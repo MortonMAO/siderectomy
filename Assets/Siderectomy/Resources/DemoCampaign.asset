@@ -1,0 +1,241 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d97f768b629885f4cae8a27712718ea3, type: 3}
+  m_Name: DemoCampaign
+  m_EditorClassIdentifier: 
+  levels:
+  - number: 1
+    planets: 3
+    moons: 1
+    stations: 0
+    seed: 2407
+    title: "\u7B2C\u4E00\u5173 \xB7 \u521D\u6B21\u4F5C\u4E1A"
+    briefing: "\u76EE\u6807\uFF1A\u9650\u65F6\u6D88\u706D\u536B\u661F\u805A\u5C45\u70B9\u3002\u5B66\u4E60\u751F\u4EA7\u3001\u8F7D\u4F53\u3001\u626B\u63CF\u3001\u4FA6\u5BDF\u53CA\u57FA\u7840\u6B66\u5668\u642D\u8F7D\u3002"
+    tutorial:
+    - "建设能源采集器与物质转化器，继续后完成建造。"
+    - "在模块制造中制造地表打击模块，完成后进入库存。"
+    - "制造星尘级载体，投送星系探测，揭示天体。"
+    - "再造一个载体，侦察有常住人口的卫星。"
+    - "选择城市人口 → 选载体 → 搭载地表打击模块 → 发射，消灭144P。"
+    limit: 480
+    population: 144
+    energy: 150
+    matter: 150
+    info: 40
+    a1: 16
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 5
+    aiCap: 0
+    techStart: 0
+    techRate: 0
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 0
+    backupRate: 0
+    escapeSeconds: 45
+    escapeFlightSeconds: 60
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 0
+    allowEscape: 0
+    regenerationScale: 1
+  - number: 2
+    planets: 3
+    moons: 3
+    stations: 2
+    seed: 2407
+    title: "\u7B2C\u4E8C\u5173 \xB7 \u529F\u80FD\u94FE\u4E0E\u642D\u8F7D"
+    briefing: "\u76EE\u6807\uFF1A\u6D88\u706D\u4E09\u4E2A\u805A\u5C45\u70B9\u4E14\u96F6\u5916\u9003\u3002\u5B8C\u6210\u9690\u5F62\u3001\u5165\u4FB5\u4E0E\u8282\u70B9\u642D\u8F7D\u57FA\u7840\u6559\u5B66\u3002"
+    tutorial:
+    - "研发隐形技术，建设信息收集点。"
+    - "扫描并深度侦察三个聚居点，找出军事与能源中心。"
+    - "制造载体与隐形模块 → 选载体 → 搭载模块 → 发射。"
+    - "制造并投送病毒入侵模块，观察碳基人口持续损失。"
+    - "针对节点或人口投送打击；外逃舰出现时选中并拦截。"
+    limit: 720
+    population: 540
+    energy: 150
+    matter: 150
+    info: 40
+    a1: 28
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 5
+    aiCap: 4
+    techStart: 10
+    techRate: 0.025
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 60
+    backupRate: 0.12
+    escapeSeconds: 75
+    escapeFlightSeconds: 60
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 1
+    allowEscape: 0
+    regenerationScale: 1
+  - number: 3
+    planets: 5
+    moons: 5
+    stations: 3
+    seed: 2407
+    title: "\u7B2C\u4E09\u5173 \xB7 \u7845\u57FA\u89C2\u5BDF\u8005"
+    briefing: "\u7845\u57FA\u4EBA\u53E3\u4F1A\u6062\u590D\uFF0C3\u6BB5\u8282\u70B9\u4FE1\u606F\u94FE\u652F\u6301\u91CD\u5EFA\u3002\u9690\u5F62\u964D\u4F4E\u88AB\u53D1\u73B0\u98CE\u9669\uFF0C\u4FE1\u606F\u5165\u4FB5\u538B\u5236\u6D41\u901F\u540E\u96C6\u4E2D\u6253\u51FB\u3002\u9650\u65F6\u6E05\u96F6\u4E14\u96F6\u5916\u9003\u3002"
+    tutorial: []
+    limit: 900
+    population: 1050
+    energy: 150
+    matter: 150
+    info: 40
+    a1: 28
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 5
+    aiCap: 6
+    techStart: 22
+    techRate: 0.035
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 120
+    backupRate: 0.25
+    escapeSeconds: 60
+    escapeFlightSeconds: 60
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 1
+    allowEscape: 0
+    regenerationScale: 1
+  - number: 4
+    planets: 8
+    moons: 10
+    stations: 3
+    seed: 2407
+    title: "\u7B2C\u56DB\u5173 \xB7 \u592A\u9633\u7CFB"
+    briefing: "\u5730\u7403\u4E0E\u6708\u7403\u4EBA\u53E3\u6E05\u96F6\u3002\u5916\u9003\u8230\u5FC5\u7136\u79BB\u6E2F\uFF0C\u9009\u62E9\u653E\u884C\u6216\u963B\u622A\uFF1B\u9009\u62E915\u79D2\u540E\u7B2C\u4E8C\u8F6E\u901A\u8BAF\u5F00\u653E\u8D44\u6E90\u7533\u8BF7\u3002\u65E0\u8282\u70B9\u6E05\u9664\u95E8\u69DB\u3002"
+    tutorial: []
+    limit: 960
+    population: 1650
+    energy: 150
+    matter: 150
+    info: 40
+    a1: 28
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 5
+    aiCap: 8
+    techStart: 32
+    techRate: 0.045
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 180
+    backupRate: 0.38
+    escapeSeconds: 45
+    escapeFlightSeconds: 90
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 1
+    allowEscape: 1
+    regenerationScale: 1
+  - number: 5
+    planets: 6
+    moons: 8
+    stations: 4
+    seed: 2407
+    title: "\u7B2C\u4E94\u5173 \xB7 \u96C6\u4E2D\u5F0F\u7845\u57FA\u7F51\u7EDC"
+    briefing: "高级硅基文明，6节点集中于主星，构成5段信息链。隐形入侵压恢复，高频打击或恒星载荷集中突破。"
+    tutorial: []
+    limit: 960
+    population: 2300
+    energy: 150
+    matter: 150
+    info: 50
+    a1: 40
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 6
+    aiCap: 10
+    techStart: 42
+    techRate: 0.055
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 300
+    backupRate: 0.5
+    escapeSeconds: 50
+    escapeFlightSeconds: 60
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 1
+    allowEscape: 1
+    regenerationScale: 1
+  - number: 6
+    planets: 7
+    moons: 10
+    stations: 5
+    seed: 2407
+    title: "\u7B2C\u516D\u5173 \xB7 \u5171\u751F\u6587\u660E"
+    briefing: "\u78B3\u57FA\u4E0E\u7845\u57FA\u5171\u751F\uFF1B\u7845\u57FA\u62E5\u67095\u6BB5\u4FE1\u606F\u94FE\u3002\u751F\u7269\u5165\u4FB5\u5904\u7406\u78B3\u57FA\uFF0C\u4FE1\u606F\u5165\u4FB5\u9650\u5236\u7845\u57FA\u6062\u590D\u3002\u9650\u65F6\u4E24\u7C7B\u4EBA\u53E3\u5747\u6E05\u96F6\u3002"
+    tutorial: []
+    limit: 1080
+    population: 2900
+    energy: 150
+    matter: 150
+    info: 60
+    a1: 50
+    energyRate: 1.2
+    matterRate: 0.8
+    energyBonus: 1.6
+    matterBonus: 0.95
+    facilityCap: 7
+    aiCap: 12
+    techStart: 50
+    techRate: 0.065
+    alertMul: 0.9
+    decay: 0.16
+    backupStart: 450
+    backupRate: 0.6
+    escapeSeconds: 45
+    escapeFlightSeconds: 60
+    aiBuildRate: 0.42
+    nodeGate: 0
+    protection: 0
+    damageScale: 1
+    aiScale: 1
+    awareness: 1
+    allowEscape: 1
+    regenerationScale: 1

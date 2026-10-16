@@ -1,0 +1,2 @@
+Unity编译构建成功；Runtime和Editor源码与验收工程SHA256一致；WindowsDemo共203 个文件复制并逐项SHA256一致。
+交付目录Demo完整界面与存档验收退出码0；实机截图确认1×/2×/4×文字正常；运行日志未检出Exception或Error。

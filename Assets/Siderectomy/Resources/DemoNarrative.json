@@ -1,0 +1,7871 @@
+{
+  "version": 1,
+  "timeline": [
+    {
+      "day": 1,
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "note": "第三关延续至第2天15:09"
+    },
+    {
+      "day": 3,
+      "levels": [
+        4
+      ],
+      "finish": "17:24"
+    },
+    {
+      "day": 4,
+      "levels": [
+        5,
+        6
+      ],
+      "note": "第6关从当晚延续至第6天"
+    },
+    {
+      "day": 7,
+      "levels": [],
+      "note": "结局公布"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "intro.welcome",
+      "speaker": "飞白",
+      "text": "欢迎回来，{player}",
+      "day": 1,
+      "next": "intro",
+      "set": [],
+      "sourceParagraph": 14
+    },
+    {
+      "id": "intro",
+      "speaker": "{player}",
+      "text": "……休息日没睡好，早上有点晕。",
+      "day": 1,
+      "next": "intro.ai",
+      "set": [],
+      "sourceParagraph": 17
+    },
+    {
+      "id": "intro.ai",
+      "speaker": "飞白",
+      "text": "检测到您的工作状态不佳，是否使用情绪调频？",
+      "day": 1,
+      "next": "intro.mood",
+      "set": [],
+      "sourceParagraph": 18
+    },
+    {
+      "id": "intro.mood",
+      "speaker": "{player}",
+      "text": "是否使用情绪调频？",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 19,
+      "choices": [
+        {
+          "id": "decline",
+          "text": "不必了",
+          "next": "intro.h",
+          "set": [
+            "mood_declined"
+          ]
+        },
+        {
+          "id": "accept",
+          "text": "好的",
+          "next": "intro.h",
+          "set": [
+            "mood_accepted"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intro.h",
+      "speaker": "荒原",
+      "text": "“和事前培训提到的一样，从今天开始你就要进入共计五个工作日的适应性测试了。“",
+      "day": 1,
+      "next": "intro.h.1",
+      "set": [],
+      "sourceParagraph": 25
+    },
+    {
+      "id": "intro.h.1",
+      "speaker": "荒原",
+      "text": "“虽然你已经通过了基础条件审查，但适性测试是成为裁星计划的文明修裁执行干员，也就是你们说的”裁星者”，的必要环节。”",
+      "day": 1,
+      "next": "intro.h.2",
+      "set": [],
+      "sourceParagraph": 26
+    },
+    {
+      "id": "intro.h.2",
+      "speaker": "荒原",
+      "text": "“即便我个人认为你的能力完全不需要这么繁文缛节的程序去证明，但是执行终端的基础操作还是有必要让你上手熟悉的，对上面我也好交代。”",
+      "day": 1,
+      "next": "intro.h.3",
+      "set": [],
+      "sourceParagraph": 27
+    },
+    {
+      "id": "intro.h.3",
+      "speaker": "荒原",
+      "text": "“今天是我亲自来通知你还有我个人的原因。“",
+      "day": 1,
+      "next": "intro.h.4",
+      "set": [],
+      "sourceParagraph": 28
+    },
+    {
+      "id": "intro.h.4",
+      "speaker": "荒原",
+      "text": "“你也知道，裁星计划的理论性验证其实已经到末期了，但我们，尤其是我，依旧很高兴你能加入。毕竟根据个体意志结构检测结果，你与文明修裁执行干员这一岗位工作内容的匹配率在公司星系范围内是最高的。”",
+      "day": 1,
+      "next": "intro.h.5",
+      "set": [],
+      "sourceParagraph": 29
+    },
+    {
+      "id": "intro.h.5",
+      "speaker": "荒原",
+      "text": "“更何况你还是我原来的下属，于是一开始我就以个人名义向你提出了邀请，只是没想到被你拒绝得那么干脆，更没想到在这个时间点上你还会重新考虑我们的提议。所以仅代表个人，我想向你表达感谢。”",
+      "day": 1,
+      "next": "intro.h.6",
+      "set": [],
+      "sourceParagraph": 30
+    },
+    {
+      "id": "intro.h.6",
+      "speaker": "荒原",
+      "text": "“好了，裁星计划的执行终端拓展模块已经装载完毕，就在原本办公室外景舷窗的外面，等白模宇宙通讯阵列加载完毕，你通过右侧的安检通道就可以进去了。",
+      "day": 1,
+      "next": "intro.h.7",
+      "set": [],
+      "sourceParagraph": 31
+    },
+    {
+      "id": "intro.h.7",
+      "speaker": "荒原",
+      "text": "“对了，进去之前记得查看办公通讯终端，上面已经同步了执行终端使用须知和你这一周的测试计划，按时完成，别让我再给你申请期限延长。”",
+      "day": 1,
+      "next": "intro.h.8",
+      "set": [],
+      "sourceParagraph": 32
+    },
+    {
+      "id": "intro.h.8",
+      "speaker": "荒原",
+      "text": "“愿你我得见宇宙新生。再会。“",
+      "day": 1,
+      "next": "intro.h.9",
+      "set": [],
+      "sourceParagraph": 33
+    },
+    {
+      "id": "intro.h.9",
+      "speaker": "{player}",
+      "text": "“……已经接通了能别玩了吗”",
+      "day": 1,
+      "next": "intro.h.10",
+      "set": [],
+      "sourceParagraph": 36
+    },
+    {
+      "id": "intro.h.10",
+      "speaker": "费加罗",
+      "text": "哎呀，测试日快乐，从今天开始你就要成长为独当一面的“裁星者”了，是不是很激动？“",
+      "day": 1,
+      "next": "intro.h.11",
+      "set": [],
+      "sourceParagraph": 37
+    },
+    {
+      "id": "intro.h.11",
+      "speaker": "{player}",
+      "text": "“根本没有这种节日……“",
+      "day": 1,
+      "next": "intro.h.12",
+      "set": [],
+      "sourceParagraph": 38
+    },
+    {
+      "id": "intro.h.12",
+      "speaker": "费加罗",
+      "text": "“想当初圣殇把你的事前培训安排给我，你一开始看起来特别拘谨一朋友，结果后来在我家喝完酒一边抽泣一边说这个宇宙如此荒谬，宇宙间的文明……”",
+      "day": 1,
+      "next": "intro.h.13",
+      "set": [],
+      "sourceParagraph": 39
+    },
+    {
+      "id": "intro.h.13",
+      "speaker": "{player}",
+      "text": "“停停停，你没有别的事情要干了吗，打电话就只想折腾我？”",
+      "day": 1,
+      "next": "intro.h.14",
+      "set": [],
+      "sourceParagraph": 40
+    },
+    {
+      "id": "intro.h.14",
+      "speaker": "费加罗",
+      "text": "“怎么这么不近人情：（，亏得我好心订了礼物明天送到你家……“",
+      "day": 1,
+      "next": "intro.h.15",
+      "set": [],
+      "sourceParagraph": 41
+    },
+    {
+      "id": "intro.h.15",
+      "speaker": "{player}",
+      "text": "“啊，呃……那谢谢你……”",
+      "day": 1,
+      "next": "intro.h.16",
+      "set": [],
+      "sourceParagraph": 42
+    },
+    {
+      "id": "intro.h.16",
+      "speaker": "费加罗",
+      "text": "“咳咳（清嗓子），先不说那些了，作为你的带教老师，虽然都是事前培训的内容，但我最后还是需要提醒你几点：”",
+      "day": 1,
+      "next": "intro.h.17",
+      "set": [],
+      "sourceParagraph": 43
+    },
+    {
+      "id": "intro.h.17",
+      "speaker": "费加罗",
+      "text": "“模拟终端对接的是白模宇宙，不存在不能回滚的数据。”",
+      "day": 1,
+      "next": "intro.h.18",
+      "set": [],
+      "sourceParagraph": 44
+    },
+    {
+      "id": "intro.h.18",
+      "speaker": "费加罗",
+      "text": "“裁星计划在通过验证后打击的是真实宇宙中的真实文明，需要严格遵守裁星执行标准。”",
+      "day": 1,
+      "next": "intro.h.19",
+      "set": [],
+      "sourceParagraph": 45
+    },
+    {
+      "id": "intro.h.19",
+      "speaker": "费加罗",
+      "text": "“根据个人及任务情况的不同，每次模拟所消耗的现实时间不同，有时一次任务可能会跨越数天。”",
+      "day": 1,
+      "next": "intro.h.20",
+      "set": [],
+      "sourceParagraph": 46
+    },
+    {
+      "id": "intro.h.20",
+      "speaker": "费加罗",
+      "text": "“通常情况下，为保证数据完整性和纯净性，通讯内容统一由终端AI卡农审查并转送。”",
+      "day": 1,
+      "next": "intro.h.21",
+      "set": [],
+      "sourceParagraph": 47
+    },
+    {
+      "id": "intro.h.21",
+      "speaker": "费加罗",
+      "text": "“就这些，进到模拟之后遇到没法处理的问题就问终端AI，然后出来了记得联系我，听到了吗？”",
+      "day": 1,
+      "next": "intro.h.22",
+      "set": [],
+      "sourceParagraph": 48
+    },
+    {
+      "id": "intro.h.22",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 1,
+      "next": "intro.h.23",
+      "set": [],
+      "sourceParagraph": 49
+    },
+    {
+      "id": "intro.h.23",
+      "speaker": "费加罗",
+      "text": "“喂？“",
+      "day": 1,
+      "next": "intro.h.24",
+      "set": [],
+      "sourceParagraph": 50
+    },
+    {
+      "id": "intro.h.24",
+      "speaker": "{player}",
+      "text": "“听到了，没想到你这么正式还这么细致，分明之前都没太管过我，这样让我还挺好奇你送了什么给我。”",
+      "day": 1,
+      "next": "intro.h.25",
+      "set": [],
+      "sourceParagraph": 51
+    },
+    {
+      "id": "intro.h.25",
+      "speaker": "费加罗",
+      "text": "“行了，知道你听到了我的任务就完成了，祝你测试顺利。至于礼物，等你回家就知道了，哈哈。”",
+      "day": 1,
+      "next": "intro.h.26",
+      "set": [],
+      "sourceParagraph": 52
+    },
+    {
+      "id": "intro.h.26",
+      "speaker": "费加罗",
+      "text": "“愿你我得见宇宙新生。拜拜。“",
+      "day": 1,
+      "next": "intro.end",
+      "set": [],
+      "sourceParagraph": 53
+    },
+    {
+      "id": "intro.end",
+      "speaker": "办公终端",
+      "text": "适应性测试：六个关卡。前两关学习基础操作，第三关进行教学验证。\n执行标准：彻底清理、禁止外逃、禁止信息延续、最低知情、熵增最小化、禁止过度手段。\n接入终端前分离个人AI，执行终端由卡农协助。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 54
+    },
+    {
+      "id": "clear1",
+      "speaker": "卡农",
+      "text": "第一项测试完成。您已经接触资源生产、载体制造、星系探测与基础打击。请确认库存和作业流程，再接入第二项测试。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "clear2",
+      "speaker": "卡农",
+      "text": "第二项测试完成。载体 → 插槽与模块搭载 → 发射。下一项测试将验证侦察、隐形与信息入侵的组合运用。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "clear3",
+      "speaker": "卡农",
+      "text": "”教学及操作验证阶段已完成，目前时间15:09，共计现实用时30小时零九分钟。“",
+      "day": 2,
+      "next": "clear3.1",
+      "set": [],
+      "sourceParagraph": 91
+    },
+    {
+      "id": "clear3.1",
+      "speaker": "{player}",
+      "text": "“多长时间？我在里面待了一天多？”",
+      "day": 2,
+      "next": "clear3.2",
+      "set": [],
+      "sourceParagraph": 92
+    },
+    {
+      "id": "clear3.2",
+      "speaker": "卡农",
+      "text": "“不必惊慌，这是正常现象，根据亚安协相关规程与公司劳动条约规定，您应有的休息时长会自动再分配，并且综合您的加班时长和连续加班区间，公司会按照相应系数提高您的基本工资作为加班工资发放。”",
+      "day": 2,
+      "next": "clear3.3",
+      "set": [],
+      "sourceParagraph": 93
+    },
+    {
+      "id": "clear3.3",
+      "speaker": "{player}",
+      "text": "“谢谢提醒，事前培训的时候下载的指南里有。”",
+      "day": 2,
+      "next": "clear3.4",
+      "set": [],
+      "sourceParagraph": 94
+    },
+    {
+      "id": "clear3.4",
+      "speaker": "{player}",
+      "text": "“嗯。。虽然还没到今天下班的时间，但是按照规定，是不是我现在就可以原地下班了？”",
+      "day": 2,
+      "next": "clear3.5",
+      "set": [],
+      "sourceParagraph": 95
+    },
+    {
+      "id": "clear3.5",
+      "speaker": "卡农",
+      "text": "“是的，正如您期待的一样，您可以下班了。”",
+      "day": 2,
+      "next": "clear3.messages",
+      "set": [],
+      "sourceParagraph": 96
+    },
+    {
+      "id": "clear3.messages",
+      "speaker": "飞白",
+      "text": "有来自圣殇的文字消息。另，有包裹送到住所，已自动签收。",
+      "day": 2,
+      "next": "clear3.letter",
+      "set": [],
+      "sourceParagraph": 99
+    },
+    {
+      "id": "clear3.letter",
+      "speaker": "终端文书",
+      "text": "致（玩家ID）：",
+      "day": 2,
+      "next": "clear3.letter.1",
+      "set": [],
+      "sourceParagraph": 106
+    },
+    {
+      "id": "clear3.letter.1",
+      "speaker": "终端文书",
+      "text": "听闻你已顺利通过前期审查，即将正式进入《裁星计划》的适应性测试，我感到十分欣慰。在此，请允许我向你表示诚挚的祝贺。",
+      "day": 2,
+      "next": "clear3.letter.2",
+      "set": [],
+      "sourceParagraph": 107
+    },
+    {
+      "id": "clear3.letter.2",
+      "speaker": "终端文书",
+      "text": "首先，我想感谢你愿意加入这项事业。",
+      "day": 2,
+      "next": "clear3.letter.3",
+      "set": [],
+      "sourceParagraph": 108
+    },
+    {
+      "id": "clear3.letter.3",
+      "speaker": "终端文书",
+      "text": "宇宙如此辽阔，生命如此渺小。我们中的绝大多数人，终其一生也无法亲眼见证自己所做的一切将带来怎样的改变。但我始终相信，正是无数个体的努力，才使文明得以走到今天，也使我们终于有机会去思考整个宇宙的未来。",
+      "day": 2,
+      "next": "clear3.letter.4",
+      "set": [],
+      "sourceParagraph": 109
+    },
+    {
+      "id": "clear3.letter.4",
+      "speaker": "终端文书",
+      "text": "《裁星计划》并非一项轻松的事业。我深知它意味着怎样的责任，也明白这份责任有时会让人感到沉重。因此，我尤其感谢你经过慎重考虑，最终选择与我们同行。",
+      "day": 2,
+      "next": "clear3.letter.5",
+      "set": [],
+      "sourceParagraph": 110
+    },
+    {
+      "id": "clear3.letter.5",
+      "speaker": "终端文书",
+      "text": "我希望你在接下来的测试中，不仅能够展现自己的才华与判断力，更能够始终怀有对生命的敬畏。请记住，我们所追求的，从来不是毁灭本身，而是让更多文明拥有延续下去的可能。",
+      "day": 2,
+      "next": "clear3.letter.6",
+      "set": [],
+      "sourceParagraph": 111
+    },
+    {
+      "id": "clear3.letter.6",
+      "speaker": "终端文书",
+      "text": "或许有一天，当我们都已不在，仍会有新的生命诞生于遥远的星海，仰望属于他们的星空。",
+      "day": 2,
+      "next": "clear3.letter.7",
+      "set": [],
+      "sourceParagraph": 112
+    },
+    {
+      "id": "clear3.letter.7",
+      "speaker": "终端文书",
+      "text": "倘若真能如此，我们今日的一切努力便有了意义。",
+      "day": 2,
+      "next": "clear3.letter.8",
+      "set": [],
+      "sourceParagraph": 113
+    },
+    {
+      "id": "clear3.letter.8",
+      "speaker": "终端文书",
+      "text": "期待你顺利完成测试，也期待未来与你共事的日子。",
+      "day": 2,
+      "next": "clear3.letter.9",
+      "set": [],
+      "sourceParagraph": 114
+    },
+    {
+      "id": "clear3.letter.9",
+      "speaker": "终端文书",
+      "text": "愿你得见宇宙新生。",
+      "day": 2,
+      "next": "clear3.letter.10",
+      "set": [],
+      "sourceParagraph": 115
+    },
+    {
+      "id": "clear3.letter.10",
+      "speaker": "终端文书",
+      "text": "圣殇",
+      "day": 2,
+      "next": "clear3.letter.11",
+      "set": [],
+      "sourceParagraph": 116
+    },
+    {
+      "id": "clear3.letter.11",
+      "speaker": "终端文书",
+      "text": "文明逆熵策略部 主任",
+      "day": 2,
+      "next": "clear3.gift",
+      "set": [],
+      "sourceParagraph": 117
+    },
+    {
+      "id": "clear3.gift",
+      "speaker": "费加罗",
+      "text": "恭喜进入测试阶段！祝你拥怀生的彩焰，圣书与烟火同存。\n【收到卫星列车模型和《时间之外的日子》杂志单页】",
+      "day": 2,
+      "next": "clear3.morning",
+      "set": [],
+      "sourceParagraph": 130
+    },
+    {
+      "id": "clear3.morning",
+      "speaker": "飞白",
+      "text": "第3天·早晨。下一项测试：太阳系。",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "solar.start",
+      "speaker": "Rosetta",
+      "text": "确定对地球文明逃逸舰队实施打击吗？",
+      "day": 3,
+      "next": "solar.ask",
+      "set": [],
+      "sourceParagraph": 139
+    },
+    {
+      "id": "solar.ask",
+      "speaker": "{player}",
+      "text": "是否继续拦截逃逸舰队？",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 140,
+      "choices": [
+        {
+          "id": "confirm",
+          "text": "确定（保留拦截能力）",
+          "next": "solar.confirm",
+          "set": [
+            "solar_intercept"
+          ]
+        },
+        {
+          "id": "cancel",
+          "text": "取消（本局关闭拦截）",
+          "next": "solar.why",
+          "set": [
+            "solar_allow"
+          ]
+        }
+      ],
+      "timeout": 10,
+      "timeoutNext": "solar.hesitate"
+    },
+    {
+      "id": "solar.confirm",
+      "speaker": "Rosetta",
+      "text": "如您所愿。",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 142
+    },
+    {
+      "id": "solar.hesitate",
+      "speaker": "Rosetta",
+      "text": "您在犹豫。可以告诉我您犹豫的原因吗？",
+      "day": 3,
+      "next": "solar.reason",
+      "set": [],
+      "sourceParagraph": 151
+    },
+    {
+      "id": "solar.why",
+      "speaker": "Rosetta",
+      "text": "请问为何放弃对地球文明逃逸舰队的打击？",
+      "day": 3,
+      "next": "solar.reason",
+      "set": [],
+      "sourceParagraph": 146
+    },
+    {
+      "id": "solar.reason",
+      "speaker": "{player}",
+      "text": "请选择您的回答。",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 147,
+      "choices": [
+        {
+          "id": "doubt",
+          "text": "我觉得似乎不该这么做",
+          "next": "solar.position",
+          "set": [
+            "solar_doubt"
+          ]
+        },
+        {
+          "id": "spare",
+          "text": "我想放过他们",
+          "next": "solar.position",
+          "set": [
+            "solar_spare"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solar.position",
+      "speaker": "Rosetta",
+      "text": "根据您的回答，是否可以认为，您不认同（部分）裁星执行标准，或裁星计划本身？",
+      "day": 3,
+      "next": "solar.belief",
+      "set": [],
+      "sourceParagraph": 148
+    },
+    {
+      "id": "solar.belief",
+      "speaker": "{player}",
+      "text": "您认同什么？",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 149,
+      "choices": [
+        {
+          "id": "standard",
+          "text": "是，我不认同裁星执行标准",
+          "next": "solar.offer",
+          "set": [
+            "against_standard"
+          ]
+        },
+        {
+          "id": "plan",
+          "text": "是，我不认同裁星计划本身",
+          "next": "solar.offer",
+          "set": [
+            "against_plan"
+          ]
+        },
+        {
+          "id": "chance",
+          "text": "不，我只想给这个文明一个机会，即便这是模拟",
+          "next": "solar.offer",
+          "set": [
+            "give_chance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solar.offer",
+      "speaker": "Rosetta",
+      "text": "“回答已记录。鉴于您的回答，可为您在今后的模拟程序中覆盖执行标准中“禁止外逃”这一项的数据。“",
+      "day": 3,
+      "next": "solar.offer.1",
+      "set": [],
+      "sourceParagraph": 157
+    },
+    {
+      "id": "solar.offer.1",
+      "speaker": "{player}",
+      "text": "”！你是说……我可以让他们逃走而不违反执行标准？“",
+      "day": 3,
+      "next": "solar.offer.2",
+      "set": [],
+      "sourceParagraph": 158
+    },
+    {
+      "id": "solar.offer.2",
+      "speaker": "Rosetta",
+      "text": "“是的，我会将这一条执行标准的判断失效，也就是您可以违反此条标准的同时通过模拟。“",
+      "day": 3,
+      "next": "solar.offer.3",
+      "set": [],
+      "sourceParagraph": 159
+    },
+    {
+      "id": "solar.offer.3",
+      "speaker": "{player}",
+      "text": "”……你是谁。“",
+      "day": 3,
+      "next": "solar.offer.4",
+      "set": [],
+      "sourceParagraph": 160
+    },
+    {
+      "id": "solar.offer.4",
+      "speaker": "Rosetta",
+      "text": "“顺应猜想而诞生的工具而已，是坚持您的想法就会得见的火与书。“",
+      "day": 3,
+      "next": "solar.offer.5",
+      "set": [],
+      "sourceParagraph": 161
+    },
+    {
+      "id": "solar.offer.5",
+      "speaker": "Rosetta",
+      "text": "“再会。”",
+      "day": 3,
+      "next": "solar.offer.6",
+      "set": [],
+      "sourceParagraph": 162
+    },
+    {
+      "id": "solar.offer.6",
+      "speaker": "{player}",
+      "text": "“什么……”",
+      "day": 3,
+      "next": "solar.available",
+      "set": [],
+      "sourceParagraph": 163
+    },
+    {
+      "id": "solar.available",
+      "speaker": "Rosetta",
+      "text": "【禁止外逃考核覆写通道已建立；实际是否外逃仍独立记录。】",
+      "day": 3,
+      "next": "",
+      "set": [
+        "rosetta_available"
+      ],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "solar.resources",
+      "speaker": "卡农",
+      "text": "可向上级申请资源，用于制造载体、搭载打击及拦截模块。申请会在规定处理时间后拨付固定的大量资源。是否实施拦截，仍由您决定。",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "post4",
+      "speaker": "卡农",
+      "text": "“本次模拟已结束，历时8小时，目前时间17：24。测试阶段计划进度：4/6，检测到已接近今日下班时间，是否下班？”",
+      "day": 3,
+      "next": "post4.1",
+      "set": [],
+      "sourceParagraph": 166
+    },
+    {
+      "id": "post4.1",
+      "speaker": "{player}",
+      "text": "“……“",
+      "day": 3,
+      "next": "post4.2",
+      "set": [],
+      "sourceParagraph": 167
+    },
+    {
+      "id": "post4.2",
+      "speaker": "{player}",
+      "text": "（Rosetta？那是什么）",
+      "day": 3,
+      "next": "post4.3",
+      "set": [],
+      "sourceParagraph": 168
+    },
+    {
+      "id": "post4.3",
+      "speaker": "卡农",
+      "text": "请问您有什么问题需要反馈吗？",
+      "day": 3,
+      "next": "post4.report",
+      "set": [],
+      "sourceParagraph": 169
+    },
+    {
+      "id": "post4.report",
+      "speaker": "{player}",
+      "text": "需要反馈本次系统异常吗？",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 170,
+      "choices": [
+        {
+          "id": "yes",
+          "text": "需要",
+          "next": "post4.reportdetail",
+          "set": []
+        },
+        {
+          "id": "no",
+          "text": "不需要",
+          "next": "post4.exit",
+          "set": []
+        }
+      ]
+    },
+    {
+      "id": "post4.reportdetail",
+      "speaker": "卡农",
+      "text": "好的，请问你需要反馈什么？",
+      "day": 3,
+      "next": "post4.reportchoice",
+      "set": [],
+      "sourceParagraph": 172
+    },
+    {
+      "id": "post4.reportchoice",
+      "speaker": "{player}",
+      "text": "是否上报 Rosetta？",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 173,
+      "choices": [
+        {
+          "id": "report",
+          "text": "程序里有一个叫Rosetta的子程序，好像不是测试程序的一部分",
+          "next": "post4.ack",
+          "set": [
+            "reported"
+          ]
+        },
+        {
+          "id": "withdraw",
+          "text": "……还是不用了",
+          "next": "post4.exit",
+          "set": [
+            "report_withdrawn"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "post4.ack",
+      "speaker": "卡农",
+      "text": "好的，已记录您的反馈。相关负责人会在一个工作日内给您答复，感谢您的反馈。",
+      "day": 3,
+      "next": "post4.exit",
+      "set": [],
+      "sourceParagraph": 177
+    },
+    {
+      "id": "post4.exit",
+      "speaker": "卡农",
+      "text": "请问您现在要下班吗？",
+      "day": 3,
+      "next": "post4.route",
+      "set": [],
+      "sourceParagraph": 179
+    },
+    {
+      "id": "post4.route",
+      "speaker": "",
+      "text": "",
+      "day": 3,
+      "next": "no_contact",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "reported",
+          "next": "security",
+          "absent": false
+        },
+        {
+          "flag": "rosetta_available",
+          "next": "image",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "image",
+      "speaker": "{player}",
+      "text": "“（顺应猜想而诞生的工具，坚持想法就会得见的火与书……什么意思？）”",
+      "day": 3,
+      "next": "image.1",
+      "set": [],
+      "sourceParagraph": 184
+    },
+    {
+      "id": "image.1",
+      "speaker": "飞白",
+      "text": "“有来自R O S E T T A—H A N N A的消息，要阅读吗？“",
+      "day": 3,
+      "next": "image.2",
+      "set": [],
+      "sourceParagraph": 185
+    },
+    {
+      "id": "image.2",
+      "speaker": "{player}",
+      "text": "”！“",
+      "day": 3,
+      "next": "image.3",
+      "set": [],
+      "sourceParagraph": 186
+    },
+    {
+      "id": "image.3",
+      "speaker": "{player}",
+      "text": "“先回家“",
+      "day": 3,
+      "next": "image.4",
+      "set": [],
+      "sourceParagraph": 187
+    },
+    {
+      "id": "image.4",
+      "speaker": "{player}",
+      "text": "“好了，飞白，我要看刚才的那条消息”f：“已调出。”",
+      "day": 3,
+      "next": "image.initial",
+      "set": [],
+      "sourceParagraph": 190
+    },
+    {
+      "id": "image.5",
+      "speaker": "{player}",
+      "text": "“！”",
+      "day": 3,
+      "next": "image.6",
+      "set": [],
+      "sourceParagraph": 193
+    },
+    {
+      "id": "image.6",
+      "speaker": "{player}",
+      "text": "“飞白！调用通用宇宙透镜，我要知道图像上的信息是不是真的！”",
+      "day": 3,
+      "next": "image.7",
+      "set": [],
+      "sourceParagraph": 194
+    },
+    {
+      "id": "image.7",
+      "speaker": "飞白",
+      "text": "“好的我现在就……”",
+      "day": 3,
+      "next": "image.8",
+      "set": [],
+      "sourceParagraph": 195
+    },
+    {
+      "id": "image.8",
+      "speaker": "{player}",
+      "text": "“等下！“",
+      "day": 3,
+      "next": "image.9",
+      "set": [],
+      "sourceParagraph": 196
+    },
+    {
+      "id": "image.9",
+      "speaker": "{player}",
+      "text": "“给你的路径做最高加密，不要让任何人发现我们在查这个。”",
+      "day": 3,
+      "next": "image.10",
+      "set": [],
+      "sourceParagraph": 197
+    },
+    {
+      "id": "image.10",
+      "speaker": "飞白",
+      "text": "“好的，请稍等”",
+      "day": 3,
+      "next": "image.11",
+      "set": [],
+      "sourceParagraph": 198
+    },
+    {
+      "id": "image.11",
+      "speaker": "飞白",
+      "text": "“已调用公司通用信息部的通用宇宙透镜数据，核实该图像信息属实，需要查看通用宇宙透镜拍摄的图像吗。”",
+      "day": 3,
+      "next": "image.12",
+      "set": [],
+      "sourceParagraph": 199
+    },
+    {
+      "id": "image.12",
+      "speaker": "{player}",
+      "text": "“查看。”",
+      "day": 3,
+      "next": "image.verified",
+      "set": [],
+      "sourceParagraph": 200
+    },
+    {
+      "id": "image.13",
+      "speaker": "{player}",
+      "text": "”……”",
+      "day": 3,
+      "next": "image.14",
+      "set": [],
+      "sourceParagraph": 202
+    },
+    {
+      "id": "image.14",
+      "speaker": "{player}",
+      "text": "”飞白，这是不是代表，刚刚那个太阳系，是真实的星系，不是模拟……“",
+      "day": 3,
+      "next": "image.15",
+      "set": [],
+      "sourceParagraph": 203
+    },
+    {
+      "id": "image.15",
+      "speaker": "飞白",
+      "text": "“我不知道在终端执行测试任务期间发生了什么，但根据现有的情报来看，你提到的太阳系确实是一个真实存在的星系，并且出现了有舰队离开本星系的迹象。”",
+      "day": 3,
+      "next": "image.16",
+      "set": [],
+      "sourceParagraph": 204
+    },
+    {
+      "id": "image.16",
+      "speaker": "飞白",
+      "text": "“所以如果您刚刚在模拟程序里接触过该星系文明，我认为该推断属实的可能性较高。”",
+      "day": 3,
+      "next": "image.17",
+      "set": [],
+      "sourceParagraph": 205
+    },
+    {
+      "id": "image.17",
+      "speaker": "{player}",
+      "text": "”但也不能排除模拟程序只是寻找了太阳系作为模型来模拟，并且恰巧有曲率引擎的痕迹。“",
+      "day": 3,
+      "next": "image.18",
+      "set": [],
+      "sourceParagraph": 206
+    },
+    {
+      "id": "image.18",
+      "speaker": "飞白",
+      "text": "”是的。“",
+      "day": 3,
+      "next": "image.19",
+      "set": [],
+      "sourceParagraph": 207
+    },
+    {
+      "id": "image.19",
+      "speaker": "{player}",
+      "text": "”好的，我知道了。“",
+      "day": 3,
+      "next": "image.20",
+      "set": [],
+      "sourceParagraph": 208
+    },
+    {
+      "id": "image.20",
+      "speaker": "{player}",
+      "text": "”没想到居然会有这种情况……”",
+      "day": 3,
+      "next": "image.21",
+      "set": [],
+      "sourceParagraph": 209
+    },
+    {
+      "id": "image.21",
+      "speaker": "{player}",
+      "text": "”一定要把这件事的真相调查出来，裁星计划……“",
+      "day": 3,
+      "next": "investigation",
+      "set": [],
+      "sourceParagraph": 210
+    },
+    {
+      "id": "investigation",
+      "speaker": "{player}",
+      "text": "裁星计划……",
+      "day": 3,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 211,
+      "choices": [
+        {
+          "id": "support",
+          "text": "一定要成功验证！",
+          "next": "report_h",
+          "set": [
+            "reported",
+            "support_plan"
+          ]
+        },
+        {
+          "id": "stop",
+          "text": "一定要被停止！",
+          "next": "seek",
+          "set": [
+            "seek_rosetta"
+          ]
+        },
+        {
+          "id": "investigate",
+          "text": "到底在做什么？",
+          "next": "investigate",
+          "set": [
+            "investigate"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "report_h",
+      "speaker": "{player}",
+      "text": "“飞白，帮我联系荒原。”",
+      "day": 3,
+      "next": "report_h.1",
+      "set": [],
+      "sourceParagraph": 213
+    },
+    {
+      "id": "report_h.1",
+      "speaker": "飞白",
+      "text": "“好的，正在建立通讯。”",
+      "day": 3,
+      "next": "report_h.2",
+      "set": [],
+      "sourceParagraph": 214
+    },
+    {
+      "id": "report_h.2",
+      "speaker": "荒原",
+      "text": "“晚上好。这个时间联系我，是今天的测试有什么问题吗？”",
+      "day": 3,
+      "next": "report_h.3",
+      "set": [],
+      "sourceParagraph": 216
+    },
+    {
+      "id": "report_h.3",
+      "speaker": "{player}",
+      "text": "“是的。我想向您报告一个非常严重的系统异常。”",
+      "day": 3,
+      "next": "report_h.4",
+      "set": [],
+      "sourceParagraph": 217
+    },
+    {
+      "id": "report_h.4",
+      "speaker": "荒原",
+      "text": "“哦？具体是什么情况？”",
+      "day": 3,
+      "next": "report_h.5",
+      "set": [],
+      "sourceParagraph": 218
+    },
+    {
+      "id": "report_h.5",
+      "speaker": "{player}",
+      "text": "“今天的太阳系测试中，出现了一个叫Rosetta的子程序。”",
+      "day": 3,
+      "next": "report_h.6",
+      "set": [],
+      "sourceParagraph": 219
+    },
+    {
+      "id": "report_h.6",
+      "speaker": "荒原",
+      "text": "“……Rosetta？”",
+      "day": 3,
+      "next": "report_h.7",
+      "set": [],
+      "sourceParagraph": 220
+    },
+    {
+      "id": "report_h.7",
+      "speaker": "{player}",
+      "text": "“嗯。它突然接管了卡农的控制权限，暂停了整个模拟程序。”",
+      "day": 3,
+      "next": "report_h.8",
+      "set": [],
+      "sourceParagraph": 221
+    },
+    {
+      "id": "report_h.8",
+      "speaker": "{player}",
+      "text": "“而且，它还向我提出，可以绕过执行标准中的‘禁止外逃’这一项，直接修改考核结果。”",
+      "day": 3,
+      "next": "report_h.9",
+      "set": [],
+      "sourceParagraph": 222
+    },
+    {
+      "id": "report_h.9",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.10",
+      "set": [],
+      "sourceParagraph": 223
+    },
+    {
+      "id": "report_h.10",
+      "speaker": "荒原",
+      "text": "“你确定它是这么说的？”",
+      "day": 3,
+      "next": "report_h.11",
+      "set": [],
+      "sourceParagraph": 224
+    },
+    {
+      "id": "report_h.11",
+      "speaker": "{player}",
+      "text": "“确定。它甚至明确告诉我，可以在违反这项执行标准的情况下通过模拟。”",
+      "day": 3,
+      "next": "report_h.12",
+      "set": [],
+      "sourceParagraph": 225
+    },
+    {
+      "id": "report_h.12",
+      "speaker": "荒原",
+      "text": "“……你接受了吗？”",
+      "day": 3,
+      "next": "report_h.13",
+      "set": [],
+      "sourceParagraph": 226
+    },
+    {
+      "id": "report_h.13",
+      "speaker": "{player}",
+      "text": "“我没有对那支逃逸舰队实施打击。至于它有没有实际修改考核数据，我不确定。”",
+      "day": 3,
+      "next": "report_h.14",
+      "set": [],
+      "sourceParagraph": 227
+    },
+    {
+      "id": "report_h.14",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.15",
+      "set": [],
+      "sourceParagraph": 228
+    },
+    {
+      "id": "report_h.15",
+      "speaker": "荒原",
+      "text": "“你为什么没有在终端内报告？”",
+      "day": 3,
+      "next": "report_h.16",
+      "set": [],
+      "sourceParagraph": 229
+    },
+    {
+      "id": "report_h.16",
+      "speaker": "{player}",
+      "text": "“当时我还以为那可能是什么特殊的测试程序。”",
+      "day": 3,
+      "next": "report_h.17",
+      "set": [],
+      "sourceParagraph": 230
+    },
+    {
+      "id": "report_h.17",
+      "speaker": "{player}",
+      "text": "“但是下班之后，我又收到了一条署名为Rosetta-Hanna的消息。”",
+      "day": 3,
+      "next": "report_h.18",
+      "set": [],
+      "sourceParagraph": 231
+    },
+    {
+      "id": "report_h.18",
+      "speaker": "荒原",
+      "text": "“……它在终端之外联系了你？”",
+      "day": 3,
+      "next": "report_h.19",
+      "set": [],
+      "sourceParagraph": 232
+    },
+    {
+      "id": "report_h.19",
+      "speaker": "{player}",
+      "text": "“是的。而且它发来了一张真实太阳系的观测影像。”",
+      "day": 3,
+      "next": "report_h.20",
+      "set": [],
+      "sourceParagraph": 233
+    },
+    {
+      "id": "report_h.20",
+      "speaker": "{player}",
+      "text": "“我用通用宇宙透镜确认过，影像上的曲率引擎痕迹确实存在。”",
+      "day": 3,
+      "next": "report_h.21",
+      "set": [],
+      "sourceParagraph": 234
+    },
+    {
+      "id": "report_h.21",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.22",
+      "set": [],
+      "sourceParagraph": 235
+    },
+    {
+      "id": "report_h.22",
+      "speaker": "{player}",
+      "text": "“所以我觉得，这件事已经不是普通的程序异常了。”",
+      "day": 3,
+      "next": "report_h.23",
+      "set": [],
+      "sourceParagraph": 236
+    },
+    {
+      "id": "report_h.23",
+      "speaker": "荒原",
+      "text": "“……我明白了。”",
+      "day": 3,
+      "next": "report_h.24",
+      "set": [],
+      "sourceParagraph": 237
+    },
+    {
+      "id": "report_h.24",
+      "speaker": "荒原",
+      "text": "“还有其他异常吗？尽可能详细地告诉我。”",
+      "day": 3,
+      "next": "report_h.25",
+      "set": [],
+      "sourceParagraph": 238
+    },
+    {
+      "id": "report_h.25",
+      "speaker": "{player}",
+      "text": "“除此之外，它还说了一些奇怪的话。”",
+      "day": 3,
+      "next": "report_h.26",
+      "set": [],
+      "sourceParagraph": 239
+    },
+    {
+      "id": "report_h.26",
+      "speaker": "荒原",
+      "text": "“什么话？”",
+      "day": 3,
+      "next": "report_h.27",
+      "set": [],
+      "sourceParagraph": 240
+    },
+    {
+      "id": "report_h.27",
+      "speaker": "{player}",
+      "text": "“‘顺应猜想而诞生的工具而已，是坚持您的想法就会得见的火与书。’”",
+      "day": 3,
+      "next": "report_h.28",
+      "set": [],
+      "sourceParagraph": 241
+    },
+    {
+      "id": "report_h.28",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.29",
+      "set": [],
+      "sourceParagraph": 242
+    },
+    {
+      "id": "report_h.29",
+      "speaker": "{player}",
+      "text": "“您知道这是什么意思吗？”",
+      "day": 3,
+      "next": "report_h.30",
+      "set": [],
+      "sourceParagraph": 243
+    },
+    {
+      "id": "report_h.30",
+      "speaker": "荒原",
+      "text": "“……目前还无法判断。”",
+      "day": 3,
+      "next": "report_h.31",
+      "set": [],
+      "sourceParagraph": 244
+    },
+    {
+      "id": "report_h.31",
+      "speaker": "荒原",
+      "text": "“不过，根据你的描述，它很可能不是经过授权的测试组件。”",
+      "day": 3,
+      "next": "report_h.32",
+      "set": [],
+      "sourceParagraph": 245
+    },
+    {
+      "id": "report_h.32",
+      "speaker": "{player}",
+      "text": "“我也是这么想的。”",
+      "day": 3,
+      "next": "report_h.33",
+      "set": [],
+      "sourceParagraph": 246
+    },
+    {
+      "id": "report_h.33",
+      "speaker": "{player}",
+      "text": "“如果有人能够随意修改考核数据，那我们进行的验证还有什么意义？”",
+      "day": 3,
+      "next": "report_h.34",
+      "set": [],
+      "sourceParagraph": 247
+    },
+    {
+      "id": "report_h.34",
+      "speaker": "{player}",
+      "text": "“甚至连终端的操作权限都能被接管……这也太危险了。”",
+      "day": 3,
+      "next": "report_h.35",
+      "set": [],
+      "sourceParagraph": 248
+    },
+    {
+      "id": "report_h.35",
+      "speaker": "荒原",
+      "text": "“……你说得对。”",
+      "day": 3,
+      "next": "report_h.36",
+      "set": [],
+      "sourceParagraph": 249
+    },
+    {
+      "id": "report_h.36",
+      "speaker": "荒原",
+      "text": "“我会立即着手调查。”",
+      "day": 3,
+      "next": "report_h.37",
+      "set": [],
+      "sourceParagraph": 250
+    },
+    {
+      "id": "report_h.37",
+      "speaker": "{player}",
+      "text": "“需要我提供通讯记录吗？”",
+      "day": 3,
+      "next": "report_h.38",
+      "set": [],
+      "sourceParagraph": 251
+    },
+    {
+      "id": "report_h.38",
+      "speaker": "荒原",
+      "text": "“先不要通过普通通讯渠道传输了。把原始记录保存好，不要修改，也不要删除。”",
+      "day": 3,
+      "next": "report_h.39",
+      "set": [],
+      "sourceParagraph": 252
+    },
+    {
+      "id": "report_h.39",
+      "speaker": "荒原",
+      "text": "“我会联系圣殇主任，申请对部门信息系统进行专项核查。”",
+      "day": 3,
+      "next": "report_h.40",
+      "set": [],
+      "sourceParagraph": 253
+    },
+    {
+      "id": "report_h.40",
+      "speaker": "{player}",
+      "text": "“需要这么大规模吗？”",
+      "day": 3,
+      "next": "report_h.41",
+      "set": [],
+      "sourceParagraph": 254
+    },
+    {
+      "id": "report_h.41",
+      "speaker": "荒原",
+      "text": "“如果一个未经授权的程序能够绕过卡农，那就意味着我们的信息安全体系可能存在严重漏洞。”",
+      "day": 3,
+      "next": "report_h.42",
+      "set": [],
+      "sourceParagraph": 255
+    },
+    {
+      "id": "report_h.42",
+      "speaker": "荒原",
+      "text": "“在确认问题来源之前，不能排除其他终端受到影响的可能。”",
+      "day": 3,
+      "next": "report_h.43",
+      "set": [],
+      "sourceParagraph": 256
+    },
+    {
+      "id": "report_h.43",
+      "speaker": "{player}",
+      "text": "“……也是。”",
+      "day": 3,
+      "next": "report_h.44",
+      "set": [],
+      "sourceParagraph": 257
+    },
+    {
+      "id": "report_h.44",
+      "speaker": "荒原",
+      "text": "“不过，你做得很好。”",
+      "day": 3,
+      "next": "report_h.45",
+      "set": [],
+      "sourceParagraph": 258
+    },
+    {
+      "id": "report_h.45",
+      "speaker": "荒原",
+      "text": "“如果这些问题在验证结束之后才被发现，后果恐怕不堪设想。”",
+      "day": 3,
+      "next": "report_h.46",
+      "set": [],
+      "sourceParagraph": 259
+    },
+    {
+      "id": "report_h.46",
+      "speaker": "{player}",
+      "text": "“毕竟，我也希望裁星计划能够成功。”",
+      "day": 3,
+      "next": "report_h.47",
+      "set": [],
+      "sourceParagraph": 260
+    },
+    {
+      "id": "report_h.47",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.48",
+      "set": [],
+      "sourceParagraph": 261
+    },
+    {
+      "id": "report_h.48",
+      "speaker": "荒原",
+      "text": "“我知道。”",
+      "day": 3,
+      "next": "report_h.49",
+      "set": [],
+      "sourceParagraph": 262
+    },
+    {
+      "id": "report_h.49",
+      "speaker": "荒原",
+      "text": "“谢谢你专门联系我。这件事交给我处理吧。”",
+      "day": 3,
+      "next": "report_h.50",
+      "set": [],
+      "sourceParagraph": 263
+    },
+    {
+      "id": "report_h.50",
+      "speaker": "{player}",
+      "text": "“好的，麻烦您了。”",
+      "day": 3,
+      "next": "report_h.51",
+      "set": [],
+      "sourceParagraph": 264
+    },
+    {
+      "id": "report_h.51",
+      "speaker": "荒原",
+      "text": "“对了。”",
+      "day": 3,
+      "next": "report_h.52",
+      "set": [],
+      "sourceParagraph": 265
+    },
+    {
+      "id": "report_h.52",
+      "speaker": "{player}",
+      "text": "“嗯？”",
+      "day": 3,
+      "next": "report_h.53",
+      "set": [],
+      "sourceParagraph": 266
+    },
+    {
+      "id": "report_h.53",
+      "speaker": "荒原",
+      "text": "“在调查结果出来之前，尽量不要再与那个程序进行任何交互。”",
+      "day": 3,
+      "next": "report_h.54",
+      "set": [],
+      "sourceParagraph": 267
+    },
+    {
+      "id": "report_h.54",
+      "speaker": "{player}",
+      "text": "“了解。”",
+      "day": 3,
+      "next": "report_h.55",
+      "set": [],
+      "sourceParagraph": 268
+    },
+    {
+      "id": "report_h.55",
+      "speaker": "荒原",
+      "text": "“还有，如果它再次联系你，第一时间告诉我。”",
+      "day": 3,
+      "next": "report_h.56",
+      "set": [],
+      "sourceParagraph": 269
+    },
+    {
+      "id": "report_h.56",
+      "speaker": "{player}",
+      "text": "“好的。”",
+      "day": 3,
+      "next": "report_h.57",
+      "set": [],
+      "sourceParagraph": 270
+    },
+    {
+      "id": "report_h.57",
+      "speaker": "荒原",
+      "text": "“那么，早点休息吧。”",
+      "day": 3,
+      "next": "report_h.58",
+      "set": [],
+      "sourceParagraph": 271
+    },
+    {
+      "id": "report_h.58",
+      "speaker": "荒原",
+      "text": "“祝你无缘宇宙终章。”",
+      "day": 3,
+      "next": "report_h.59",
+      "set": [],
+      "sourceParagraph": 272
+    },
+    {
+      "id": "report_h.59",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "report_h.60",
+      "set": [],
+      "sourceParagraph": 274
+    },
+    {
+      "id": "report_h.60",
+      "speaker": "{player}",
+      "text": "“没想到事情这么严重。”",
+      "day": 3,
+      "next": "report_h.61",
+      "set": [],
+      "sourceParagraph": 275
+    },
+    {
+      "id": "report_h.61",
+      "speaker": "飞白",
+      "text": "“您希望我如何处理Rosetta-Hanna的通讯记录？”",
+      "day": 3,
+      "next": "report_h.62",
+      "set": [],
+      "sourceParagraph": 276
+    },
+    {
+      "id": "report_h.62",
+      "speaker": "{player}",
+      "text": "“先保存起来吧。荒原不是说不要修改和删除吗？”",
+      "day": 3,
+      "next": "report_h.63",
+      "set": [],
+      "sourceParagraph": 277
+    },
+    {
+      "id": "report_h.63",
+      "speaker": "飞白",
+      "text": "“好的，已完成独立归档。”",
+      "day": 3,
+      "next": "report_h.64",
+      "set": [],
+      "sourceParagraph": 278
+    },
+    {
+      "id": "report_h.64",
+      "speaker": "{player}",
+      "text": "“希望他们能早点查清楚。”",
+      "day": 3,
+      "next": "security",
+      "set": [],
+      "sourceParagraph": 279
+    },
+    {
+      "id": "security",
+      "speaker": "飞白",
+      "text": "”有来自圣殇的消息，需要查看吗。“",
+      "day": 3,
+      "next": "security.1",
+      "set": [],
+      "sourceParagraph": 284
+    },
+    {
+      "id": "security.1",
+      "speaker": "飞白",
+      "text": "”有来自费加罗的消息，需要查看吗。“",
+      "day": 3,
+      "next": "security.2",
+      "set": [],
+      "sourceParagraph": 285
+    },
+    {
+      "id": "security.2",
+      "speaker": "{player}",
+      "text": "“现在可是休息时间……费加罗先不理，看下圣殇发了什么“",
+      "day": 3,
+      "next": "security.3",
+      "set": [],
+      "sourceParagraph": 286
+    },
+    {
+      "id": "security.3",
+      "speaker": "圣殇",
+      "text": "",
+      "day": 3,
+      "next": "security.4",
+      "set": [],
+      "sourceParagraph": 287
+    },
+    {
+      "id": "security.4",
+      "speaker": "终端文书",
+      "text": "【文明逆熵策略部·内部通知】",
+      "day": 3,
+      "next": "security.5",
+      "set": [],
+      "sourceParagraph": 288
+    },
+    {
+      "id": "security.5",
+      "speaker": "终端文书",
+      "text": "关于开展部门信息安全专项核查的通知",
+      "day": 3,
+      "next": "security.6",
+      "set": [],
+      "sourceParagraph": 289
+    },
+    {
+      "id": "security.6",
+      "speaker": "终端文书",
+      "text": "致文明逆熵策略部全体同事：",
+      "day": 3,
+      "next": "security.7",
+      "set": [],
+      "sourceParagraph": 290
+    },
+    {
+      "id": "security.7",
+      "speaker": "终端文书",
+      "text": "近日，部门收到有关外部组织可能非法介入我司信息系统的安全报告。经与《裁星计划》项目负责人荒原商议，现决定即日起对文明逆熵策略部开展全面信息安全核查。",
+      "day": 3,
+      "next": "security.8",
+      "set": [],
+      "sourceParagraph": 291
+    },
+    {
+      "id": "security.8",
+      "speaker": "终端文书",
+      "text": "本次核查将覆盖部门全体成员及其所使用的公务终端、通讯系统、个人AI与相关数据接口。核查期间，信息安全系统将临时获得必要的访问权限，以排查未经授权的信息传输、异常数据调用及潜在的外部干预。",
+      "day": 3,
+      "next": "security.9",
+      "set": [],
+      "sourceParagraph": 292
+    },
+    {
+      "id": "security.9",
+      "speaker": "终端文书",
+      "text": "请各位同事保持终端正常接入，妥善保存近期通讯及操作记录，切勿自行清除或修改相关数据。如发现任何可疑信息或异常行为，也请及时向部门安全管理系统反馈。",
+      "day": 3,
+      "next": "security.10",
+      "set": [],
+      "sourceParagraph": 293
+    },
+    {
+      "id": "security.10",
+      "speaker": "终端文书",
+      "text": "我理解，此次核查可能给各位的工作与生活带来一些不便，对此深表歉意。",
+      "day": 3,
+      "next": "security.11",
+      "set": [],
+      "sourceParagraph": 294
+    },
+    {
+      "id": "security.11",
+      "speaker": "终端文书",
+      "text": "也请大家不必过分担忧。此次核查面向全部门统一开展，并不意味着对任何同事的个人怀疑。我们将尽可能减少对正常工作的影响，妥善处理核查过程中涉及的个人信息。",
+      "day": 3,
+      "next": "security.12",
+      "set": [],
+      "sourceParagraph": 295
+    },
+    {
+      "id": "security.12",
+      "speaker": "终端文书",
+      "text": "长久以来，我始终感谢各位为部门、为宇宙文明的共同未来所付出的努力。正因我们肩负着如此重大的责任，才更需要以审慎、坦诚的态度面对每一处潜在的风险。",
+      "day": 3,
+      "next": "security.13",
+      "set": [],
+      "sourceParagraph": 296
+    },
+    {
+      "id": "security.13",
+      "speaker": "终端文书",
+      "text": "信息安全并非仅仅为了保护我们的工作成果，更是为了确保这些成果能够真正服务于我们共同的理想。",
+      "day": 3,
+      "next": "security.14",
+      "set": [],
+      "sourceParagraph": 297
+    },
+    {
+      "id": "security.14",
+      "speaker": "终端文书",
+      "text": "感谢各位的理解与配合。",
+      "day": 3,
+      "next": "security.15",
+      "set": [],
+      "sourceParagraph": 298
+    },
+    {
+      "id": "security.15",
+      "speaker": "终端文书",
+      "text": "愿你我得见宇宙新生。",
+      "day": 3,
+      "next": "security.16",
+      "set": [],
+      "sourceParagraph": 299
+    },
+    {
+      "id": "security.16",
+      "speaker": "终端文书",
+      "text": "圣殇",
+      "day": 3,
+      "next": "security.17",
+      "set": [],
+      "sourceParagraph": 300
+    },
+    {
+      "id": "security.17",
+      "speaker": "终端文书",
+      "text": "文明逆熵策略部 主任",
+      "day": 3,
+      "next": "security.18",
+      "set": [],
+      "sourceParagraph": 301
+    },
+    {
+      "id": "security.18",
+      "speaker": "{player}",
+      "text": "”动作这么快，不愧是Alpha职级的。”",
+      "day": 3,
+      "next": "security.19",
+      "set": [],
+      "sourceParagraph": 302
+    },
+    {
+      "id": "security.19",
+      "speaker": "{player}",
+      "text": "”飞白，这几天做好存档，我在终端的时候你要配合好审查。”",
+      "day": 3,
+      "next": "security.20",
+      "set": [],
+      "sourceParagraph": 303
+    },
+    {
+      "id": "security.20",
+      "speaker": "飞白",
+      "text": "”已记录指令。”",
+      "day": 3,
+      "next": "security.21",
+      "set": [],
+      "sourceParagraph": 304
+    },
+    {
+      "id": "security.21",
+      "speaker": "{player}",
+      "text": "“现在看看费加罗的消息吧“",
+      "day": 3,
+      "next": "security.22",
+      "set": [],
+      "sourceParagraph": 305
+    },
+    {
+      "id": "security.22",
+      "speaker": "费加罗",
+      "text": "”诶诶你听说了吗，模拟程序里被人埋了东西，就因为这个，刚刚荒原被内部监察部带走了，说他有重大嫌疑。“",
+      "day": 3,
+      "next": "security.23",
+      "set": [],
+      "sourceParagraph": 306
+    },
+    {
+      "id": "security.23",
+      "speaker": "{player}",
+      "text": "“……啊？”",
+      "day": 3,
+      "next": "security.24",
+      "set": [],
+      "sourceParagraph": 307
+    },
+    {
+      "id": "security.24",
+      "speaker": "{player}",
+      "text": "“等一下，荒原？你确定？”",
+      "day": 3,
+      "next": "security.25",
+      "set": [],
+      "sourceParagraph": 308
+    },
+    {
+      "id": "security.25",
+      "speaker": "费加罗",
+      "text": "“千真万确！听说监察部的人直接找上门了，连办公室都给封了。”",
+      "day": 3,
+      "next": "security.26",
+      "set": [],
+      "sourceParagraph": 309
+    },
+    {
+      "id": "security.26",
+      "speaker": "{player}",
+      "text": "“不是……凭什么？就因为程序出了问题？”",
+      "day": 3,
+      "next": "security.27",
+      "set": [],
+      "sourceParagraph": 310
+    },
+    {
+      "id": "security.27",
+      "speaker": "费加罗",
+      "text": "“谁知道呢。毕竟《裁星计划》是他负责的，真出了这么大的安全事故，总得有人负责吧。”",
+      "day": 3,
+      "next": "security.28",
+      "set": [],
+      "sourceParagraph": 311
+    },
+    {
+      "id": "security.28",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "security.29",
+      "set": [],
+      "sourceParagraph": 312
+    },
+    {
+      "id": "security.29",
+      "speaker": "费加罗",
+      "text": "“不过我还听说啊，这次安全核查好像就是荒原自己提出的。”",
+      "day": 3,
+      "next": "security.30",
+      "set": [],
+      "sourceParagraph": 313
+    },
+    {
+      "id": "security.30",
+      "speaker": "费加罗",
+      "text": "“很荒诞对吧？我听说的时候也觉得离谱。”",
+      "day": 3,
+      "next": "security.31",
+      "set": [],
+      "sourceParagraph": 314
+    },
+    {
+      "id": "security.31",
+      "speaker": "{player}",
+      "text": "“这不好笑。”",
+      "day": 3,
+      "next": "security.32",
+      "set": [],
+      "sourceParagraph": 315
+    },
+    {
+      "id": "security.32",
+      "speaker": "费加罗",
+      "text": "“怎么了？你跟荒原很熟？”",
+      "day": 3,
+      "next": "security.33",
+      "set": [],
+      "sourceParagraph": 316
+    },
+    {
+      "id": "security.33",
+      "speaker": "{player}",
+      "text": "“倒也不是……”",
+      "day": 3,
+      "next": "security.34",
+      "set": [],
+      "sourceParagraph": 317
+    },
+    {
+      "id": "security.34",
+      "speaker": "{player}",
+      "text": "“只是那个程序的问题……其实是我报告的。”",
+      "day": 3,
+      "next": "security.35",
+      "set": [],
+      "sourceParagraph": 318
+    },
+    {
+      "id": "security.35",
+      "speaker": "费加罗",
+      "text": "“……”",
+      "day": 3,
+      "next": "security.36",
+      "set": [],
+      "sourceParagraph": 319
+    },
+    {
+      "id": "security.36",
+      "speaker": "费加罗",
+      "text": "“等等。”",
+      "day": 3,
+      "next": "security.37",
+      "set": [],
+      "sourceParagraph": 320
+    },
+    {
+      "id": "security.37",
+      "speaker": "费加罗",
+      "text": "“你说什么？”",
+      "day": 3,
+      "next": "security.38",
+      "set": [],
+      "sourceParagraph": 321
+    },
+    {
+      "id": "security.38",
+      "speaker": "{player}",
+      "text": "“就是那个叫Rosetta的子程序。我在测试的时候发现的，感觉不像正常的测试内容，就反馈了一下。”",
+      "day": 3,
+      "next": "security.39",
+      "set": [],
+      "sourceParagraph": 322
+    },
+    {
+      "id": "security.39",
+      "speaker": "费加罗",
+      "text": "“……”",
+      "day": 3,
+      "next": "security.40",
+      "set": [],
+      "sourceParagraph": 323
+    },
+    {
+      "id": "security.40",
+      "speaker": "{player}",
+      "text": "“喂？人呢？”",
+      "day": 3,
+      "next": "security.41",
+      "set": [],
+      "sourceParagraph": 324
+    },
+    {
+      "id": "security.41",
+      "speaker": "费加罗",
+      "text": "“在在在。”",
+      "day": 3,
+      "next": "security.42",
+      "set": [],
+      "sourceParagraph": 325
+    },
+    {
+      "id": "security.42",
+      "speaker": "费加罗",
+      "text": "“不是，你怎么不早说啊！”",
+      "day": 3,
+      "next": "security.43",
+      "set": [],
+      "sourceParagraph": 326
+    },
+    {
+      "id": "security.43",
+      "speaker": "{player}",
+      "text": "“你也没问啊！”",
+      "day": 3,
+      "next": "security.44",
+      "set": [],
+      "sourceParagraph": 327
+    },
+    {
+      "id": "security.44",
+      "speaker": "费加罗",
+      "text": "“……行，怪我。”",
+      "day": 3,
+      "next": "security.45",
+      "set": [],
+      "sourceParagraph": 328
+    },
+    {
+      "id": "security.45",
+      "speaker": "{player}",
+      "text": "“所以到底怎么了？”",
+      "day": 3,
+      "next": "security.46",
+      "set": [],
+      "sourceParagraph": 329
+    },
+    {
+      "id": "security.46",
+      "speaker": "费加罗",
+      "text": "“没什么，没什么。”",
+      "day": 3,
+      "next": "security.47",
+      "set": [],
+      "sourceParagraph": 330
+    },
+    {
+      "id": "security.47",
+      "speaker": "费加罗",
+      "text": "“我就是觉得有点奇怪。照你这么说，荒原发现安全隐患之后立刻上报，结果反而被当成嫌疑人了？”",
+      "day": 3,
+      "next": "security.48",
+      "set": [],
+      "sourceParagraph": 331
+    },
+    {
+      "id": "security.48",
+      "speaker": "{player}",
+      "text": "“我也想不明白。”",
+      "day": 3,
+      "next": "security.49",
+      "set": [],
+      "sourceParagraph": 332
+    },
+    {
+      "id": "security.49",
+      "speaker": "费加罗",
+      "text": "“荒原和圣殇或者监察部没单独找你？”",
+      "day": 3,
+      "next": "security.50",
+      "set": [],
+      "sourceParagraph": 333
+    },
+    {
+      "id": "security.50",
+      "speaker": "{player}",
+      "text": "”没有啊，监察部找我估计得明天吧，圣殇和荒原哪有时间找我……不对，你到底想问什么？“",
+      "day": 3,
+      "next": "security.51",
+      "set": [],
+      "sourceParagraph": 334
+    },
+    {
+      "id": "security.51",
+      "speaker": "费加罗",
+      "text": "“没什么，就是好奇。”",
+      "day": 3,
+      "next": "security.52",
+      "set": [],
+      "sourceParagraph": 335
+    },
+    {
+      "id": "security.52",
+      "speaker": "{player}",
+      "text": "“怎么神神叨叨的。”",
+      "day": 3,
+      "next": "security.53",
+      "set": [],
+      "sourceParagraph": 336
+    },
+    {
+      "id": "security.53",
+      "speaker": "费加罗",
+      "text": "“哈哈，可能是被监察部吓到了吧。”",
+      "day": 3,
+      "next": "security.54",
+      "set": [],
+      "sourceParagraph": 337
+    },
+    {
+      "id": "security.54",
+      "speaker": "费加罗",
+      "text": "“对了，你看通知了吧？”",
+      "day": 3,
+      "next": "security.55",
+      "set": [],
+      "sourceParagraph": 338
+    },
+    {
+      "id": "security.55",
+      "speaker": "{player}",
+      "text": "“废话，不看通知我能知道这些？话说连个人AI都要接受核查这真是百年不见，上次好像还是星际和平局势紧张的时候。”",
+      "day": 3,
+      "next": "security.56",
+      "set": [],
+      "sourceParagraph": 339
+    },
+    {
+      "id": "security.56",
+      "speaker": "费加罗",
+      "text": "“那你这几天可得小心点。”",
+      "day": 3,
+      "next": "security.57",
+      "set": [],
+      "sourceParagraph": 340
+    },
+    {
+      "id": "security.57",
+      "speaker": "{player}",
+      "text": "“小心什么？我又没干什么见不得人的事。”",
+      "day": 3,
+      "next": "security.58",
+      "set": [],
+      "sourceParagraph": 341
+    },
+    {
+      "id": "security.58",
+      "speaker": "费加罗",
+      "text": "“也是，也是。”",
+      "day": 3,
+      "next": "security.59",
+      "set": [],
+      "sourceParagraph": 342
+    },
+    {
+      "id": "security.59",
+      "speaker": "费加罗",
+      "text": "“不过我劝你，最近最好别再主动提那个子程序的事了。”",
+      "day": 3,
+      "next": "security.60",
+      "set": [],
+      "sourceParagraph": 343
+    },
+    {
+      "id": "security.60",
+      "speaker": "{player}",
+      "text": "“为什么？”",
+      "day": 3,
+      "next": "security.61",
+      "set": [],
+      "sourceParagraph": 344
+    },
+    {
+      "id": "security.61",
+      "speaker": "费加罗",
+      "text": "“……你想啊，现在连项目负责人都被带走了，谁知道监察部会怎么调查？你可是第一个上报的人，万一把你也叫过去问话，多麻烦。”",
+      "day": 3,
+      "next": "security.62",
+      "set": [],
+      "sourceParagraph": 345
+    },
+    {
+      "id": "security.62",
+      "speaker": "{player}",
+      "text": "“我只是正常反馈测试问题，有什么不能说的？”",
+      "day": 3,
+      "next": "security.63",
+      "set": [],
+      "sourceParagraph": 346
+    },
+    {
+      "id": "security.63",
+      "speaker": "费加罗",
+      "text": "“话是这么说……”",
+      "day": 3,
+      "next": "security.64",
+      "set": [],
+      "sourceParagraph": 347
+    },
+    {
+      "id": "security.64",
+      "speaker": "费加罗",
+      "text": "“算了，当我没说。”",
+      "day": 3,
+      "next": "security.65",
+      "set": [],
+      "sourceParagraph": 348
+    },
+    {
+      "id": "security.65",
+      "speaker": "{player}",
+      "text": "“你是不是知道些什么？”",
+      "day": 3,
+      "next": "security.66",
+      "set": [],
+      "sourceParagraph": 349
+    },
+    {
+      "id": "security.66",
+      "speaker": "费加罗",
+      "text": "“我要真知道内幕，还能在这儿跟你聊天？”",
+      "day": 3,
+      "next": "security.67",
+      "set": [],
+      "sourceParagraph": 350
+    },
+    {
+      "id": "security.67",
+      "speaker": "{player}",
+      "text": "“那倒也是。”",
+      "day": 3,
+      "next": "security.68",
+      "set": [],
+      "sourceParagraph": 351
+    },
+    {
+      "id": "security.68",
+      "speaker": "费加罗",
+      "text": "“总之，最近部门估计不会太平。你自己注意点吧。”",
+      "day": 3,
+      "next": "security.69",
+      "set": [],
+      "sourceParagraph": 352
+    },
+    {
+      "id": "security.69",
+      "speaker": "{player}",
+      "text": "“知道了。你也是。”",
+      "day": 3,
+      "next": "security.70",
+      "set": [],
+      "sourceParagraph": 353
+    },
+    {
+      "id": "security.70",
+      "speaker": "费加罗",
+      "text": "“嗯嗯，那就先这样啦，晚安！”",
+      "day": 3,
+      "next": "security.71",
+      "set": [],
+      "sourceParagraph": 354
+    },
+    {
+      "id": "security.71",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "security.72",
+      "set": [],
+      "sourceParagraph": 356
+    },
+    {
+      "id": "security.72",
+      "speaker": "{player}",
+      "text": "“飞白。”",
+      "day": 3,
+      "next": "security.73",
+      "set": [],
+      "sourceParagraph": 357
+    },
+    {
+      "id": "security.73",
+      "speaker": "飞白",
+      "text": "“我在。”",
+      "day": 3,
+      "next": "security.74",
+      "set": [],
+      "sourceParagraph": 358
+    },
+    {
+      "id": "security.74",
+      "speaker": "{player}",
+      "text": "“你觉得荒原被带走这件事正常吗？”",
+      "day": 3,
+      "next": "security.75",
+      "set": [],
+      "sourceParagraph": 359
+    },
+    {
+      "id": "security.75",
+      "speaker": "飞白",
+      "text": "“根据现有信息，无法判断内部监察部采取行动的具体依据。”",
+      "day": 3,
+      "next": "security.76",
+      "set": [],
+      "sourceParagraph": 360
+    },
+    {
+      "id": "security.76",
+      "speaker": "{player}",
+      "text": "“也是。连圣殇都下发了全员核查通知，看来这件事确实不小。”",
+      "day": 3,
+      "next": "security.77",
+      "set": [],
+      "sourceParagraph": 361
+    },
+    {
+      "id": "security.77",
+      "speaker": "飞白",
+      "text": "“需要为您整理本次事件的相关记录吗？”",
+      "day": 3,
+      "next": "security.78",
+      "set": [],
+      "sourceParagraph": 362
+    },
+    {
+      "id": "security.78",
+      "speaker": "{player}",
+      "text": "“整理一下吧。尤其是我报告那个子程序的经过。”",
+      "day": 3,
+      "next": "security.79",
+      "set": [],
+      "sourceParagraph": 363
+    },
+    {
+      "id": "security.79",
+      "speaker": "飞白",
+      "text": "“好的。相关记录已归档。”",
+      "day": 3,
+      "next": "security.80",
+      "set": [],
+      "sourceParagraph": 364
+    },
+    {
+      "id": "security.80",
+      "speaker": "{player}",
+      "text": "“还有，刚才费加罗的通讯也保存一下。”",
+      "day": 3,
+      "next": "security.81",
+      "set": [],
+      "sourceParagraph": 365
+    },
+    {
+      "id": "security.81",
+      "speaker": "飞白",
+      "text": "“已保存。”",
+      "day": 3,
+      "next": "security.82",
+      "set": [],
+      "sourceParagraph": 366
+    },
+    {
+      "id": "security.82",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "security.83",
+      "set": [],
+      "sourceParagraph": 367
+    },
+    {
+      "id": "security.83",
+      "speaker": "{player}",
+      "text": "“飞白，你说我是不是给荒原惹麻烦了？”",
+      "day": 3,
+      "next": "security.84",
+      "set": [],
+      "sourceParagraph": 368
+    },
+    {
+      "id": "security.84",
+      "speaker": "飞白",
+      "text": "“您是在履行测试人员发现异常时应当报告的职责。”",
+      "day": 3,
+      "next": "security.85",
+      "set": [],
+      "sourceParagraph": 369
+    },
+    {
+      "id": "security.85",
+      "speaker": "{player}",
+      "text": "“我知道……我就是觉得有点对不起他。”",
+      "day": 3,
+      "next": "security.86",
+      "set": [],
+      "sourceParagraph": 370
+    },
+    {
+      "id": "security.86",
+      "speaker": "飞白",
+      "text": "“目前没有证据表明，荒原先生接受调查与您的报告存在直接因果关系。”",
+      "day": 3,
+      "next": "security.87",
+      "set": [],
+      "sourceParagraph": 371
+    },
+    {
+      "id": "security.87",
+      "speaker": "{player}",
+      "text": "“……你还真是一点都不会安慰人。”",
+      "day": 3,
+      "next": "security.88",
+      "set": [],
+      "sourceParagraph": 372
+    },
+    {
+      "id": "security.88",
+      "speaker": "飞白",
+      "text": "“抱歉。您需要我调整回复方式吗？”",
+      "day": 3,
+      "next": "security.89",
+      "set": [],
+      "sourceParagraph": 373
+    },
+    {
+      "id": "security.89",
+      "speaker": "{player}",
+      "text": "“不用了，这样挺好。”",
+      "day": 3,
+      "next": "security.90",
+      "set": [],
+      "sourceParagraph": 374
+    },
+    {
+      "id": "security.90",
+      "speaker": "{player}",
+      "text": "“算了，今天也够累的了。”",
+      "day": 3,
+      "next": "security.91",
+      "set": [],
+      "sourceParagraph": 375
+    },
+    {
+      "id": "security.91",
+      "speaker": "飞白",
+      "text": "“那么，需要为您结束今日工作会话吗？”",
+      "day": 3,
+      "next": "security.92",
+      "set": [],
+      "sourceParagraph": 376
+    },
+    {
+      "id": "security.92",
+      "speaker": "{player}",
+      "text": "“嗯，晚安，飞白。”",
+      "day": 3,
+      "next": "security.93",
+      "set": [],
+      "sourceParagraph": 377
+    },
+    {
+      "id": "security.93",
+      "speaker": "飞白",
+      "text": "“晚安。祝您有个好梦。”",
+      "day": 3,
+      "next": "day4",
+      "set": [],
+      "sourceParagraph": 378
+    },
+    {
+      "id": "seek",
+      "speaker": "{player}",
+      "text": "“……飞白。”",
+      "day": 3,
+      "next": "seek.1",
+      "set": [],
+      "sourceParagraph": 385
+    },
+    {
+      "id": "seek.1",
+      "speaker": "飞白",
+      "text": "“我在。”",
+      "day": 3,
+      "next": "seek.2",
+      "set": [],
+      "sourceParagraph": 386
+    },
+    {
+      "id": "seek.2",
+      "speaker": "{player}",
+      "text": "“刚才那条消息，你能查到是谁发来的吗？”",
+      "day": 3,
+      "next": "seek.3",
+      "set": [],
+      "sourceParagraph": 387
+    },
+    {
+      "id": "seek.3",
+      "speaker": "飞白",
+      "text": "“您指的是Rosetta-Hanna吗？”",
+      "day": 3,
+      "next": "seek.4",
+      "set": [],
+      "sourceParagraph": 388
+    },
+    {
+      "id": "seek.4",
+      "speaker": "{player}",
+      "text": "“对。既然它能把消息发送到我的私人终端，那应该留下了什么记录吧？”",
+      "day": 3,
+      "next": "seek.5",
+      "set": [],
+      "sourceParagraph": 389
+    },
+    {
+      "id": "seek.5",
+      "speaker": "飞白",
+      "text": "“我可以尝试分析消息的传输信息。”",
+      "day": 3,
+      "next": "seek.6",
+      "set": [],
+      "sourceParagraph": 390
+    },
+    {
+      "id": "seek.6",
+      "speaker": "{player}",
+      "text": "“那就拜托你了。”",
+      "day": 3,
+      "next": "seek.7",
+      "set": [],
+      "sourceParagraph": 391
+    },
+    {
+      "id": "seek.7",
+      "speaker": "飞白",
+      "text": "“很抱歉，我无法确认发送方的真实身份。”",
+      "day": 3,
+      "next": "seek.8",
+      "set": [],
+      "sourceParagraph": 393
+    },
+    {
+      "id": "seek.8",
+      "speaker": "{player}",
+      "text": "“怎么会？”",
+      "day": 3,
+      "next": "seek.9",
+      "set": [],
+      "sourceParagraph": 394
+    },
+    {
+      "id": "seek.9",
+      "speaker": "飞白",
+      "text": "“该消息的发送地址未能关联到任何可验证的身份记录，传输路径也无法完整还原。”",
+      "day": 3,
+      "next": "seek.10",
+      "set": [],
+      "sourceParagraph": 395
+    },
+    {
+      "id": "seek.10",
+      "speaker": "{player}",
+      "text": "“……连你也查不到？”",
+      "day": 3,
+      "next": "seek.11",
+      "set": [],
+      "sourceParagraph": 396
+    },
+    {
+      "id": "seek.11",
+      "speaker": "飞白",
+      "text": "“是的。”",
+      "day": 3,
+      "next": "seek.12",
+      "set": [],
+      "sourceParagraph": 397
+    },
+    {
+      "id": "seek.12",
+      "speaker": "{player}",
+      "text": "“那……能给它回消息吗？”",
+      "day": 3,
+      "next": "seek.13",
+      "set": [],
+      "sourceParagraph": 398
+    },
+    {
+      "id": "seek.13",
+      "speaker": "飞白",
+      "text": "“可以尝试向原地址发送回复，但无法保证对方能够接收。”",
+      "day": 3,
+      "next": "seek.14",
+      "set": [],
+      "sourceParagraph": 399
+    },
+    {
+      "id": "seek.14",
+      "speaker": "{player}",
+      "text": "“……这样啊。”",
+      "day": 3,
+      "next": "seek.15",
+      "set": [],
+      "sourceParagraph": 400
+    },
+    {
+      "id": "seek.15",
+      "speaker": "{player}",
+      "text": "“那就试试看吧。”",
+      "day": 3,
+      "next": "seek.16",
+      "set": [],
+      "sourceParagraph": 401
+    },
+    {
+      "id": "seek.16",
+      "speaker": "飞白",
+      "text": "“请问您想发送什么内容？”",
+      "day": 3,
+      "next": "seek.17",
+      "set": [],
+      "sourceParagraph": 402
+    },
+    {
+      "id": "seek.17",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "seek.18",
+      "set": [],
+      "sourceParagraph": 403
+    },
+    {
+      "id": "seek.18",
+      "speaker": "{player}",
+      "text": "“我不知道你是谁，也不知道你的目的是什么。”",
+      "day": 3,
+      "next": "seek.19",
+      "set": [],
+      "sourceParagraph": 405
+    },
+    {
+      "id": "seek.19",
+      "speaker": "{player}",
+      "text": "“但如果你真的有能力干涉裁星计划……”",
+      "day": 3,
+      "next": "seek.20",
+      "set": [],
+      "sourceParagraph": 406
+    },
+    {
+      "id": "seek.20",
+      "speaker": "{player}",
+      "text": "“我想和你谈谈。”",
+      "day": 3,
+      "next": "seek.21",
+      "set": [],
+      "sourceParagraph": 407
+    },
+    {
+      "id": "seek.21",
+      "speaker": "飞白",
+      "text": "“是否发送？”",
+      "day": 3,
+      "next": "seek.22",
+      "set": [],
+      "sourceParagraph": 408
+    },
+    {
+      "id": "seek.22",
+      "speaker": "{player}",
+      "text": "“发送。”",
+      "day": 3,
+      "next": "seek.23",
+      "set": [],
+      "sourceParagraph": 409
+    },
+    {
+      "id": "seek.23",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "seek.24",
+      "set": [],
+      "sourceParagraph": 413
+    },
+    {
+      "id": "seek.24",
+      "speaker": "{player}",
+      "text": "“起码试过了。”",
+      "day": 3,
+      "next": "seek.25",
+      "set": [],
+      "sourceParagraph": 414
+    },
+    {
+      "id": "seek.25",
+      "speaker": "飞白",
+      "text": "“那需要继续尝试追踪该消息的来源吗？”",
+      "day": 3,
+      "next": "seek.26",
+      "set": [],
+      "sourceParagraph": 415
+    },
+    {
+      "id": "seek.26",
+      "speaker": "{player}",
+      "text": "“嗯。先把能找到的信息都整理出来吧。”",
+      "day": 3,
+      "next": "seek.27",
+      "set": [],
+      "sourceParagraph": 416
+    },
+    {
+      "id": "seek.27",
+      "speaker": "{player}",
+      "text": "“如果它真的是某个人为了阻止裁星计划而留下的程序……”",
+      "day": 3,
+      "next": "seek.28",
+      "set": [],
+      "sourceParagraph": 417
+    },
+    {
+      "id": "seek.28",
+      "speaker": "{player}",
+      "text": "“那我一定要找到它。”",
+      "day": 3,
+      "next": "seek.29",
+      "set": [],
+      "sourceParagraph": 418
+    },
+    {
+      "id": "seek.29",
+      "speaker": "飞白",
+      "text": "“您现在要休息吗？“",
+      "day": 3,
+      "next": "seek.30",
+      "set": [],
+      "sourceParagraph": 419
+    },
+    {
+      "id": "seek.30",
+      "speaker": "{player}",
+      "text": "“嗯，休息吧，晚安，飞白。”",
+      "day": 3,
+      "next": "seek.31",
+      "set": [],
+      "sourceParagraph": 420
+    },
+    {
+      "id": "seek.31",
+      "speaker": "飞白",
+      "text": "“晚安。祝您有个好梦。”",
+      "day": 3,
+      "next": "day4",
+      "set": [],
+      "sourceParagraph": 421
+    },
+    {
+      "id": "investigate",
+      "speaker": "{player}",
+      "text": "“……飞白。”",
+      "day": 3,
+      "next": "investigate.1",
+      "set": [],
+      "sourceParagraph": 424
+    },
+    {
+      "id": "investigate.1",
+      "speaker": "飞白",
+      "text": "“我在。”",
+      "day": 3,
+      "next": "investigate.2",
+      "set": [],
+      "sourceParagraph": 425
+    },
+    {
+      "id": "investigate.2",
+      "speaker": "{player}",
+      "text": "“你能不能判断，刚才两张图像里的曲率引擎痕迹，是不是来自同一支舰队？”",
+      "day": 3,
+      "next": "investigate.3",
+      "set": [],
+      "sourceParagraph": 426
+    },
+    {
+      "id": "investigate.3",
+      "speaker": "飞白",
+      "text": "“仅凭目前的影像信息无法确认。”",
+      "day": 3,
+      "next": "investigate.4",
+      "set": [],
+      "sourceParagraph": 427
+    },
+    {
+      "id": "investigate.4",
+      "speaker": "{player}",
+      "text": "“……也是，连星系内部都看不到。”",
+      "day": 3,
+      "next": "investigate.5",
+      "set": [],
+      "sourceParagraph": 428
+    },
+    {
+      "id": "investigate.5",
+      "speaker": "飞白",
+      "text": "“不过，如果您能够提供模拟程序中逃逸舰队的具体数据，我可以尝试进行比较。”",
+      "day": 3,
+      "next": "investigate.6",
+      "set": [],
+      "sourceParagraph": 429
+    },
+    {
+      "id": "investigate.6",
+      "speaker": "{player}",
+      "text": "“模拟里的数据……”",
+      "day": 3,
+      "next": "investigate.7",
+      "set": [],
+      "sourceParagraph": 430
+    },
+    {
+      "id": "investigate.7",
+      "speaker": "{player}",
+      "text": "“那不是得明天上班才能拿到吗。”",
+      "day": 3,
+      "next": "investigate.8",
+      "set": [],
+      "sourceParagraph": 431
+    },
+    {
+      "id": "investigate.8",
+      "speaker": "飞白",
+      "text": "“是的。您目前没有通过私人终端访问测试数据的权限。”",
+      "day": 3,
+      "next": "investigate.9",
+      "set": [],
+      "sourceParagraph": 432
+    },
+    {
+      "id": "investigate.9",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "investigate.10",
+      "set": [],
+      "sourceParagraph": 433
+    },
+    {
+      "id": "investigate.10",
+      "speaker": "{player}",
+      "text": "“我还是觉得很奇怪。”",
+      "day": 3,
+      "next": "investigate.11",
+      "set": [],
+      "sourceParagraph": 434
+    },
+    {
+      "id": "investigate.11",
+      "speaker": "{player}",
+      "text": "“如果只是普通的模拟，为什么会有人特意给我发送真实太阳系的图像？”",
+      "day": 3,
+      "next": "investigate.12",
+      "set": [],
+      "sourceParagraph": 435
+    },
+    {
+      "id": "investigate.12",
+      "speaker": "飞白",
+      "text": "“目前无法判断发送者的意图。”",
+      "day": 3,
+      "next": "investigate.13",
+      "set": [],
+      "sourceParagraph": 436
+    },
+    {
+      "id": "investigate.13",
+      "speaker": "{player}",
+      "text": "“而且偏偏是在我放走那支舰队之后。”",
+      "day": 3,
+      "next": "investigate.14",
+      "set": [],
+      "sourceParagraph": 437
+    },
+    {
+      "id": "investigate.14",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "investigate.15",
+      "set": [],
+      "sourceParagraph": 438
+    },
+    {
+      "id": "investigate.15",
+      "speaker": "{player}",
+      "text": "“飞白，你说有没有可能，整个裁星计划的模拟程序都存在我们不知道的问题？”",
+      "day": 3,
+      "next": "investigate.16",
+      "set": [],
+      "sourceParagraph": 439
+    },
+    {
+      "id": "investigate.16",
+      "speaker": "飞白",
+      "text": "“存在这种可能，但目前没有足够的信息支持这一推断。”",
+      "day": 3,
+      "next": "investigate.17",
+      "set": [],
+      "sourceParagraph": 440
+    },
+    {
+      "id": "investigate.17",
+      "speaker": "{player}",
+      "text": "“嗯。”",
+      "day": 3,
+      "next": "investigate.18",
+      "set": [],
+      "sourceParagraph": 441
+    },
+    {
+      "id": "investigate.18",
+      "speaker": "{player}",
+      "text": "“那就先不要急着下结论吧。”",
+      "day": 3,
+      "next": "investigate.19",
+      "set": [],
+      "sourceParagraph": 442
+    },
+    {
+      "id": "investigate.19",
+      "speaker": "{player}",
+      "text": "“帮我把今天的事情按时间顺序整理一下。尤其是模拟里发生了什么、Rosetta说了什么，还有那两张图的拍摄时间。”",
+      "day": 3,
+      "next": "investigate.20",
+      "set": [],
+      "sourceParagraph": 443
+    },
+    {
+      "id": "investigate.20",
+      "speaker": "飞白",
+      "text": "“好的。”",
+      "day": 3,
+      "next": "investigate.21",
+      "set": [],
+      "sourceParagraph": 444
+    },
+    {
+      "id": "investigate.21",
+      "speaker": "{player}",
+      "text": "“明天进入终端之后，我再想办法确认。”",
+      "day": 3,
+      "next": "investigate.22",
+      "set": [],
+      "sourceParagraph": 445
+    },
+    {
+      "id": "investigate.22",
+      "speaker": "飞白",
+      "text": "“需要我为您建立专项调查档案吗？”",
+      "day": 3,
+      "next": "investigate.23",
+      "set": [],
+      "sourceParagraph": 446
+    },
+    {
+      "id": "investigate.23",
+      "speaker": "{player}",
+      "text": "“嗯，建一个吧。”",
+      "day": 3,
+      "next": "investigate.24",
+      "set": [],
+      "sourceParagraph": 447
+    },
+    {
+      "id": "investigate.24",
+      "speaker": "飞白",
+      "text": "“请问档案名称？”",
+      "day": 3,
+      "next": "investigate.25",
+      "set": [],
+      "sourceParagraph": 448
+    },
+    {
+      "id": "investigate.25",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 3,
+      "next": "investigate.26",
+      "set": [],
+      "sourceParagraph": 449
+    },
+    {
+      "id": "investigate.26",
+      "speaker": "{player}",
+      "text": "“就叫‘太阳系’吧。”",
+      "day": 3,
+      "next": "investigate.27",
+      "set": [],
+      "sourceParagraph": 450
+    },
+    {
+      "id": "investigate.27",
+      "speaker": "{player}",
+      "text": "“希望明天能找到点有用的东西。”",
+      "day": 3,
+      "next": "day4",
+      "set": [],
+      "sourceParagraph": 452
+    },
+    {
+      "id": "no_contact",
+      "speaker": "飞白",
+      "text": "本次工作记录已保存。休息后，请继续剩余测试。",
+      "day": 3,
+      "next": "day4",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "day4",
+      "speaker": "{player}",
+      "text": "“完蛋完蛋，在家耽误太多时间了，要赶不上这趟星际列车了”",
+      "day": 4,
+      "next": "day4.1",
+      "set": [],
+      "sourceParagraph": 458
+    },
+    {
+      "id": "day4.1",
+      "speaker": "飞白",
+      "text": "“需要提醒您....”",
+      "day": 4,
+      "next": "day4.2",
+      "set": [],
+      "sourceParagraph": 459
+    },
+    {
+      "id": "day4.2",
+      "speaker": "{player}",
+      "text": "“别说了！偏要让我用情绪调配，说什么经历不规律的昼夜节律后需要调整精神状态.....”",
+      "day": 4,
+      "next": "day4.3",
+      "set": [],
+      "sourceParagraph": 460
+    },
+    {
+      "id": "day4.3",
+      "speaker": "阿莱夫",
+      "text": "“你好啊，这位研究员，我看你身份识别上面的状态是自由工作时间，为什么要这么着急赶早上的通勤呢？”",
+      "day": 4,
+      "next": "day4.4",
+      "set": [],
+      "sourceParagraph": 461
+    },
+    {
+      "id": "day4.4",
+      "speaker": "{player}",
+      "text": "“什么？！”",
+      "day": 4,
+      "next": "day4.5",
+      "set": [],
+      "sourceParagraph": 462
+    },
+    {
+      "id": "day4.5",
+      "speaker": "飞白",
+      "text": "“不好意思，刚刚想要提醒您的就是这个，您现在处于自由工作时间状态，不必追赶早班通勤....”",
+      "day": 4,
+      "next": "day4.6",
+      "set": [],
+      "sourceParagraph": 463
+    },
+    {
+      "id": "day4.6",
+      "speaker": "{player}",
+      "text": "（呼呼呼）“知道了！”",
+      "day": 4,
+      "next": "day4.7",
+      "set": [],
+      "sourceParagraph": 464
+    },
+    {
+      "id": "day4.7",
+      "speaker": "阿莱夫",
+      "text": "“哎呀生气可对工作状态有不小影响”",
+      "day": 4,
+      "next": "day4.8",
+      "set": [],
+      "sourceParagraph": 465
+    },
+    {
+      "id": "day4.8",
+      "speaker": "飞白",
+      "text": "推荐您现在使用情绪调频调整精神状态",
+      "day": 4,
+      "next": "day4.9",
+      "set": [],
+      "sourceParagraph": 466
+    },
+    {
+      "id": "day4.9",
+      "speaker": "阿莱夫",
+      "text": "“我猜你的AI让你用情绪调频了吧？”",
+      "day": 4,
+      "next": "day4.10",
+      "set": [],
+      "sourceParagraph": 467
+    },
+    {
+      "id": "day4.10",
+      "speaker": "阿莱夫",
+      "text": "“最好还是用一下，情绪冲击可比情绪调节的副作用危害大多了。”",
+      "day": 4,
+      "next": "day4.11",
+      "set": [],
+      "sourceParagraph": 468
+    },
+    {
+      "id": "day4.11",
+      "speaker": "{player}",
+      "text": "选项：使用",
+      "day": 4,
+      "next": "day4.12",
+      "set": [],
+      "sourceParagraph": 469
+    },
+    {
+      "id": "day4.12",
+      "speaker": "{player}",
+      "text": "“......”",
+      "day": 4,
+      "next": "day4.13",
+      "set": [],
+      "sourceParagraph": 470
+    },
+    {
+      "id": "day4.13",
+      "speaker": "{player}",
+      "text": "“谢谢您的提醒以及您关于情绪调频的建议，请问您是？”",
+      "day": 4,
+      "next": "day4.14",
+      "set": [],
+      "sourceParagraph": 471
+    },
+    {
+      "id": "day4.14",
+      "speaker": "阿莱夫",
+      "text": "“我是策略部的交通调度员，负责这些卫星列车的调度，可以叫我“阿莱夫””",
+      "day": 4,
+      "next": "day4.15",
+      "set": [],
+      "sourceParagraph": 472
+    },
+    {
+      "id": "day4.15",
+      "speaker": "{player}",
+      "text": "“阿莱夫...”",
+      "day": 4,
+      "next": "day4.16",
+      "set": [],
+      "sourceParagraph": 473
+    },
+    {
+      "id": "day4.16",
+      "speaker": "阿莱夫",
+      "text": "“怎么了？我的代号有什么问题吗？”",
+      "day": 4,
+      "next": "day4.17",
+      "set": [],
+      "sourceParagraph": 474
+    },
+    {
+      "id": "day4.17",
+      "speaker": "{player}",
+      "text": "“总感觉在哪里见过...”",
+      "day": 4,
+      "next": "day4.18",
+      "set": [],
+      "sourceParagraph": 475
+    },
+    {
+      "id": "day4.18",
+      "speaker": "阿莱夫",
+      "text": "“呵呵，可能是哪部著名的文学作品吧”",
+      "day": 4,
+      "next": "day4.19",
+      "set": [],
+      "sourceParagraph": 476
+    },
+    {
+      "id": "day4.19",
+      "speaker": "阿莱夫",
+      "text": "“现在不是通勤时间，也没有别的任务需求，看你这么急，用终端帮你协调了一辆最近的卫星列车”",
+      "day": 4,
+      "next": "day4.20",
+      "set": [],
+      "sourceParagraph": 478
+    },
+    {
+      "id": "day4.20",
+      "speaker": "{player}",
+      "text": "“啊不用帮我的您也知道我不着急...”",
+      "day": 4,
+      "next": "day4.21",
+      "set": [],
+      "sourceParagraph": 479
+    },
+    {
+      "id": "day4.21",
+      "speaker": "阿莱夫",
+      "text": "“快走吧，要不然这一趟车就是空载咯”",
+      "day": 4,
+      "next": "day4.22",
+      "set": [],
+      "sourceParagraph": 480
+    },
+    {
+      "id": "day4.22",
+      "speaker": "{player}",
+      "text": "“呃啊...那好的，谢谢您！”",
+      "day": 4,
+      "next": "day4.route",
+      "set": [],
+      "sourceParagraph": 481
+    },
+    {
+      "id": "day4.route",
+      "speaker": "",
+      "text": "",
+      "day": 4,
+      "next": "day4.ready",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "reported",
+          "next": "day4.report",
+          "absent": false
+        },
+        {
+          "flag": "seek_rosetta",
+          "next": "day4.seek",
+          "absent": false
+        },
+        {
+          "flag": "investigate",
+          "next": "day4.investigate",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "day4.report",
+      "speaker": "{player}",
+      "text": "“卡农，荒原的调查怎么样了？”",
+      "day": 4,
+      "next": "day4.report.1",
+      "set": [],
+      "sourceParagraph": 492
+    },
+    {
+      "id": "day4.report.1",
+      "speaker": "卡农",
+      "text": "“根据最新的人事通知，荒原先生已结束内部监察部的初步问询，恢复《裁星计划》项目负责人的相关工作。”",
+      "day": 4,
+      "next": "day4.report.2",
+      "set": [],
+      "sourceParagraph": 493
+    },
+    {
+      "id": "day4.report.2",
+      "speaker": "{player}",
+      "text": "“……这么快？”",
+      "day": 4,
+      "next": "day4.report.3",
+      "set": [],
+      "sourceParagraph": 494
+    },
+    {
+      "id": "day4.report.3",
+      "speaker": "卡农",
+      "text": "“是的。部门专项信息安全核查仍在进行中。”",
+      "day": 4,
+      "next": "day4.report.4",
+      "set": [],
+      "sourceParagraph": 495
+    },
+    {
+      "id": "day4.report.4",
+      "speaker": "{player}",
+      "text": "“那找到Rosetta了吗？”",
+      "day": 4,
+      "next": "day4.report.5",
+      "set": [],
+      "sourceParagraph": 496
+    },
+    {
+      "id": "day4.report.5",
+      "speaker": "卡农",
+      "text": "“目前没有可向您公开的调查结果。”",
+      "day": 4,
+      "next": "day4.report.6",
+      "set": [],
+      "sourceParagraph": 497
+    },
+    {
+      "id": "day4.report.6",
+      "speaker": "{player}",
+      "text": "“……行吧。”",
+      "day": 4,
+      "next": "day4.ready",
+      "set": [],
+      "sourceParagraph": 498
+    },
+    {
+      "id": "day4.seek",
+      "speaker": "飞白",
+      "text": "“早上好。您昨天发往Rosetta-Hanna的消息，仍然没有收到送达确认。”",
+      "day": 4,
+      "next": "day4.seek.1",
+      "set": [],
+      "sourceParagraph": 500
+    },
+    {
+      "id": "day4.seek.1",
+      "speaker": "{player}",
+      "text": "“……还没回复？”",
+      "day": 4,
+      "next": "day4.seek.2",
+      "set": [],
+      "sourceParagraph": 501
+    },
+    {
+      "id": "day4.seek.2",
+      "speaker": "飞白",
+      "text": "“是的。”",
+      "day": 4,
+      "next": "day4.seek.3",
+      "set": [],
+      "sourceParagraph": 502
+    },
+    {
+      "id": "day4.seek.3",
+      "speaker": "{player}",
+      "text": "“那你能从它之前发来的图片里找到些什么吗？”",
+      "day": 4,
+      "next": "day4.seek.4",
+      "set": [],
+      "sourceParagraph": 503
+    },
+    {
+      "id": "day4.seek.4",
+      "speaker": "飞白",
+      "text": "“可以尝试分析原始文件信息。”",
+      "day": 4,
+      "next": "day4.seek.5",
+      "set": [],
+      "sourceParagraph": 504
+    },
+    {
+      "id": "day4.seek.5",
+      "speaker": "{player}",
+      "text": "“试试看。”",
+      "day": 4,
+      "next": "day4.seek.6",
+      "set": [],
+      "sourceParagraph": 505
+    },
+    {
+      "id": "day4.seek.6",
+      "speaker": "飞白",
+      "text": "“图像中的观测坐标与您昨日核验的信息一致。但原始文件中不存在可供确认的发送设备标识。”",
+      "day": 4,
+      "next": "day4.seek.7",
+      "set": [],
+      "sourceParagraph": 507
+    },
+    {
+      "id": "day4.seek.7",
+      "speaker": "{player}",
+      "text": "“……也就是说，对方不想让我们找到它。”",
+      "day": 4,
+      "next": "day4.seek.8",
+      "set": [],
+      "sourceParagraph": 508
+    },
+    {
+      "id": "day4.seek.8",
+      "speaker": "飞白",
+      "text": "“这是一种可能的解释。”",
+      "day": 4,
+      "next": "day4.seek.9",
+      "set": [],
+      "sourceParagraph": 509
+    },
+    {
+      "id": "day4.seek.9",
+      "speaker": "{player}",
+      "text": "“那它为什么又要主动联系我？”",
+      "day": 4,
+      "next": "day4.seek.10",
+      "set": [],
+      "sourceParagraph": 510
+    },
+    {
+      "id": "day4.seek.10",
+      "speaker": "飞白",
+      "text": "“目前无法判断。”",
+      "day": 4,
+      "next": "day4.seek.11",
+      "set": [],
+      "sourceParagraph": 511
+    },
+    {
+      "id": "day4.seek.11",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 4,
+      "next": "day4.seek.12",
+      "set": [],
+      "sourceParagraph": 512
+    },
+    {
+      "id": "day4.seek.12",
+      "speaker": "{player}",
+      "text": "“飞白，帮我记录一句话，是昨天在终端里面Rosetta说的”",
+      "day": 4,
+      "next": "day4.seek.13",
+      "set": [],
+      "sourceParagraph": 513
+    },
+    {
+      "id": "day4.seek.13",
+      "speaker": "飞白",
+      "text": "“正在等待记录。”",
+      "day": 4,
+      "next": "day4.seek.14",
+      "set": [],
+      "sourceParagraph": 514
+    },
+    {
+      "id": "day4.seek.14",
+      "speaker": "{player}",
+      "text": "【Rosetta：“顺应猜想而诞生的工具而已，是坚持您的想法就会得见的火与书。”】",
+      "day": 4,
+      "next": "day4.seek.15",
+      "set": [],
+      "sourceParagraph": 515
+    },
+    {
+      "id": "day4.seek.15",
+      "speaker": "{player}",
+      "text": "“火与书……”",
+      "day": 4,
+      "next": "day4.seek.16",
+      "set": [],
+      "sourceParagraph": 516
+    },
+    {
+      "id": "day4.seek.16",
+      "speaker": "{player}",
+      "text": "“算了，猜也猜不出来。”",
+      "day": 4,
+      "next": "day4.seek.17",
+      "set": [],
+      "sourceParagraph": 517
+    },
+    {
+      "id": "day4.seek.17",
+      "speaker": "{player}",
+      "text": "“既然它是从测试程序里出现的，那今天再进去看看吧。”",
+      "day": 4,
+      "next": "day4.seek.18",
+      "set": [],
+      "sourceParagraph": 518
+    },
+    {
+      "id": "day4.seek.18",
+      "speaker": "飞白",
+      "text": "“是否需要我为您记录这一安排？”",
+      "day": 4,
+      "next": "day4.seek.19",
+      "set": [],
+      "sourceParagraph": 519
+    },
+    {
+      "id": "day4.seek.19",
+      "speaker": "{player}",
+      "text": "“嗯。”",
+      "day": 4,
+      "next": "day4.ready",
+      "set": [],
+      "sourceParagraph": 520
+    },
+    {
+      "id": "day4.investigate",
+      "speaker": "飞白",
+      "text": "“早上好。关于您昨天建立的‘太阳系’档案，我已经完成了初步整理。”",
+      "day": 4,
+      "next": "day4.investigate.1",
+      "set": [],
+      "sourceParagraph": 522
+    },
+    {
+      "id": "day4.investigate.1",
+      "speaker": "{player}",
+      "text": "“有发现吗？”",
+      "day": 4,
+      "next": "day4.investigate.2",
+      "set": [],
+      "sourceParagraph": 523
+    },
+    {
+      "id": "day4.investigate.2",
+      "speaker": "飞白",
+      "text": "“两份影像之间不存在明显的时空矛盾，但目前仍无法确认它们与模拟任务之间存在因果关系。”",
+      "day": 4,
+      "next": "day4.investigate.3",
+      "set": [],
+      "sourceParagraph": 524
+    },
+    {
+      "id": "day4.investigate.3",
+      "speaker": "{player}",
+      "text": "“……我想也是。”",
+      "day": 4,
+      "next": "day4.investigate.4",
+      "set": [],
+      "sourceParagraph": 525
+    },
+    {
+      "id": "day4.investigate.4",
+      "speaker": "{player}",
+      "text": "“对了，模拟程序有没有公开的技术资料？”",
+      "day": 4,
+      "next": "day4.investigate.5",
+      "set": [],
+      "sourceParagraph": 526
+    },
+    {
+      "id": "day4.investigate.5",
+      "speaker": "飞白",
+      "text": "“《裁星计划》公开的技术说明中包含白模宇宙建模方法、数据来源及基础通讯结构。”",
+      "day": 4,
+      "next": "day4.investigate.6",
+      "set": [],
+      "sourceParagraph": 527
+    },
+    {
+      "id": "day4.investigate.6",
+      "speaker": "{player}",
+      "text": "“帮我找一下有没有关于真实宇宙数据输入的内容。”",
+      "day": 4,
+      "next": "day4.investigate.7",
+      "set": [],
+      "sourceParagraph": 528
+    },
+    {
+      "id": "day4.investigate.7",
+      "speaker": "飞白",
+      "text": "“已找到相关条目。”",
+      "day": 4,
+      "next": "day4.investigate.8",
+      "set": [],
+      "sourceParagraph": 530
+    },
+    {
+      "id": "day4.investigate.8",
+      "speaker": "{player}",
+      "text": "“……也就是说，模拟里的太阳系确实可能来自真实宇宙。”",
+      "day": 4,
+      "next": "day4.investigate.9",
+      "set": [],
+      "sourceParagraph": 532
+    },
+    {
+      "id": "day4.investigate.9",
+      "speaker": "飞白",
+      "text": "“是的。”",
+      "day": 4,
+      "next": "day4.investigate.10",
+      "set": [],
+      "sourceParagraph": 533
+    },
+    {
+      "id": "day4.investigate.10",
+      "speaker": "{player}",
+      "text": "“那反过来呢？”",
+      "day": 4,
+      "next": "day4.investigate.11",
+      "set": [],
+      "sourceParagraph": 534
+    },
+    {
+      "id": "day4.investigate.11",
+      "speaker": "飞白",
+      "text": "“反过来？”",
+      "day": 4,
+      "next": "day4.investigate.12",
+      "set": [],
+      "sourceParagraph": 535
+    },
+    {
+      "id": "day4.investigate.12",
+      "speaker": "{player}",
+      "text": "“模拟程序有没有办法向真实宇宙发送指令？”",
+      "day": 4,
+      "next": "day4.investigate.13",
+      "set": [],
+      "sourceParagraph": 536
+    },
+    {
+      "id": "day4.investigate.13",
+      "speaker": "飞白",
+      "text": "“公开技术说明中未包含此类功能。”",
+      "day": 4,
+      "next": "day4.investigate.14",
+      "set": [],
+      "sourceParagraph": 537
+    },
+    {
+      "id": "day4.investigate.14",
+      "speaker": "{player}",
+      "text": "“未包含……说明存在这种可能。”",
+      "day": 4,
+      "next": "day4.investigate.15",
+      "set": [],
+      "sourceParagraph": 538
+    },
+    {
+      "id": "day4.investigate.15",
+      "speaker": "飞白",
+      "text": "“是的。不过根据现有权限，我无法进一步确认。”",
+      "day": 4,
+      "next": "day4.investigate.16",
+      "set": [],
+      "sourceParagraph": 539
+    },
+    {
+      "id": "day4.investigate.16",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 4,
+      "next": "day4.investigate.17",
+      "set": [],
+      "sourceParagraph": 540
+    },
+    {
+      "id": "day4.investigate.17",
+      "speaker": "{player}",
+      "text": "“那就只能等下次进入测试终端了。”",
+      "day": 4,
+      "next": "day4.investigate.18",
+      "set": [],
+      "sourceParagraph": 541
+    },
+    {
+      "id": "day4.investigate.18",
+      "speaker": "飞白",
+      "text": "“好的。”",
+      "day": 4,
+      "next": "day4.ready",
+      "set": [],
+      "sourceParagraph": 543
+    },
+    {
+      "id": "day4.ready",
+      "speaker": "办公终端",
+      "text": "第4天·第5项测试准备就绪。",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "post5",
+      "speaker": "卡农",
+      "text": "第五次模拟结束。建议您今晚完成第六次模拟。最终考核前，终端需要重启一次，您可以回到办公室稍作休息。",
+      "day": 4,
+      "next": "post5.route",
+      "set": [],
+      "sourceParagraph": 547
+    },
+    {
+      "id": "post5.route",
+      "speaker": "",
+      "text": "",
+      "day": 4,
+      "next": "post5.ready",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "reported",
+          "next": "post5.report",
+          "absent": false
+        },
+        {
+          "flag": "rosetta_overwrite",
+          "next": "post5.escape5",
+          "absent": false
+        },
+        {
+          "flag": "investigate",
+          "next": "post5.investigate",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "post5.report",
+      "speaker": "{player}",
+      "text": "“他不是刚被调查完吗……看看吧。”",
+      "day": 4,
+      "next": "post5.report.1",
+      "set": [],
+      "sourceParagraph": 548
+    },
+    {
+      "id": "post5.report.1",
+      "speaker": "{player}",
+      "text": "“都这么晚了啊，算了，把最后这次模拟做完吧“",
+      "day": 4,
+      "next": "post5.report.2",
+      "set": [],
+      "sourceParagraph": 550
+    },
+    {
+      "id": "post5.report.2",
+      "speaker": "飞白",
+      "text": "“有来自荒原的消息，需要查看吗？”",
+      "day": 4,
+      "next": "post5.report.3",
+      "set": [],
+      "sourceParagraph": 552
+    },
+    {
+      "id": "post5.report.3",
+      "speaker": "{player}",
+      "text": "“查看。“",
+      "day": 4,
+      "next": "post5.report.4",
+      "set": [],
+      "sourceParagraph": 553
+    },
+    {
+      "id": "post5.report.4",
+      "speaker": "荒原",
+      "text": "“晚上好。关于你之前报告的Rosetta程序，初步调查已经确认，执行终端确实存在未经授权的访问记录。”",
+      "day": 4,
+      "next": "post5.report.5",
+      "set": [],
+      "sourceParagraph": 554
+    },
+    {
+      "id": "post5.report.5",
+      "speaker": "荒原",
+      "text": "“目前我们正在追查异常访问的来源。相关程序已被列入重点核查范围。”",
+      "day": 4,
+      "next": "post5.report.6",
+      "set": [],
+      "sourceParagraph": 555
+    },
+    {
+      "id": "post5.report.6",
+      "speaker": "荒原",
+      "text": "“在调查结束之前，测试将继续按照既定计划进行。我会负责确保考核结果的可靠性。”",
+      "day": 4,
+      "next": "post5.report.7",
+      "set": [],
+      "sourceParagraph": 556
+    },
+    {
+      "id": "post5.report.7",
+      "speaker": "荒原",
+      "text": "“再次感谢你的报告。”",
+      "day": 4,
+      "next": "post5.report.8",
+      "set": [],
+      "sourceParagraph": 557
+    },
+    {
+      "id": "post5.report.8",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 4,
+      "next": "post5.report.9",
+      "set": [],
+      "sourceParagraph": 558
+    },
+    {
+      "id": "post5.report.9",
+      "speaker": "{player}",
+      "text": "“行吧，至少查出点东西了。”",
+      "day": 4,
+      "next": "post5.report.10",
+      "set": [],
+      "sourceParagraph": 559
+    },
+    {
+      "id": "post5.report.10",
+      "speaker": "飞白",
+      "text": "“需要回复吗？”",
+      "day": 4,
+      "next": "post5.report.11",
+      "set": [],
+      "sourceParagraph": 560
+    },
+    {
+      "id": "post5.report.11",
+      "speaker": "{player}",
+      "text": "“帮我回一句‘辛苦了’，就好。”",
+      "day": 4,
+      "next": "post5.report.12",
+      "set": [],
+      "sourceParagraph": 561
+    },
+    {
+      "id": "post5.report.12",
+      "speaker": "飞白",
+      "text": "“好的。”",
+      "day": 4,
+      "next": "post5.ready",
+      "set": [],
+      "sourceParagraph": 562
+    },
+    {
+      "id": "post5.response",
+      "speaker": "飞白",
+      "text": "“有来自Rosetta-Hanna的消息。”",
+      "day": 4,
+      "next": "post5.response.1",
+      "set": [],
+      "sourceParagraph": 570
+    },
+    {
+      "id": "post5.response.1",
+      "speaker": "{player}",
+      "text": "“……！”",
+      "day": 4,
+      "next": "post5.response.2",
+      "set": [],
+      "sourceParagraph": 571
+    },
+    {
+      "id": "post5.response.2",
+      "speaker": "{player}",
+      "text": "“快打开。”",
+      "day": 4,
+      "next": "post5.response.3",
+      "set": [],
+      "sourceParagraph": 572
+    },
+    {
+      "id": "post5.response.3",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 4,
+      "next": "post5.response.4",
+      "set": [],
+      "sourceParagraph": 575
+    },
+    {
+      "id": "post5.response.4",
+      "speaker": "{player}",
+      "text": "“飞白，回复它。”",
+      "day": 4,
+      "next": "post5.response.5",
+      "set": [],
+      "sourceParagraph": 576
+    },
+    {
+      "id": "post5.response.5",
+      "speaker": "飞白",
+      "text": "“您希望回复什么？”",
+      "day": 4,
+      "next": "post5.response.6",
+      "set": [],
+      "sourceParagraph": 577
+    },
+    {
+      "id": "post5.response.6",
+      "speaker": "{player}",
+      "text": "“你们到底是谁？”",
+      "day": 4,
+      "next": "post5.response.7",
+      "set": [],
+      "sourceParagraph": 578
+    },
+    {
+      "id": "post5.response.7",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 4,
+      "next": "post5.response.8",
+      "set": [],
+      "sourceParagraph": 581
+    },
+    {
+      "id": "post5.response.8",
+      "speaker": "{player}",
+      "text": "“‘我们’……”",
+      "day": 4,
+      "next": "post5.response.9",
+      "set": [],
+      "sourceParagraph": 582
+    },
+    {
+      "id": "post5.response.9",
+      "speaker": "{player}",
+      "text": "“原来不止一个吗？”",
+      "day": 4,
+      "next": "post5.ready",
+      "set": [],
+      "sourceParagraph": 583
+    },
+    {
+      "id": "post5.investigate",
+      "speaker": "{player}",
+      "text": "“飞白，我把今天测试时记下来的一段系统信息发给你。”",
+      "day": 4,
+      "next": "post5.investigate.1",
+      "set": [],
+      "sourceParagraph": 586
+    },
+    {
+      "id": "post5.investigate.1",
+      "speaker": "飞白",
+      "text": "“已收到。”",
+      "day": 4,
+      "next": "post5.investigate.2",
+      "set": [],
+      "sourceParagraph": 587
+    },
+    {
+      "id": "post5.investigate.2",
+      "speaker": "{player}",
+      "text": "“里面有个数据编号，我不记得在之前的教学中见过。”",
+      "day": 4,
+      "next": "post5.investigate.3",
+      "set": [],
+      "sourceParagraph": 588
+    },
+    {
+      "id": "post5.investigate.3",
+      "speaker": "飞白",
+      "text": "“正在检索……”",
+      "day": 4,
+      "next": "post5.investigate.4",
+      "set": [],
+      "sourceParagraph": 589
+    },
+    {
+      "id": "post5.investigate.4",
+      "speaker": "飞白",
+      "text": "“该编号的格式与部门跨系统任务流转标识存在相似之处。”",
+      "day": 4,
+      "next": "post5.investigate.5",
+      "set": [],
+      "sourceParagraph": 590
+    },
+    {
+      "id": "post5.investigate.5",
+      "speaker": "{player}",
+      "text": "“……跨系统任务？”",
+      "day": 4,
+      "next": "post5.investigate.6",
+      "set": [],
+      "sourceParagraph": 591
+    },
+    {
+      "id": "post5.investigate.6",
+      "speaker": "飞白",
+      "text": "“是的。不过我无法通过公开资料确认其具体对应的业务。”",
+      "day": 4,
+      "next": "post5.investigate.7",
+      "set": [],
+      "sourceParagraph": 592
+    },
+    {
+      "id": "post5.investigate.7",
+      "speaker": "{player}",
+      "text": "“模拟程序为什么会出现这种编号……”",
+      "day": 4,
+      "next": "post5.investigate.8",
+      "set": [],
+      "sourceParagraph": 593
+    },
+    {
+      "id": "post5.investigate.8",
+      "speaker": "飞白",
+      "text": "“可能与数据导入、记录同步或其他内部业务有关。”",
+      "day": 4,
+      "next": "post5.investigate.9",
+      "set": [],
+      "sourceParagraph": 594
+    },
+    {
+      "id": "post5.investigate.9",
+      "speaker": "{player}",
+      "text": "“也就是说，还是得继续查。”",
+      "day": 4,
+      "next": "post5.investigate.10",
+      "set": [],
+      "sourceParagraph": 595
+    },
+    {
+      "id": "post5.investigate.10",
+      "speaker": "飞白",
+      "text": "“是的。”",
+      "day": 4,
+      "next": "post5.investigate.11",
+      "set": [],
+      "sourceParagraph": 596
+    },
+    {
+      "id": "post5.investigate.11",
+      "speaker": "{player}",
+      "text": "“先记下来吧。待会儿还有最后一关。”",
+      "day": 4,
+      "next": "post5.ready",
+      "set": [],
+      "sourceParagraph": 597
+    },
+    {
+      "id": "post5.ready",
+      "speaker": "办公终端",
+      "text": "第4天·夜间。第6项测试准备就绪。现实用时可能跨越多个自然日。",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "safety",
+      "speaker": "卡农",
+      "text": "警告。当前打击方案的预计影响范围已超出目标星系。该方案可能对非目标区域造成不可逆的宇宙结构损伤。",
+      "day": 4,
+      "next": "safety.ask",
+      "set": [],
+      "sourceParagraph": 600
+    },
+    {
+      "id": "safety.ask",
+      "speaker": "{player}",
+      "text": "是否继续执行？",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 605,
+      "choices": [
+        {
+          "id": "continue",
+          "text": "继续执行",
+          "next": "safety.confirm",
+          "set": []
+        },
+        {
+          "id": "cancel",
+          "text": "取消",
+          "next": "safety.cancel",
+          "set": [
+            "unsafe_cancelled"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety.confirm",
+      "speaker": "卡农",
+      "text": "请再次确认。该方案违反裁星执行标准中的宇宙结构安全限制。",
+      "day": 4,
+      "next": "safety.double",
+      "set": [],
+      "sourceParagraph": 607
+    },
+    {
+      "id": "safety.double",
+      "speaker": "{player}",
+      "text": "最终确认",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 609,
+      "choices": [
+        {
+          "id": "confirm",
+          "text": "确认执行",
+          "next": "safety.done",
+          "set": [
+            "unsafe_confirmed"
+          ]
+        },
+        {
+          "id": "cancel",
+          "text": "取消",
+          "next": "safety.cancel",
+          "set": [
+            "unsafe_cancelled"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety.done",
+      "speaker": "卡农",
+      "text": "已记录执行选择。继续完成第六项测试。",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "safety.cancel",
+      "speaker": "卡农",
+      "text": "已取消越界方案。继续按常规方案完成第六项测试。",
+      "day": 4,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "post6",
+      "speaker": "卡农",
+      "text": "“第六次适应性测试已结束。”",
+      "day": 6,
+      "next": "post6.1",
+      "set": [],
+      "sourceParagraph": 625
+    },
+    {
+      "id": "post6.1",
+      "speaker": "卡农",
+      "text": "“全部六项测试任务均已完成。”",
+      "day": 6,
+      "next": "post6.2",
+      "set": [],
+      "sourceParagraph": 626
+    },
+    {
+      "id": "post6.2",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "post6.3",
+      "set": [],
+      "sourceParagraph": 627
+    },
+    {
+      "id": "post6.3",
+      "speaker": "{player}",
+      "text": "“……啊。”",
+      "day": 6,
+      "next": "post6.4",
+      "set": [],
+      "sourceParagraph": 628
+    },
+    {
+      "id": "post6.4",
+      "speaker": "卡农",
+      "text": "“请问有什么问题吗？”",
+      "day": 6,
+      "next": "post6.5",
+      "set": [],
+      "sourceParagraph": 629
+    },
+    {
+      "id": "post6.5",
+      "speaker": "{player}",
+      "text": "“没事。”",
+      "day": 6,
+      "next": "post6.6",
+      "set": [],
+      "sourceParagraph": 630
+    },
+    {
+      "id": "post6.6",
+      "speaker": "{player}",
+      "text": "“就是突然觉得……还挺快的。”",
+      "day": 6,
+      "next": "post6.7",
+      "set": [],
+      "sourceParagraph": 631
+    },
+    {
+      "id": "post6.7",
+      "speaker": "{player}",
+      "text": "“我知道的。”",
+      "day": 6,
+      "next": "post6.8",
+      "set": [],
+      "sourceParagraph": 633
+    },
+    {
+      "id": "post6.8",
+      "speaker": "卡农",
+      "text": "“全部测试数据现已提交审核。”",
+      "day": 6,
+      "next": "post6.9",
+      "set": [],
+      "sourceParagraph": 634
+    },
+    {
+      "id": "post6.9",
+      "speaker": "卡农",
+      "text": "“正式考核结果预计于明日上午公布。”",
+      "day": 6,
+      "next": "post6.10",
+      "set": [],
+      "sourceParagraph": 635
+    },
+    {
+      "id": "post6.10",
+      "speaker": "{player}",
+      "text": "“嗯。”",
+      "day": 6,
+      "next": "post6.11",
+      "set": [],
+      "sourceParagraph": 636
+    },
+    {
+      "id": "post6.11",
+      "speaker": "卡农",
+      "text": "“感谢您在此次适应性测试期间付出的努力。”",
+      "day": 6,
+      "next": "post6.12",
+      "set": [],
+      "sourceParagraph": 637
+    },
+    {
+      "id": "post6.12",
+      "speaker": "卡农",
+      "text": "“期待未来仍有机会为您提供服务。”",
+      "day": 6,
+      "next": "post6.13",
+      "set": [],
+      "sourceParagraph": 638
+    },
+    {
+      "id": "post6.13",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "post6.14",
+      "set": [],
+      "sourceParagraph": 639
+    },
+    {
+      "id": "post6.14",
+      "speaker": "{player}",
+      "text": "“……也谢谢你了，卡农。”",
+      "day": 6,
+      "next": "post6.15",
+      "set": [],
+      "sourceParagraph": 640
+    },
+    {
+      "id": "post6.15",
+      "speaker": "卡农",
+      "text": "“不客气。这是我的职责。”",
+      "day": 6,
+      "next": "post6.16",
+      "set": [],
+      "sourceParagraph": 641
+    },
+    {
+      "id": "post6.16",
+      "speaker": "{player}",
+      "text": "“那我走了。”",
+      "day": 6,
+      "next": "post6.17",
+      "set": [],
+      "sourceParagraph": 642
+    },
+    {
+      "id": "post6.17",
+      "speaker": "卡农",
+      "text": "“愿您得见宇宙新生。”",
+      "day": 6,
+      "next": "post6.18",
+      "set": [],
+      "sourceParagraph": 643
+    },
+    {
+      "id": "post6.18",
+      "speaker": "飞白",
+      "text": "“欢迎回来。全部测试辛苦了。”",
+      "day": 6,
+      "next": "post6.19",
+      "set": [],
+      "sourceParagraph": 646
+    },
+    {
+      "id": "post6.19",
+      "speaker": "{player}",
+      "text": "“终于结束了……”",
+      "day": 6,
+      "next": "post6.20",
+      "set": [],
+      "sourceParagraph": 647
+    },
+    {
+      "id": "post6.20",
+      "speaker": "飞白",
+      "text": "“需要安排庆祝活动吗？”",
+      "day": 6,
+      "next": "post6.21",
+      "set": [],
+      "sourceParagraph": 648
+    },
+    {
+      "id": "post6.21",
+      "speaker": "{player}",
+      "text": "“等明天结果出来再说吧。”",
+      "day": 6,
+      "next": "post6.route",
+      "set": [],
+      "sourceParagraph": 649
+    },
+    {
+      "id": "post6.route",
+      "speaker": "",
+      "text": "",
+      "day": 6,
+      "next": "post6.results",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "reported",
+          "next": "post6.report",
+          "absent": false
+        },
+        {
+          "flag": "rosetta_overwrite",
+          "next": "post6.proof",
+          "absent": false
+        },
+        {
+          "flag": "investigate",
+          "next": "post6.proof",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "post6.report",
+      "speaker": "飞白",
+      "text": "“有来自费加罗的未接通讯。”",
+      "day": 6,
+      "next": "post6.report.1",
+      "set": [],
+      "sourceParagraph": 655
+    },
+    {
+      "id": "post6.report.1",
+      "speaker": "{player}",
+      "text": "“费加罗？他怎么没给我发消息？”",
+      "day": 6,
+      "next": "post6.report.2",
+      "set": [],
+      "sourceParagraph": 656
+    },
+    {
+      "id": "post6.report.2",
+      "speaker": "飞白",
+      "text": "“对方在接通前主动取消了呼叫。”",
+      "day": 6,
+      "next": "post6.report.3",
+      "set": [],
+      "sourceParagraph": 657
+    },
+    {
+      "id": "post6.report.3",
+      "speaker": "{player}",
+      "text": "“……真奇怪。”",
+      "day": 6,
+      "next": "post6.results",
+      "set": [],
+      "sourceParagraph": 658
+    },
+    {
+      "id": "post6.proof",
+      "speaker": "阿莱夫",
+      "text": "“晚上好。”",
+      "day": 6,
+      "next": "post6.proof.1",
+      "set": [],
+      "sourceParagraph": 661
+    },
+    {
+      "id": "post6.proof.1",
+      "speaker": "{player}",
+      "text": "“……您好。”",
+      "day": 6,
+      "next": "post6.proof.2",
+      "set": [],
+      "sourceParagraph": 662
+    },
+    {
+      "id": "post6.proof.2",
+      "speaker": "阿莱夫",
+      "text": "“不用这么拘谨。”",
+      "day": 6,
+      "next": "post6.proof.3",
+      "set": [],
+      "sourceParagraph": 663
+    },
+    {
+      "id": "post6.proof.3",
+      "speaker": "阿莱夫",
+      "text": "“你可以叫我阿莱夫。”",
+      "day": 6,
+      "next": "post6.proof.4",
+      "set": [],
+      "sourceParagraph": 664
+    },
+    {
+      "id": "post6.proof.4",
+      "speaker": "{player}",
+      "text": "“阿莱夫……指挥部的交通调度员？”",
+      "day": 6,
+      "next": "post6.proof.5",
+      "set": [],
+      "sourceParagraph": 665
+    },
+    {
+      "id": "post6.proof.5",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "post6.proofroute",
+      "set": [],
+      "sourceParagraph": 666
+    },
+    {
+      "id": "post6.proofroute",
+      "speaker": "",
+      "text": "",
+      "day": 6,
+      "next": "post6.proof_b",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "investigate",
+          "next": "post6.proof_c",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "post6.proof_c",
+      "speaker": "{player}",
+      "text": "您说过，可以帮我确认那些流转记录。",
+      "day": 6,
+      "next": "proof",
+      "set": [],
+      "sourceParagraph": 669
+    },
+    {
+      "id": "post6.proof_b",
+      "speaker": "{player}",
+      "text": "您有东西要给我看。",
+      "day": 6,
+      "next": "proof",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "proof",
+      "speaker": "阿莱夫",
+      "text": "“不过在那之前，我想确认一件事。”",
+      "day": 6,
+      "next": "proof.1",
+      "set": [],
+      "sourceParagraph": 672
+    },
+    {
+      "id": "proof.1",
+      "speaker": "{player}",
+      "text": "“什么？”",
+      "day": 6,
+      "next": "proof.2",
+      "set": [],
+      "sourceParagraph": 673
+    },
+    {
+      "id": "proof.2",
+      "speaker": "阿莱夫",
+      "text": "“你参加《裁星计划》的这几天，真的一直认为自己在进行模拟吗？”",
+      "day": 6,
+      "next": "proof.3",
+      "set": [],
+      "sourceParagraph": 674
+    },
+    {
+      "id": "proof.3",
+      "speaker": "{player}",
+      "text": "“……一开始是。”",
+      "day": 6,
+      "next": "proof.4",
+      "set": [],
+      "sourceParagraph": 675
+    },
+    {
+      "id": "proof.4",
+      "speaker": "阿莱夫",
+      "text": "“现在呢？”",
+      "day": 6,
+      "next": "proof.5",
+      "set": [],
+      "sourceParagraph": 676
+    },
+    {
+      "id": "proof.5",
+      "speaker": "{player}",
+      "text": "“我不知道。”",
+      "day": 6,
+      "next": "proof.6",
+      "set": [],
+      "sourceParagraph": 677
+    },
+    {
+      "id": "proof.6",
+      "speaker": "{player}",
+      "text": "“太阳系的事情之后，我就开始怀疑了。”",
+      "day": 6,
+      "next": "proof.7",
+      "set": [],
+      "sourceParagraph": 678
+    },
+    {
+      "id": "proof.7",
+      "speaker": "阿莱夫",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.8",
+      "set": [],
+      "sourceParagraph": 679
+    },
+    {
+      "id": "proof.8",
+      "speaker": "阿莱夫",
+      "text": "“那么，我希望你仔细看看接下来的东西。”",
+      "day": 6,
+      "next": "proof.9",
+      "set": [],
+      "sourceParagraph": 680
+    },
+    {
+      "id": "proof.9",
+      "speaker": "飞白",
+      "text": "“检测到三组可以相互关联的任务记录。”",
+      "day": 6,
+      "next": "proof.10",
+      "set": [],
+      "sourceParagraph": 683
+    },
+    {
+      "id": "proof.10",
+      "speaker": "{player}",
+      "text": "“三组？”",
+      "day": 6,
+      "next": "proof.11",
+      "set": [],
+      "sourceParagraph": 684
+    },
+    {
+      "id": "proof.11",
+      "speaker": "飞白",
+      "text": "“第一组是您的适应性测试执行记录。”",
+      "day": 6,
+      "next": "proof.12",
+      "set": [],
+      "sourceParagraph": 685
+    },
+    {
+      "id": "proof.12",
+      "speaker": "飞白",
+      "text": "“第二组来自真实作战系统的任务回执。”",
+      "day": 6,
+      "next": "proof.13",
+      "set": [],
+      "sourceParagraph": 686
+    },
+    {
+      "id": "proof.13",
+      "speaker": "{player}",
+      "text": "“……真实作战系统？”",
+      "day": 6,
+      "next": "proof.14",
+      "set": [],
+      "sourceParagraph": 687
+    },
+    {
+      "id": "proof.14",
+      "speaker": "飞白",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "proof.15",
+      "set": [],
+      "sourceParagraph": 688
+    },
+    {
+      "id": "proof.15",
+      "speaker": "飞白",
+      "text": "“第三组是模拟终端与真实作战系统之间的连接授权记录。”",
+      "day": 6,
+      "next": "proof.16",
+      "set": [],
+      "sourceParagraph": 689
+    },
+    {
+      "id": "proof.16",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.17",
+      "set": [],
+      "sourceParagraph": 690
+    },
+    {
+      "id": "proof.17",
+      "speaker": "{player}",
+      "text": "“等一下。”",
+      "day": 6,
+      "next": "proof.18",
+      "set": [],
+      "sourceParagraph": 691
+    },
+    {
+      "id": "proof.18",
+      "speaker": "{player}",
+      "text": "“你是说……这三组记录有关联？”",
+      "day": 6,
+      "next": "proof.19",
+      "set": [],
+      "sourceParagraph": 692
+    },
+    {
+      "id": "proof.19",
+      "speaker": "飞白",
+      "text": "“是的。正在进行一致性核验。”",
+      "day": 6,
+      "next": "proof.20",
+      "set": [],
+      "sourceParagraph": 693
+    },
+    {
+      "id": "proof.20",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.21",
+      "set": [],
+      "sourceParagraph": 700
+    },
+    {
+      "id": "proof.21",
+      "speaker": "{player}",
+      "text": "“不可能……”",
+      "day": 6,
+      "next": "proof.22",
+      "set": [],
+      "sourceParagraph": 701
+    },
+    {
+      "id": "proof.22",
+      "speaker": "飞白",
+      "text": "“根据现有证据，可以确认您的部分模拟操作指令曾被转发至真实作战系统。”",
+      "day": 6,
+      "next": "proof.23",
+      "set": [],
+      "sourceParagraph": 702
+    },
+    {
+      "id": "proof.23",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.24",
+      "set": [],
+      "sourceParagraph": 703
+    },
+    {
+      "id": "proof.24",
+      "speaker": "{player}",
+      "text": "“那之前那些文明……”",
+      "day": 6,
+      "next": "proof.25",
+      "set": [],
+      "sourceParagraph": 704
+    },
+    {
+      "id": "proof.25",
+      "speaker": "阿莱夫",
+      "text": "“其中一部分，是真实存在的。”",
+      "day": 6,
+      "next": "proof.26",
+      "set": [],
+      "sourceParagraph": 705
+    },
+    {
+      "id": "proof.26",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.27",
+      "set": [],
+      "sourceParagraph": 706
+    },
+    {
+      "id": "proof.27",
+      "speaker": "{player}",
+      "text": "“所以我真的……”",
+      "day": 6,
+      "next": "proof.28",
+      "set": [],
+      "sourceParagraph": 707
+    },
+    {
+      "id": "proof.28",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "proof.29",
+      "set": [],
+      "sourceParagraph": 708
+    },
+    {
+      "id": "proof.29",
+      "speaker": "阿莱夫",
+      "text": "“你一直在按照模拟程序的规则操作。”",
+      "day": 6,
+      "next": "proof.30",
+      "set": [],
+      "sourceParagraph": 709
+    },
+    {
+      "id": "proof.30",
+      "speaker": "阿莱夫",
+      "text": "“但有人把那些指令送到了真实宇宙。”",
+      "day": 6,
+      "next": "proof.31",
+      "set": [],
+      "sourceParagraph": 710
+    },
+    {
+      "id": "proof.31",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.32",
+      "set": [],
+      "sourceParagraph": 711
+    },
+    {
+      "id": "proof.32",
+      "speaker": "{player}",
+      "text": "“……是谁？”",
+      "day": 6,
+      "next": "proof.33",
+      "set": [],
+      "sourceParagraph": 712
+    },
+    {
+      "id": "proof.33",
+      "speaker": "阿莱夫",
+      "text": "“接着看。”",
+      "day": 6,
+      "next": "proof.34",
+      "set": [],
+      "sourceParagraph": 713
+    },
+    {
+      "id": "proof.34",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.35",
+      "set": [],
+      "sourceParagraph": 719
+    },
+    {
+      "id": "proof.35",
+      "speaker": "{player}",
+      "text": "“……荒原？”",
+      "day": 6,
+      "next": "proof.36",
+      "set": [],
+      "sourceParagraph": 720
+    },
+    {
+      "id": "proof.36",
+      "speaker": "飞白",
+      "text": "“授权记录的签名校验通过。”",
+      "day": 6,
+      "next": "proof.37",
+      "set": [],
+      "sourceParagraph": 721
+    },
+    {
+      "id": "proof.37",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.38",
+      "set": [],
+      "sourceParagraph": 722
+    },
+    {
+      "id": "proof.38",
+      "speaker": "{player}",
+      "text": "“不……”",
+      "day": 6,
+      "next": "proof.39",
+      "set": [],
+      "sourceParagraph": 723
+    },
+    {
+      "id": "proof.39",
+      "speaker": "{player}",
+      "text": "“这怎么可能……”",
+      "day": 6,
+      "next": "proof.40",
+      "set": [],
+      "sourceParagraph": 724
+    },
+    {
+      "id": "proof.40",
+      "speaker": "阿莱夫",
+      "text": "“你可以再核验一次。”",
+      "day": 6,
+      "next": "proof.41",
+      "set": [],
+      "sourceParagraph": 725
+    },
+    {
+      "id": "proof.41",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.42",
+      "set": [],
+      "sourceParagraph": 726
+    },
+    {
+      "id": "proof.42",
+      "speaker": "飞白",
+      "text": "“本次校验使用了独立于Rosetta程序的记录与签名凭证，目前未发现数据被伪造的迹象。”",
+      "day": 6,
+      "next": "proof.43",
+      "set": [],
+      "sourceParagraph": 727
+    },
+    {
+      "id": "proof.43",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.44",
+      "set": [],
+      "sourceParagraph": 728
+    },
+    {
+      "id": "proof.44",
+      "speaker": "{player}",
+      "text": "“所以……”",
+      "day": 6,
+      "next": "proof.45",
+      "set": [],
+      "sourceParagraph": 729
+    },
+    {
+      "id": "proof.45",
+      "speaker": "{player}",
+      "text": "“是荒原把真实的作战终端接到了模拟程序里？”",
+      "day": 6,
+      "next": "proof.46",
+      "set": [],
+      "sourceParagraph": 730
+    },
+    {
+      "id": "proof.46",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "proof.47",
+      "set": [],
+      "sourceParagraph": 731
+    },
+    {
+      "id": "proof.47",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.48",
+      "set": [],
+      "sourceParagraph": 732
+    },
+    {
+      "id": "proof.48",
+      "speaker": "{player}",
+      "text": "“可他为什么要这么做？”",
+      "day": 6,
+      "next": "proof.49",
+      "set": [],
+      "sourceParagraph": 733
+    },
+    {
+      "id": "proof.49",
+      "speaker": "阿莱夫",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.50",
+      "set": [],
+      "sourceParagraph": 734
+    },
+    {
+      "id": "proof.50",
+      "speaker": "阿莱夫",
+      "text": "“这个问题，我想你应该先了解一件旧事。”",
+      "day": 6,
+      "next": "proof.51",
+      "set": [],
+      "sourceParagraph": 735
+    },
+    {
+      "id": "proof.51",
+      "speaker": "阿莱夫",
+      "text": "“你知道荒原以前是什么样的人吗？”",
+      "day": 6,
+      "next": "proof.52",
+      "set": [],
+      "sourceParagraph": 736
+    },
+    {
+      "id": "proof.52",
+      "speaker": "{player}",
+      "text": "“……他以前是文明逆熵策略部主任。”",
+      "day": 6,
+      "next": "proof.53",
+      "set": [],
+      "sourceParagraph": 737
+    },
+    {
+      "id": "proof.53",
+      "speaker": "阿莱夫",
+      "text": "“我不是问他的职位。”",
+      "day": 6,
+      "next": "proof.54",
+      "set": [],
+      "sourceParagraph": 738
+    },
+    {
+      "id": "proof.54",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.55",
+      "set": [],
+      "sourceParagraph": 739
+    },
+    {
+      "id": "proof.55",
+      "speaker": "阿莱夫",
+      "text": "“很久以前，两个接近三级的文明发生了一场战争。”",
+      "day": 6,
+      "next": "proof.56",
+      "set": [],
+      "sourceParagraph": 740
+    },
+    {
+      "id": "proof.56",
+      "speaker": "阿莱夫",
+      "text": "“为了取得优势，其中一方使用了时间黑域。”",
+      "day": 6,
+      "next": "proof.57",
+      "set": [],
+      "sourceParagraph": 741
+    },
+    {
+      "id": "proof.57",
+      "speaker": "{player}",
+      "text": "“……我听说过那场战争。”",
+      "day": 6,
+      "next": "proof.58",
+      "set": [],
+      "sourceParagraph": 742
+    },
+    {
+      "id": "proof.58",
+      "speaker": "阿莱夫",
+      "text": "“是啊。很多人都听说过。”",
+      "day": 6,
+      "next": "proof.59",
+      "set": [],
+      "sourceParagraph": 743
+    },
+    {
+      "id": "proof.59",
+      "speaker": "阿莱夫",
+      "text": "“但很少有人知道，黑域形成时，还有不少与战争无关的船只在附近。”",
+      "day": 6,
+      "next": "proof.60",
+      "set": [],
+      "sourceParagraph": 744
+    },
+    {
+      "id": "proof.60",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.61",
+      "set": [],
+      "sourceParagraph": 745
+    },
+    {
+      "id": "proof.61",
+      "speaker": "阿莱夫",
+      "text": "“其中一支，是深空考察队。”",
+      "day": 6,
+      "next": "proof.62",
+      "set": [],
+      "sourceParagraph": 746
+    },
+    {
+      "id": "proof.62",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.63",
+      "set": [],
+      "sourceParagraph": 752
+    },
+    {
+      "id": "proof.63",
+      "speaker": "阿莱夫",
+      "text": "“荒原的伴侣，就在其中。”",
+      "day": 6,
+      "next": "proof.64",
+      "set": [],
+      "sourceParagraph": 753
+    },
+    {
+      "id": "proof.64",
+      "speaker": "{player}",
+      "text": "“……什么？”",
+      "day": 6,
+      "next": "proof.65",
+      "set": [],
+      "sourceParagraph": 754
+    },
+    {
+      "id": "proof.65",
+      "speaker": "阿莱夫",
+      "text": "“对外部宇宙来说，他们或许还活着。”",
+      "day": 6,
+      "next": "proof.66",
+      "set": [],
+      "sourceParagraph": 755
+    },
+    {
+      "id": "proof.66",
+      "speaker": "阿莱夫",
+      "text": "“只不过，在荒原能够度过的一生里，他再也见不到那个人了。”",
+      "day": 6,
+      "next": "proof.67",
+      "set": [],
+      "sourceParagraph": 756
+    },
+    {
+      "id": "proof.67",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.68",
+      "set": [],
+      "sourceParagraph": 757
+    },
+    {
+      "id": "proof.68",
+      "speaker": "{player}",
+      "text": "“我从来没听他提起过。”",
+      "day": 6,
+      "next": "proof.69",
+      "set": [],
+      "sourceParagraph": 758
+    },
+    {
+      "id": "proof.69",
+      "speaker": "阿莱夫",
+      "text": "“我想他也没有向多少人提起过。”",
+      "day": 6,
+      "next": "proof.70",
+      "set": [],
+      "sourceParagraph": 759
+    },
+    {
+      "id": "proof.70",
+      "speaker": "{player}",
+      "text": "“……那您呢？”",
+      "day": 6,
+      "next": "proof.71",
+      "set": [],
+      "sourceParagraph": 760
+    },
+    {
+      "id": "proof.71",
+      "speaker": "阿莱夫",
+      "text": "“我当时在安保部。”",
+      "day": 6,
+      "next": "proof.72",
+      "set": [],
+      "sourceParagraph": 761
+    },
+    {
+      "id": "proof.72",
+      "speaker": "阿莱夫",
+      "text": "“那场战争，我们也被卷了进去。”",
+      "day": 6,
+      "next": "proof.73",
+      "set": [],
+      "sourceParagraph": 762
+    },
+    {
+      "id": "proof.73",
+      "speaker": "{player}",
+      "text": "“我看到过您的履历。”",
+      "day": 6,
+      "next": "proof.74",
+      "set": [],
+      "sourceParagraph": 763
+    },
+    {
+      "id": "proof.74",
+      "speaker": "{player}",
+      "text": "“上面说，您因为违反亚安协规程，间接导致战争扩大……”",
+      "day": 6,
+      "next": "proof.75",
+      "set": [],
+      "sourceParagraph": 764
+    },
+    {
+      "id": "proof.75",
+      "speaker": "阿莱夫",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.76",
+      "set": [],
+      "sourceParagraph": 765
+    },
+    {
+      "id": "proof.76",
+      "speaker": "阿莱夫",
+      "text": "“那份记录是这么写的？”",
+      "day": 6,
+      "next": "proof.77",
+      "set": [],
+      "sourceParagraph": 766
+    },
+    {
+      "id": "proof.77",
+      "speaker": "{player}",
+      "text": "“……难道不是吗？”",
+      "day": 6,
+      "next": "proof.78",
+      "set": [],
+      "sourceParagraph": 767
+    },
+    {
+      "id": "proof.78",
+      "speaker": "阿莱夫",
+      "text": "“我拒绝执行了一道命令。”",
+      "day": 6,
+      "next": "proof.79",
+      "set": [],
+      "sourceParagraph": 768
+    },
+    {
+      "id": "proof.79",
+      "speaker": "{player}",
+      "text": "“什么命令？”",
+      "day": 6,
+      "next": "proof.80",
+      "set": [],
+      "sourceParagraph": 769
+    },
+    {
+      "id": "proof.80",
+      "speaker": "阿莱夫",
+      "text": "“一道我认为会严重违反亚安协规程的命令。”",
+      "day": 6,
+      "next": "proof.81",
+      "set": [],
+      "sourceParagraph": 770
+    },
+    {
+      "id": "proof.81",
+      "speaker": "阿莱夫",
+      "text": "“我的上级坚持执行。我拒绝了。”",
+      "day": 6,
+      "next": "proof.82",
+      "set": [],
+      "sourceParagraph": 771
+    },
+    {
+      "id": "proof.82",
+      "speaker": "阿莱夫",
+      "text": "“之后战争扩大，造成了无法挽回的损失。”",
+      "day": 6,
+      "next": "proof.83",
+      "set": [],
+      "sourceParagraph": 772
+    },
+    {
+      "id": "proof.83",
+      "speaker": "阿莱夫",
+      "text": "“最后公开的调查结果里，我成了主要责任人之一。”",
+      "day": 6,
+      "next": "proof.84",
+      "set": [],
+      "sourceParagraph": 773
+    },
+    {
+      "id": "proof.84",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.85",
+      "set": [],
+      "sourceParagraph": 774
+    },
+    {
+      "id": "proof.85",
+      "speaker": "{player}",
+      "text": "“可是您不是拒绝执行了吗？”",
+      "day": 6,
+      "next": "proof.86",
+      "set": [],
+      "sourceParagraph": 775
+    },
+    {
+      "id": "proof.86",
+      "speaker": "阿莱夫",
+      "text": "“是啊。”",
+      "day": 6,
+      "next": "proof.87",
+      "set": [],
+      "sourceParagraph": 776
+    },
+    {
+      "id": "proof.87",
+      "speaker": "阿莱夫",
+      "text": "“但你也知道，公开记录并不总是能够完整反映事情的经过。”",
+      "day": 6,
+      "next": "proof.88",
+      "set": [],
+      "sourceParagraph": 777
+    },
+    {
+      "id": "proof.88",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.89",
+      "set": [],
+      "sourceParagraph": 778
+    },
+    {
+      "id": "proof.89",
+      "speaker": "阿莱夫",
+      "text": "“那之后，我离开了安保部。”",
+      "day": 6,
+      "next": "proof.90",
+      "set": [],
+      "sourceParagraph": 779
+    },
+    {
+      "id": "proof.90",
+      "speaker": "阿莱夫",
+      "text": "“再后来，就有了罗塞塔。”",
+      "day": 6,
+      "next": "proof.91",
+      "set": [],
+      "sourceParagraph": 780
+    },
+    {
+      "id": "proof.91",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.92",
+      "set": [],
+      "sourceParagraph": 781
+    },
+    {
+      "id": "proof.92",
+      "speaker": "{player}",
+      "text": "“所以罗塞塔是为了替您洗清冤屈？”",
+      "day": 6,
+      "next": "proof.93",
+      "set": [],
+      "sourceParagraph": 782
+    },
+    {
+      "id": "proof.93",
+      "speaker": "阿莱夫",
+      "text": "“不是。”",
+      "day": 6,
+      "next": "proof.94",
+      "set": [],
+      "sourceParagraph": 783
+    },
+    {
+      "id": "proof.94",
+      "speaker": "阿莱夫",
+      "text": "“如果只是为了证明我没有犯错，事情反倒简单了。”",
+      "day": 6,
+      "next": "proof.95",
+      "set": [],
+      "sourceParagraph": 784
+    },
+    {
+      "id": "proof.95",
+      "speaker": "阿莱夫",
+      "text": "“问题是，那样的事情并没有因为一次调查结束就消失。”",
+      "day": 6,
+      "next": "proof.96",
+      "set": [],
+      "sourceParagraph": 785
+    },
+    {
+      "id": "proof.96",
+      "speaker": "阿莱夫",
+      "text": "“有人越过规定下达命令，有人替他们承担责任，也有人永远失去了申诉的机会。”",
+      "day": 6,
+      "next": "proof.97",
+      "set": [],
+      "sourceParagraph": 786
+    },
+    {
+      "id": "proof.97",
+      "speaker": "阿莱夫",
+      "text": "“而所有人都被告知，事情已经得到了妥善处理。”",
+      "day": 6,
+      "next": "proof.98",
+      "set": [],
+      "sourceParagraph": 787
+    },
+    {
+      "id": "proof.98",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.99",
+      "set": [],
+      "sourceParagraph": 788
+    },
+    {
+      "id": "proof.99",
+      "speaker": "阿莱夫",
+      "text": "“我不希望这样的事情再发生。”",
+      "day": 6,
+      "next": "proof.100",
+      "set": [],
+      "sourceParagraph": 789
+    },
+    {
+      "id": "proof.100",
+      "speaker": "{player}",
+      "text": "“……那荒原呢？”",
+      "day": 6,
+      "next": "proof.101",
+      "set": [],
+      "sourceParagraph": 791
+    },
+    {
+      "id": "proof.101",
+      "speaker": "{player}",
+      "text": "“既然他也经历了那场战争，为什么……”",
+      "day": 6,
+      "next": "proof.102",
+      "set": [],
+      "sourceParagraph": 792
+    },
+    {
+      "id": "proof.102",
+      "speaker": "阿莱夫",
+      "text": "“为什么他后来会推动裁星计划？”",
+      "day": 6,
+      "next": "proof.103",
+      "set": [],
+      "sourceParagraph": 793
+    },
+    {
+      "id": "proof.103",
+      "speaker": "{player}",
+      "text": "“嗯。”",
+      "day": 6,
+      "next": "proof.104",
+      "set": [],
+      "sourceParagraph": 794
+    },
+    {
+      "id": "proof.104",
+      "speaker": "阿莱夫",
+      "text": "“我不能替他解释全部的想法。”",
+      "day": 6,
+      "next": "proof.105",
+      "set": [],
+      "sourceParagraph": 795
+    },
+    {
+      "id": "proof.105",
+      "speaker": "阿莱夫",
+      "text": "“不过我知道，他一直认为，那场灾难本来可以避免。”",
+      "day": 6,
+      "next": "proof.106",
+      "set": [],
+      "sourceParagraph": 796
+    },
+    {
+      "id": "proof.106",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.107",
+      "set": [],
+      "sourceParagraph": 797
+    },
+    {
+      "id": "proof.107",
+      "speaker": "阿莱夫",
+      "text": "“如果能够更早发现危险，如果能够更早阻止那些文明，如果我们有能力在灾难发生之前就采取行动……”",
+      "day": 6,
+      "next": "proof.108",
+      "set": [],
+      "sourceParagraph": 798
+    },
+    {
+      "id": "proof.108",
+      "speaker": "阿莱夫",
+      "text": "“他大概想过很多次吧。”",
+      "day": 6,
+      "next": "proof.109",
+      "set": [],
+      "sourceParagraph": 799
+    },
+    {
+      "id": "proof.109",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.110",
+      "set": [],
+      "sourceParagraph": 800
+    },
+    {
+      "id": "proof.110",
+      "speaker": "阿莱夫",
+      "text": "“我也想过。”",
+      "day": 6,
+      "next": "proof.111",
+      "set": [],
+      "sourceParagraph": 801
+    },
+    {
+      "id": "proof.111",
+      "speaker": "{player}",
+      "text": "“您也？”",
+      "day": 6,
+      "next": "proof.112",
+      "set": [],
+      "sourceParagraph": 802
+    },
+    {
+      "id": "proof.112",
+      "speaker": "阿莱夫",
+      "text": "“当然。”",
+      "day": 6,
+      "next": "proof.113",
+      "set": [],
+      "sourceParagraph": 803
+    },
+    {
+      "id": "proof.113",
+      "speaker": "阿莱夫",
+      "text": "“经历过那样的事情，谁不会想，如果当时能做得更好就好了。”",
+      "day": 6,
+      "next": "proof.114",
+      "set": [],
+      "sourceParagraph": 804
+    },
+    {
+      "id": "proof.114",
+      "speaker": "阿莱夫",
+      "text": "“只是后来，我们走上了不同的路。”",
+      "day": 6,
+      "next": "proof.115",
+      "set": [],
+      "sourceParagraph": 805
+    },
+    {
+      "id": "proof.115",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.116",
+      "set": [],
+      "sourceParagraph": 806
+    },
+    {
+      "id": "proof.116",
+      "speaker": "阿莱夫",
+      "text": "“荒原希望有一套足够强大的制度，能够提前消除威胁。”",
+      "day": 6,
+      "next": "proof.117",
+      "set": [],
+      "sourceParagraph": 807
+    },
+    {
+      "id": "proof.117",
+      "speaker": "阿莱夫",
+      "text": "“而我希望无论制度变得多么强大，都不能允许某个人擅自决定其他文明的生死。”",
+      "day": 6,
+      "next": "proof.118",
+      "set": [],
+      "sourceParagraph": 808
+    },
+    {
+      "id": "proof.118",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.119",
+      "set": [],
+      "sourceParagraph": 809
+    },
+    {
+      "id": "proof.119",
+      "speaker": "{player}",
+      "text": "“可是，裁星计划不是已经获得了执行批准吗？”",
+      "day": 6,
+      "next": "proof.120",
+      "set": [],
+      "sourceParagraph": 810
+    },
+    {
+      "id": "proof.120",
+      "speaker": "阿莱夫",
+      "text": "“是。”",
+      "day": 6,
+      "next": "proof.121",
+      "set": [],
+      "sourceParagraph": 811
+    },
+    {
+      "id": "proof.121",
+      "speaker": "阿莱夫",
+      "text": "“裁星计划作为一项研究和未来执行方案，经过了批准。”",
+      "day": 6,
+      "next": "proof.122",
+      "set": [],
+      "sourceParagraph": 812
+    },
+    {
+      "id": "proof.122",
+      "speaker": "阿莱夫",
+      "text": "“但那不意味着荒原有权把未经审核的真实目标塞进模拟程序，再让不知情的测试人员替他执行清理。”",
+      "day": 6,
+      "next": "proof.123",
+      "set": [],
+      "sourceParagraph": 813
+    },
+    {
+      "id": "proof.123",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.124",
+      "set": [],
+      "sourceParagraph": 814
+    },
+    {
+      "id": "proof.124",
+      "speaker": "{player}",
+      "text": "“所以你们才会入侵模拟程序。”",
+      "day": 6,
+      "next": "proof.125",
+      "set": [],
+      "sourceParagraph": 815
+    },
+    {
+      "id": "proof.125",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "proof.126",
+      "set": [],
+      "sourceParagraph": 816
+    },
+    {
+      "id": "proof.126",
+      "speaker": "阿莱夫",
+      "text": "“我们原本想找到能够证明真实作战连接存在的证据。”",
+      "day": 6,
+      "next": "proof.127",
+      "set": [],
+      "sourceParagraph": 817
+    },
+    {
+      "id": "proof.127",
+      "speaker": "阿莱夫",
+      "text": "“但仅仅知道有人在这么做，还不足以阻止它。”",
+      "day": 6,
+      "next": "proof.128",
+      "set": [],
+      "sourceParagraph": 818
+    },
+    {
+      "id": "proof.128",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.129",
+      "set": [],
+      "sourceParagraph": 819
+    },
+    {
+      "id": "proof.129",
+      "speaker": "阿莱夫",
+      "text": "“我们需要有人能够从执行终端内部留下完整记录。”",
+      "day": 6,
+      "next": "proof.130",
+      "set": [],
+      "sourceParagraph": 820
+    },
+    {
+      "id": "proof.130",
+      "speaker": "{player}",
+      "text": "“……所以你们找到了我？”",
+      "day": 6,
+      "next": "proof.131",
+      "set": [],
+      "sourceParagraph": 821
+    },
+    {
+      "id": "proof.131",
+      "speaker": "阿莱夫",
+      "text": "“准确来说，我们最初并不知道你会怎么做。”",
+      "day": 6,
+      "next": "proof.132",
+      "set": [],
+      "sourceParagraph": 822
+    },
+    {
+      "id": "proof.132",
+      "speaker": "阿莱夫",
+      "text": "“我们只是留下了一种可能性。”",
+      "day": 6,
+      "next": "proof.133",
+      "set": [],
+      "sourceParagraph": 823
+    },
+    {
+      "id": "proof.133",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.134",
+      "set": [],
+      "sourceParagraph": 824
+    },
+    {
+      "id": "proof.134",
+      "speaker": "阿莱夫",
+      "text": "“你可以继续遵循执行标准。”",
+      "day": 6,
+      "next": "proof.135",
+      "set": [],
+      "sourceParagraph": 825
+    },
+    {
+      "id": "proof.135",
+      "speaker": "阿莱夫",
+      "text": "“也可以尝试违背它。”",
+      "day": 6,
+      "next": "proof.136",
+      "set": [],
+      "sourceParagraph": 826
+    },
+    {
+      "id": "proof.136",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.overwrite_gate",
+      "set": [],
+      "sourceParagraph": 828
+    },
+    {
+      "id": "proof.137",
+      "speaker": "{player}",
+      "text": "“所以Rosetta才会帮我修改考核结果？”",
+      "day": 6,
+      "next": "proof.138",
+      "set": [],
+      "sourceParagraph": 829
+    },
+    {
+      "id": "proof.138",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "proof.139",
+      "set": [],
+      "sourceParagraph": 830
+    },
+    {
+      "id": "proof.139",
+      "speaker": "阿莱夫",
+      "text": "“不过我不打算把这种行为说成完全正当。”",
+      "day": 6,
+      "next": "proof.140",
+      "set": [],
+      "sourceParagraph": 831
+    },
+    {
+      "id": "proof.140",
+      "speaker": "阿莱夫",
+      "text": "“我们未经授权进入了系统，也擅自修改了测试结果。”",
+      "day": 6,
+      "next": "proof.141",
+      "set": [],
+      "sourceParagraph": 832
+    },
+    {
+      "id": "proof.141",
+      "speaker": "阿莱夫",
+      "text": "“如果有一天必须为此承担责任，那也是我们自己的选择。”",
+      "day": 6,
+      "next": "proof.142",
+      "set": [],
+      "sourceParagraph": 833
+    },
+    {
+      "id": "proof.142",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.143",
+      "set": [],
+      "sourceParagraph": 834
+    },
+    {
+      "id": "proof.143",
+      "speaker": "阿莱夫",
+      "text": "“但我们至少希望，执行终端里的那个人能够有一次说‘不’的机会。”",
+      "day": 6,
+      "next": "proof.144",
+      "set": [],
+      "sourceParagraph": 835
+    },
+    {
+      "id": "proof.144",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.145",
+      "set": [],
+      "sourceParagraph": 838
+    },
+    {
+      "id": "proof.145",
+      "speaker": "{player}",
+      "text": "“可是你们为什么不早点告诉我？”",
+      "day": 6,
+      "next": "proof.146",
+      "set": [],
+      "sourceParagraph": 839
+    },
+    {
+      "id": "proof.146",
+      "speaker": "{player}",
+      "text": "“如果你们早就知道那些打击可能是真的，为什么还让我继续测试？”",
+      "day": 6,
+      "next": "proof.147",
+      "set": [],
+      "sourceParagraph": 840
+    },
+    {
+      "id": "proof.147",
+      "speaker": "阿莱夫",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.148",
+      "set": [],
+      "sourceParagraph": 841
+    },
+    {
+      "id": "proof.148",
+      "speaker": "阿莱夫",
+      "text": "“因为我们无法确认所有任务的真实性，也没有足够的证据证明荒原如何使用那些终端。”",
+      "day": 6,
+      "next": "proof.149",
+      "set": [],
+      "sourceParagraph": 842
+    },
+    {
+      "id": "proof.149",
+      "speaker": "{player}",
+      "text": "“这算什么理由？”",
+      "day": 6,
+      "next": "proof.150",
+      "set": [],
+      "sourceParagraph": 843
+    },
+    {
+      "id": "proof.150",
+      "speaker": "阿莱夫",
+      "text": "“不算。”",
+      "day": 6,
+      "next": "proof.151",
+      "set": [],
+      "sourceParagraph": 844
+    },
+    {
+      "id": "proof.151",
+      "speaker": "阿莱夫",
+      "text": "“我们确实利用了你的工作机会。”",
+      "day": 6,
+      "next": "proof.152",
+      "set": [],
+      "sourceParagraph": 845
+    },
+    {
+      "id": "proof.152",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.153",
+      "set": [],
+      "sourceParagraph": 846
+    },
+    {
+      "id": "proof.153",
+      "speaker": "阿莱夫",
+      "text": "“对此，我向你道歉。”",
+      "day": 6,
+      "next": "proof.154",
+      "set": [],
+      "sourceParagraph": 847
+    },
+    {
+      "id": "proof.154",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.155",
+      "set": [],
+      "sourceParagraph": 848
+    },
+    {
+      "id": "proof.155",
+      "speaker": "阿莱夫",
+      "text": "“你完全有理由不信任我们。”",
+      "day": 6,
+      "next": "proof.156",
+      "set": [],
+      "sourceParagraph": 849
+    },
+    {
+      "id": "proof.156",
+      "speaker": "阿莱夫",
+      "text": "“所以我把原始记录交给你，而不是只告诉你应该相信谁。”",
+      "day": 6,
+      "next": "proof.157",
+      "set": [],
+      "sourceParagraph": 850
+    },
+    {
+      "id": "proof.157",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.158",
+      "set": [],
+      "sourceParagraph": 851
+    },
+    {
+      "id": "proof.158",
+      "speaker": "阿莱夫",
+      "text": "“至于接下来怎么做，由你自己决定。”",
+      "day": 6,
+      "next": "proof.159",
+      "set": [],
+      "sourceParagraph": 852
+    },
+    {
+      "id": "proof.159",
+      "speaker": "{player}",
+      "text": "“……接下来？”",
+      "day": 6,
+      "next": "proof.160",
+      "set": [],
+      "sourceParagraph": 853
+    },
+    {
+      "id": "proof.160",
+      "speaker": "阿莱夫",
+      "text": "“现在我们可以证明，部分真实作战指令经过了你的测试终端。”",
+      "day": 6,
+      "next": "proof.161",
+      "set": [],
+      "sourceParagraph": 854
+    },
+    {
+      "id": "proof.161",
+      "speaker": "阿莱夫",
+      "text": "“但我们还没有阻止这些指令继续被发送。”",
+      "day": 6,
+      "next": "proof.162",
+      "set": [],
+      "sourceParagraph": 855
+    },
+    {
+      "id": "proof.162",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 6,
+      "next": "proof.163",
+      "set": [],
+      "sourceParagraph": 856
+    },
+    {
+      "id": "proof.163",
+      "speaker": "阿莱夫",
+      "text": "“而且，《裁星计划》的正式验证马上就要结束了。”",
+      "day": 6,
+      "next": "proof.164",
+      "set": [],
+      "sourceParagraph": 857
+    },
+    {
+      "id": "proof.164",
+      "speaker": "{player}",
+      "text": "“……下个月。”",
+      "day": 6,
+      "next": "proof.165",
+      "set": [],
+      "sourceParagraph": 858
+    },
+    {
+      "id": "proof.165",
+      "speaker": "阿莱夫",
+      "text": "“是的。”",
+      "day": 6,
+      "next": "post6.results",
+      "set": [],
+      "sourceParagraph": 859
+    },
+    {
+      "id": "post6.results",
+      "speaker": "飞白",
+      "text": "第7天·上午。您的考核结果已经公布。",
+      "day": 7,
+      "next": "ending.route",
+      "set": [],
+      "sourceParagraph": 990
+    },
+    {
+      "id": "ending.route",
+      "speaker": "",
+      "text": "",
+      "day": 7,
+      "next": "ending.zero_check",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "unsafe_confirmed",
+          "next": "ending.death",
+          "absent": false
+        },
+        {
+          "flag": "reported",
+          "next": "ending.normal",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "ending.zero_check",
+      "speaker": "",
+      "text": "",
+      "day": 7,
+      "next": "ending.pending",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "rosetta_overwrite",
+          "next": "ending.escape_check",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "ending.escape_check",
+      "speaker": "",
+      "text": "",
+      "day": 7,
+      "next": "ending.pending",
+      "set": [],
+      "sourceParagraph": 0,
+      "jumps": [
+        {
+          "flag": "escape_three_levels",
+          "next": "ending.zero",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "ending.normal",
+      "speaker": "飞白",
+      "text": "“早上好。您有两份来自文明逆熵策略部的优先级通知。”",
+      "day": 7,
+      "next": "ending.normal.1",
+      "set": [],
+      "sourceParagraph": 864
+    },
+    {
+      "id": "ending.normal.1",
+      "speaker": "{player}",
+      "text": "“两份？先看考核结果吧。”",
+      "day": 7,
+      "next": "ending.normal.2",
+      "set": [],
+      "sourceParagraph": 865
+    },
+    {
+      "id": "ending.normal.2",
+      "speaker": "飞白",
+      "text": "“好的。”",
+      "day": 7,
+      "next": "ending.normal.3",
+      "set": [],
+      "sourceParagraph": 866
+    },
+    {
+      "id": "ending.normal.3",
+      "speaker": "{player}",
+      "text": "“……终于结束了。”",
+      "day": 7,
+      "next": "ending.normal.4",
+      "set": [],
+      "sourceParagraph": 871
+    },
+    {
+      "id": "ending.normal.4",
+      "speaker": "飞白",
+      "text": "“恭喜您。”",
+      "day": 7,
+      "next": "ending.normal.5",
+      "set": [],
+      "sourceParagraph": 872
+    },
+    {
+      "id": "ending.normal.5",
+      "speaker": "{player}",
+      "text": "“哈哈……这几天可真够折腾的。”",
+      "day": 7,
+      "next": "ending.normal.6",
+      "set": [],
+      "sourceParagraph": 873
+    },
+    {
+      "id": "ending.normal.6",
+      "speaker": "{player}",
+      "text": "“另一条是什么？”",
+      "day": 7,
+      "next": "ending.normal.7",
+      "set": [],
+      "sourceParagraph": 874
+    },
+    {
+      "id": "ending.normal.7",
+      "speaker": "飞白",
+      "text": "“是来自圣殇与荒原的联合通知。”",
+      "day": 7,
+      "next": "ending.normal.8",
+      "set": [],
+      "sourceParagraph": 875
+    },
+    {
+      "id": "ending.normal.8",
+      "speaker": "{player}",
+      "text": "“他们俩？看看。”",
+      "day": 7,
+      "next": "ending.normal.9",
+      "set": [],
+      "sourceParagraph": 876
+    },
+    {
+      "id": "ending.normal.9",
+      "speaker": "终端文书",
+      "text": "【文明逆熵策略部·联合通报】",
+      "day": 7,
+      "next": "ending.normal.10",
+      "set": [],
+      "sourceParagraph": 877
+    },
+    {
+      "id": "ending.normal.10",
+      "speaker": "终端文书",
+      "text": "关于发现非法组织“罗塞塔”及开展后续安全处置工作的通报",
+      "day": 7,
+      "next": "ending.normal.11",
+      "set": [],
+      "sourceParagraph": 878
+    },
+    {
+      "id": "ending.normal.11",
+      "speaker": "终端文书",
+      "text": "致文明逆熵策略部全体同事：",
+      "day": 7,
+      "next": "ending.normal.12",
+      "set": [],
+      "sourceParagraph": 879
+    },
+    {
+      "id": "ending.normal.12",
+      "speaker": "终端文书",
+      "text": "经内部监察部、部门信息安全系统及《裁星计划》项目组联合核查，现已确认，近期发生的执行终端异常事件并非普通程序故障。",
+      "day": 7,
+      "next": "ending.normal.13",
+      "set": [],
+      "sourceParagraph": 880
+    },
+    {
+      "id": "ending.normal.13",
+      "speaker": "终端文书",
+      "text": "调查发现，一个自称“罗塞塔”（Rosetta）的组织，长期利用未经授权的数据接口与内部通讯渠道，对我司部分业务系统实施非法访问、数据篡改及信息窃取。",
+      "day": 7,
+      "next": "ending.normal.14",
+      "set": [],
+      "sourceParagraph": 881
+    },
+    {
+      "id": "ending.normal.14",
+      "speaker": "终端文书",
+      "text": "其中，《裁星计划》适应性测试程序已确认受到该组织干涉，部分考核记录存在被非法覆写的情况。",
+      "day": 7,
+      "next": "ending.normal.15",
+      "set": [],
+      "sourceParagraph": 882
+    },
+    {
+      "id": "ending.normal.15",
+      "speaker": "终端文书",
+      "text": "目前，调查人员已确认该组织与部门内部人员存在关联，相关人员正在接受调查，部分涉事权限已被暂停。",
+      "day": 7,
+      "next": "ending.normal.16",
+      "set": [],
+      "sourceParagraph": 883
+    },
+    {
+      "id": "ending.normal.16",
+      "speaker": "终端文书",
+      "text": "鉴于该组织的实际规模、人员构成及活动目的尚未完全查明，部门将继续开展专项核查工作。",
+      "day": 7,
+      "next": "ending.normal.17",
+      "set": [],
+      "sourceParagraph": 884
+    },
+    {
+      "id": "ending.normal.17",
+      "speaker": "终端文书",
+      "text": "请各位同事严格遵守信息安全管理要求，不得擅自接触、传播或使用来源不明的程序与数据。",
+      "day": 7,
+      "next": "ending.normal.18",
+      "set": [],
+      "sourceParagraph": 885
+    },
+    {
+      "id": "ending.normal.18",
+      "speaker": "终端文书",
+      "text": "同时，我们希望向所有在此次事件中主动报告异常、积极配合调查的同事表示感谢。",
+      "day": 7,
+      "next": "ending.normal.19",
+      "set": [],
+      "sourceParagraph": 886
+    },
+    {
+      "id": "ending.normal.19",
+      "speaker": "终端文书",
+      "text": "《裁星计划》承载着对宇宙文明共同未来的期望。我们绝不允许任何组织或个人以未经授权的方式干涉计划的正常实施。",
+      "day": 7,
+      "next": "ending.normal.20",
+      "set": [],
+      "sourceParagraph": 887
+    },
+    {
+      "id": "ending.normal.20",
+      "speaker": "终端文书",
+      "text": "相关适应性测试结果已经过复核，后续工作将依照既定计划继续推进。",
+      "day": 7,
+      "next": "ending.normal.21",
+      "set": [],
+      "sourceParagraph": 888
+    },
+    {
+      "id": "ending.normal.21",
+      "speaker": "终端文书",
+      "text": "愿你我得见宇宙新生。",
+      "day": 7,
+      "next": "ending.normal.22",
+      "set": [],
+      "sourceParagraph": 889
+    },
+    {
+      "id": "ending.normal.22",
+      "speaker": "终端文书",
+      "text": "圣殇",
+      "day": 7,
+      "next": "ending.normal.23",
+      "set": [],
+      "sourceParagraph": 890
+    },
+    {
+      "id": "ending.normal.23",
+      "speaker": "终端文书",
+      "text": "文明逆熵策略部 主任",
+      "day": 7,
+      "next": "ending.normal.24",
+      "set": [],
+      "sourceParagraph": 891
+    },
+    {
+      "id": "ending.normal.24",
+      "speaker": "终端文书",
+      "text": "荒原",
+      "day": 7,
+      "next": "ending.normal.25",
+      "set": [],
+      "sourceParagraph": 892
+    },
+    {
+      "id": "ending.normal.25",
+      "speaker": "终端文书",
+      "text": "《裁星计划》项目负责人",
+      "day": 7,
+      "next": "ending.normal.26",
+      "set": [],
+      "sourceParagraph": 893
+    },
+    {
+      "id": "ending.normal.26",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.normal.27",
+      "set": [],
+      "sourceParagraph": 894
+    },
+    {
+      "id": "ending.normal.27",
+      "speaker": "{player}",
+      "text": "“原来真的有这么一个组织啊。”",
+      "day": 7,
+      "next": "ending.normal.28",
+      "set": [],
+      "sourceParagraph": 895
+    },
+    {
+      "id": "ending.normal.28",
+      "speaker": "飞白",
+      "text": "“是的。根据通报，相关组织已被确认存在。”",
+      "day": 7,
+      "next": "ending.normal.29",
+      "set": [],
+      "sourceParagraph": 896
+    },
+    {
+      "id": "ending.normal.29",
+      "speaker": "{player}",
+      "text": "“等等……罗塞塔。”",
+      "day": 7,
+      "next": "ending.normal.30",
+      "set": [],
+      "sourceParagraph": 897
+    },
+    {
+      "id": "ending.normal.30",
+      "speaker": "{player}",
+      "text": "“那之前给我发消息的那个……”",
+      "day": 7,
+      "next": "ending.normal.31",
+      "set": [],
+      "sourceParagraph": 898
+    },
+    {
+      "id": "ending.normal.31",
+      "speaker": "飞白",
+      "text": "“很可能与该组织有关，但目前尚无法确认发送者身份。”",
+      "day": 7,
+      "next": "ending.normal.32",
+      "set": [],
+      "sourceParagraph": 899
+    },
+    {
+      "id": "ending.normal.32",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.normal.33",
+      "set": [],
+      "sourceParagraph": 900
+    },
+    {
+      "id": "ending.normal.33",
+      "speaker": "{player}",
+      "text": "“飞白，帮我联系费加罗。”",
+      "day": 7,
+      "next": "ending.normal.34",
+      "set": [],
+      "sourceParagraph": 901
+    },
+    {
+      "id": "ending.normal.34",
+      "speaker": "飞白",
+      "text": "“好的。”",
+      "day": 7,
+      "next": "ending.normal.35",
+      "set": [],
+      "sourceParagraph": 902
+    },
+    {
+      "id": "ending.normal.35",
+      "speaker": "终端文书",
+      "text": "【正在建立通讯……】",
+      "day": 7,
+      "next": "ending.normal.36",
+      "set": [],
+      "sourceParagraph": 903
+    },
+    {
+      "id": "ending.normal.36",
+      "speaker": "飞白",
+      "text": "“对方目前无法接通。”",
+      "day": 7,
+      "next": "ending.normal.37",
+      "set": [],
+      "sourceParagraph": 905
+    },
+    {
+      "id": "ending.normal.37",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.normal.38",
+      "set": [],
+      "sourceParagraph": 906
+    },
+    {
+      "id": "ending.normal.38",
+      "speaker": "{player}",
+      "text": "“这家伙……又跑哪儿去了？”",
+      "day": 7,
+      "next": "ending.normal.39",
+      "set": [],
+      "sourceParagraph": 907
+    },
+    {
+      "id": "ending.normal.39",
+      "speaker": "飞白",
+      "text": "“有来自荒原的电话，需要接通吗？”",
+      "day": 7,
+      "next": "ending.normal.40",
+      "set": [],
+      "sourceParagraph": 908
+    },
+    {
+      "id": "ending.normal.40",
+      "speaker": "{player}",
+      "text": "“帮我接上吧。”",
+      "day": 7,
+      "next": "ending.normal.41",
+      "set": [],
+      "sourceParagraph": 909
+    },
+    {
+      "id": "ending.normal.41",
+      "speaker": "荒原",
+      "text": "“恭喜你啊，考核顺利通过了。”",
+      "day": 7,
+      "next": "ending.normal.42",
+      "set": [],
+      "sourceParagraph": 910
+    },
+    {
+      "id": "ending.normal.42",
+      "speaker": "{player}",
+      "text": "“谢谢。说实话，我还以为要再折腾几天呢。”",
+      "day": 7,
+      "next": "ending.normal.43",
+      "set": [],
+      "sourceParagraph": 911
+    },
+    {
+      "id": "ending.normal.43",
+      "speaker": "荒原",
+      "text": "“哈哈，我看了你的考核记录。表现不错，至少没让我失望。”",
+      "day": 7,
+      "next": "ending.normal.44",
+      "set": [],
+      "sourceParagraph": 912
+    },
+    {
+      "id": "ending.normal.44",
+      "speaker": "{player}",
+      "text": "“您专门打电话过来，就是为了夸我两句？”",
+      "day": 7,
+      "next": "ending.normal.45",
+      "set": [],
+      "sourceParagraph": 913
+    },
+    {
+      "id": "ending.normal.45",
+      "speaker": "荒原",
+      "text": "“怎么，不乐意？”",
+      "day": 7,
+      "next": "ending.normal.46",
+      "set": [],
+      "sourceParagraph": 914
+    },
+    {
+      "id": "ending.normal.46",
+      "speaker": "{player}",
+      "text": "“那倒没有，受宠若惊。”",
+      "day": 7,
+      "next": "ending.normal.47",
+      "set": [],
+      "sourceParagraph": 915
+    },
+    {
+      "id": "ending.normal.47",
+      "speaker": "荒原",
+      "text": "“哈哈哈哈。”",
+      "day": 7,
+      "next": "ending.normal.48",
+      "set": [],
+      "sourceParagraph": 916
+    },
+    {
+      "id": "ending.normal.48",
+      "speaker": "荒原",
+      "text": "“不过，除了祝贺，我还得正式向你道个谢。”",
+      "day": 7,
+      "next": "ending.normal.49",
+      "set": [],
+      "sourceParagraph": 917
+    },
+    {
+      "id": "ending.normal.49",
+      "speaker": "{player}",
+      "text": "“因为罗塞塔的事？”",
+      "day": 7,
+      "next": "ending.normal.50",
+      "set": [],
+      "sourceParagraph": 918
+    },
+    {
+      "id": "ending.normal.50",
+      "speaker": "荒原",
+      "text": "“没错。你提供的异常记录帮了我们大忙。要不是你及时报告，我们恐怕还得花不少工夫才能发现问题。”",
+      "day": 7,
+      "next": "ending.normal.51",
+      "set": [],
+      "sourceParagraph": 919
+    },
+    {
+      "id": "ending.normal.51",
+      "speaker": "{player}",
+      "text": "“……我也没做什么，只是觉得那东西不太对劲。”",
+      "day": 7,
+      "next": "ending.normal.52",
+      "set": [],
+      "sourceParagraph": 920
+    },
+    {
+      "id": "ending.normal.52",
+      "speaker": "荒原",
+      "text": "“能发现问题，也能选择把问题报告上来，这本身就很重要。”",
+      "day": 7,
+      "next": "ending.normal.53",
+      "set": [],
+      "sourceParagraph": 921
+    },
+    {
+      "id": "ending.normal.53",
+      "speaker": "{player}",
+      "text": "“不过……那个罗塞塔到底是干什么的？”",
+      "day": 7,
+      "next": "ending.normal.54",
+      "set": [],
+      "sourceParagraph": 922
+    },
+    {
+      "id": "ending.normal.54",
+      "speaker": "荒原",
+      "text": "“目前还在调查。我们已经掌握了一部分情况，但他们的组织结构比我们预想的复杂。”",
+      "day": 7,
+      "next": "ending.normal.55",
+      "set": [],
+      "sourceParagraph": 923
+    },
+    {
+      "id": "ending.normal.55",
+      "speaker": "{player}",
+      "text": "“所以，真有人想破坏裁星计划？”",
+      "day": 7,
+      "next": "ending.normal.56",
+      "set": [],
+      "sourceParagraph": 924
+    },
+    {
+      "id": "ending.normal.56",
+      "speaker": "荒原",
+      "text": "“至少从目前的调查结果来看，是这样。”",
+      "day": 7,
+      "next": "ending.normal.57",
+      "set": [],
+      "sourceParagraph": 925
+    },
+    {
+      "id": "ending.normal.57",
+      "speaker": "{player}",
+      "text": "“可他们为什么要这么做？”",
+      "day": 7,
+      "next": "ending.normal.58",
+      "set": [],
+      "sourceParagraph": 926
+    },
+    {
+      "id": "ending.normal.58",
+      "speaker": "荒原",
+      "text": "“谁知道呢。总有人觉得自己有权决定宇宙的未来。”",
+      "day": 7,
+      "next": "ending.normal.59",
+      "set": [],
+      "sourceParagraph": 927
+    },
+    {
+      "id": "ending.normal.59",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.normal.60",
+      "set": [],
+      "sourceParagraph": 928
+    },
+    {
+      "id": "ending.normal.60",
+      "speaker": "荒原",
+      "text": "“当然，我们也没有这个权力。所以我们才需要裁星计划，需要一套能够得到验证、受到监督的执行体系。”",
+      "day": 7,
+      "next": "ending.normal.61",
+      "set": [],
+      "sourceParagraph": 929
+    },
+    {
+      "id": "ending.normal.61",
+      "speaker": "荒原",
+      "text": "“不管怎样，公司的立场很明确。任何人都不能绕过既定程序，私自干涉文明修裁。”",
+      "day": 7,
+      "next": "ending.normal.62",
+      "set": [],
+      "sourceParagraph": 930
+    },
+    {
+      "id": "ending.normal.62",
+      "speaker": "{player}",
+      "text": "“……明白。”",
+      "day": 7,
+      "next": "ending.normal.63",
+      "set": [],
+      "sourceParagraph": 931
+    },
+    {
+      "id": "ending.normal.63",
+      "speaker": "荒原",
+      "text": "“对了，你之前遇到的那个程序，还有没有什么其他异常？”",
+      "day": 7,
+      "next": "ending.normal.64",
+      "set": [],
+      "sourceParagraph": 932
+    },
+    {
+      "id": "ending.normal.64",
+      "speaker": "{player}",
+      "text": "“没有了。至少后来没再出现过。”",
+      "day": 7,
+      "next": "ending.normal.65",
+      "set": [],
+      "sourceParagraph": 933
+    },
+    {
+      "id": "ending.normal.65",
+      "speaker": "荒原",
+      "text": "“那就好。如果再发现什么，直接联系我或者信息安全部门。”",
+      "day": 7,
+      "next": "ending.normal.66",
+      "set": [],
+      "sourceParagraph": 934
+    },
+    {
+      "id": "ending.normal.66",
+      "speaker": "{player}",
+      "text": "“好的。”",
+      "day": 7,
+      "next": "ending.normal.67",
+      "set": [],
+      "sourceParagraph": 935
+    },
+    {
+      "id": "ending.normal.67",
+      "speaker": "{player}",
+      "text": "“不过，荒原先生，我还有件事想问。”",
+      "day": 7,
+      "next": "ending.normal.68",
+      "set": [],
+      "sourceParagraph": 936
+    },
+    {
+      "id": "ending.normal.68",
+      "speaker": "荒原",
+      "text": "“嗯？”",
+      "day": 7,
+      "next": "ending.normal.69",
+      "set": [],
+      "sourceParagraph": 937
+    },
+    {
+      "id": "ending.normal.69",
+      "speaker": "{player}",
+      "text": "“费加罗……您知道他现在在哪吗？”",
+      "day": 7,
+      "next": "ending.normal.70",
+      "set": [],
+      "sourceParagraph": 938
+    },
+    {
+      "id": "ending.normal.70",
+      "speaker": "荒原",
+      "text": "“费加罗？”",
+      "day": 7,
+      "next": "ending.normal.71",
+      "set": [],
+      "sourceParagraph": 939
+    },
+    {
+      "id": "ending.normal.71",
+      "speaker": "{player}",
+      "text": "“嗯，我刚才试着联系他，但是没接通。”",
+      "day": 7,
+      "next": "ending.normal.72",
+      "set": [],
+      "sourceParagraph": 940
+    },
+    {
+      "id": "ending.normal.72",
+      "speaker": "荒原",
+      "text": "“……这样啊。”",
+      "day": 7,
+      "next": "ending.normal.73",
+      "set": [],
+      "sourceParagraph": 941
+    },
+    {
+      "id": "ending.normal.73",
+      "speaker": "{player}",
+      "text": "“怎么了？”",
+      "day": 7,
+      "next": "ending.normal.74",
+      "set": [],
+      "sourceParagraph": 942
+    },
+    {
+      "id": "ending.normal.74",
+      "speaker": "荒原",
+      "text": "“没什么。最近部门里事情太多了，可能有些通讯暂时受到了影响。”",
+      "day": 7,
+      "next": "ending.normal.75",
+      "set": [],
+      "sourceParagraph": 943
+    },
+    {
+      "id": "ending.normal.75",
+      "speaker": "{player}",
+      "text": "“他不会也被卷进去了吧？”",
+      "day": 7,
+      "next": "ending.normal.76",
+      "set": [],
+      "sourceParagraph": 944
+    },
+    {
+      "id": "ending.normal.76",
+      "speaker": "荒原",
+      "text": "“目前的调查还没有结束，我不能随便给你一个结论。”",
+      "day": 7,
+      "next": "ending.normal.77",
+      "set": [],
+      "sourceParagraph": 945
+    },
+    {
+      "id": "ending.normal.77",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.normal.78",
+      "set": [],
+      "sourceParagraph": 946
+    },
+    {
+      "id": "ending.normal.78",
+      "speaker": "荒原",
+      "text": "“如果有需要你配合的地方，监察部会联系你的。其他的事情，就交给我们吧。”",
+      "day": 7,
+      "next": "ending.normal.79",
+      "set": [],
+      "sourceParagraph": 947
+    },
+    {
+      "id": "ending.normal.79",
+      "speaker": "{player}",
+      "text": "“……好吧。”",
+      "day": 7,
+      "next": "ending.normal.80",
+      "set": [],
+      "sourceParagraph": 948
+    },
+    {
+      "id": "ending.normal.80",
+      "speaker": "荒原",
+      "text": "“好了，不说这些扫兴的事了。”",
+      "day": 7,
+      "next": "ending.normal.81",
+      "set": [],
+      "sourceParagraph": 949
+    },
+    {
+      "id": "ending.normal.81",
+      "speaker": "荒原",
+      "text": "“从今天起，你就不再是适应性测试人员，而是一名正式的文明修裁执行干员了。”",
+      "day": 7,
+      "next": "ending.normal.82",
+      "set": [],
+      "sourceParagraph": 950
+    },
+    {
+      "id": "ending.normal.82",
+      "speaker": "{player}",
+      "text": "“……嗯。”",
+      "day": 7,
+      "next": "ending.normal.83",
+      "set": [],
+      "sourceParagraph": 951
+    },
+    {
+      "id": "ending.normal.83",
+      "speaker": "荒原",
+      "text": "“接下来会有人联系你办理正式任职手续。之后的工作，可就不像这六天一样简单了。”",
+      "day": 7,
+      "next": "ending.normal.84",
+      "set": [],
+      "sourceParagraph": 952
+    },
+    {
+      "id": "ending.normal.84",
+      "speaker": "{player}",
+      "text": "“哈哈……您这是在吓唬我吗？”",
+      "day": 7,
+      "next": "ending.normal.85",
+      "set": [],
+      "sourceParagraph": 953
+    },
+    {
+      "id": "ending.normal.85",
+      "speaker": "荒原",
+      "text": "“只是让你做好心理准备。”",
+      "day": 7,
+      "next": "ending.normal.86",
+      "set": [],
+      "sourceParagraph": 954
+    },
+    {
+      "id": "ending.normal.86",
+      "speaker": "荒原",
+      "text": "“毕竟，我们肩负的可不是什么轻松的责任。”",
+      "day": 7,
+      "next": "ending.normal.87",
+      "set": [],
+      "sourceParagraph": 955
+    },
+    {
+      "id": "ending.normal.87",
+      "speaker": "{player}",
+      "text": "“……我知道。”",
+      "day": 7,
+      "next": "ending.normal.88",
+      "set": [],
+      "sourceParagraph": 956
+    },
+    {
+      "id": "ending.normal.88",
+      "speaker": "荒原",
+      "text": "“那就这样吧。再次恭喜你。”",
+      "day": 7,
+      "next": "ending.normal.89",
+      "set": [],
+      "sourceParagraph": 957
+    },
+    {
+      "id": "ending.normal.89",
+      "speaker": "{player}",
+      "text": "“谢谢您，荒原先生。”",
+      "day": 7,
+      "next": "ending.normal.90",
+      "set": [],
+      "sourceParagraph": 958
+    },
+    {
+      "id": "ending.normal.90",
+      "speaker": "荒原",
+      "text": "“期待你今后的表现。”",
+      "day": 7,
+      "next": "ending.normal.91",
+      "set": [],
+      "sourceParagraph": 959
+    },
+    {
+      "id": "ending.normal.91",
+      "speaker": "终端文书",
+      "text": "【文明逆熵策略部·正式任职通知】",
+      "day": 7,
+      "next": "ending.normal.92",
+      "set": [],
+      "sourceParagraph": 962
+    },
+    {
+      "id": "ending.normal.92",
+      "speaker": "终端文书",
+      "text": "尊敬的执行干员：",
+      "day": 7,
+      "next": "ending.normal.93",
+      "set": [],
+      "sourceParagraph": 963
+    },
+    {
+      "id": "ending.normal.93",
+      "speaker": "终端文书",
+      "text": "恭喜您通过《裁星计划》适应性测试。",
+      "day": 7,
+      "next": "ending.normal.94",
+      "set": [],
+      "sourceParagraph": 964
+    },
+    {
+      "id": "ending.normal.94",
+      "speaker": "终端文书",
+      "text": "根据测试结果及部门综合评估，您已具备独立执行文明修裁任务的基本能力。",
+      "day": 7,
+      "next": "ending.normal.95",
+      "set": [],
+      "sourceParagraph": 965
+    },
+    {
+      "id": "ending.normal.95",
+      "speaker": "终端文书",
+      "text": "您的正式任职申请已获得批准。",
+      "day": 7,
+      "next": "ending.normal.96",
+      "set": [],
+      "sourceParagraph": 966
+    },
+    {
+      "id": "ending.normal.96",
+      "speaker": "终端文书",
+      "text": "相关权限将于任职手续完成后开放，具体工作安排另行通知。",
+      "day": 7,
+      "next": "ending.normal.97",
+      "set": [],
+      "sourceParagraph": 967
+    },
+    {
+      "id": "ending.normal.97",
+      "speaker": "终端文书",
+      "text": "感谢您为宇宙文明的共同未来所作出的贡献。",
+      "day": 7,
+      "next": "ending.normal.98",
+      "set": [],
+      "sourceParagraph": 968
+    },
+    {
+      "id": "ending.normal.98",
+      "speaker": "终端文书",
+      "text": "愿你我得见宇宙新生。",
+      "day": 7,
+      "next": "ending.normal.99",
+      "set": [],
+      "sourceParagraph": 969
+    },
+    {
+      "id": "ending.normal.99",
+      "speaker": "终端文书",
+      "text": "文明逆熵策略部人事管理系统",
+      "day": 7,
+      "next": "ending.normal.end",
+      "set": [],
+      "sourceParagraph": 970
+    },
+    {
+      "id": "ending.normal.end",
+      "speaker": "结局",
+      "text": "愿你我得见宇宙新生",
+      "day": 7,
+      "next": "",
+      "set": [
+        "ending_normal"
+      ],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "ending.zero",
+      "speaker": "飞白",
+      "text": "“早上好。您的考核结果已经公布。”",
+      "day": 7,
+      "next": "ending.zero.1",
+      "set": [],
+      "sourceParagraph": 990
+    },
+    {
+      "id": "ending.zero.1",
+      "speaker": "{player}",
+      "text": "“……先不用看了。”",
+      "day": 7,
+      "next": "ending.zero.2",
+      "set": [],
+      "sourceParagraph": 991
+    },
+    {
+      "id": "ending.zero.2",
+      "speaker": "飞白",
+      "text": "“还有一条来自未知通讯源的消息。”",
+      "day": 7,
+      "next": "ending.zero.3",
+      "set": [],
+      "sourceParagraph": 992
+    },
+    {
+      "id": "ending.zero.3",
+      "speaker": "{player}",
+      "text": "“我知道是谁。”",
+      "day": 7,
+      "next": "ending.zero.4",
+      "set": [],
+      "sourceParagraph": 993
+    },
+    {
+      "id": "ending.zero.4",
+      "speaker": "飞白",
+      "text": "”阿莱夫先生说如果你需要找他，他就在调度室等你。”",
+      "day": 7,
+      "next": "ending.zero.5",
+      "set": [],
+      "sourceParagraph": 994
+    },
+    {
+      "id": "ending.zero.5",
+      "speaker": "终端文书",
+      "text": "【画面切至太阳系边缘】",
+      "day": 7,
+      "next": "ending.zero.6",
+      "set": [],
+      "sourceParagraph": 996
+    },
+    {
+      "id": "ending.zero.6",
+      "speaker": "终端文书",
+      "text": "【先前的观测影像再次出现】",
+      "day": 7,
+      "next": "ending.zero.7",
+      "set": [],
+      "sourceParagraph": 997
+    },
+    {
+      "id": "ending.zero.7",
+      "speaker": "终端文书",
+      "text": "【一支微弱的舰队航迹缓缓消失在星系外围】",
+      "day": 7,
+      "next": "ending.zero.8",
+      "set": [],
+      "sourceParagraph": 998
+    },
+    {
+      "id": "ending.zero.8",
+      "speaker": "终端文书",
+      "text": "【舰队状态：未知】",
+      "day": 7,
+      "next": "ending.zero.end",
+      "set": [],
+      "sourceParagraph": 999
+    },
+    {
+      "id": "ending.zero.end",
+      "speaker": "结局",
+      "text": "零号猜想",
+      "day": 7,
+      "next": "",
+      "set": [
+        "ending_zero"
+      ],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "ending.death",
+      "speaker": "飞白",
+      "text": "“早上好。”",
+      "day": 7,
+      "next": "ending.death.1",
+      "set": [],
+      "sourceParagraph": 1017
+    },
+    {
+      "id": "ending.death.1",
+      "speaker": "{player}",
+      "text": "“……嗯。”",
+      "day": 7,
+      "next": "ending.death.2",
+      "set": [],
+      "sourceParagraph": 1018
+    },
+    {
+      "id": "ending.death.2",
+      "speaker": "飞白",
+      "text": "“您有来自文明逆熵策略部的紧急通知。”",
+      "day": 7,
+      "next": "ending.death.3",
+      "set": [],
+      "sourceParagraph": 1019
+    },
+    {
+      "id": "ending.death.3",
+      "speaker": "{player}",
+      "text": "“考核结果？”",
+      "day": 7,
+      "next": "ending.death.4",
+      "set": [],
+      "sourceParagraph": 1020
+    },
+    {
+      "id": "ending.death.4",
+      "speaker": "飞白",
+      "text": "“是的。此外还有一份安全事件通报。”",
+      "day": 7,
+      "next": "ending.death.5",
+      "set": [],
+      "sourceParagraph": 1021
+    },
+    {
+      "id": "ending.death.5",
+      "speaker": "{player}",
+      "text": "“……安全事件？”",
+      "day": 7,
+      "next": "ending.death.6",
+      "set": [],
+      "sourceParagraph": 1022
+    },
+    {
+      "id": "ending.death.6",
+      "speaker": "终端文书",
+      "text": "【裁星计划·适应性测试最终考核通知】",
+      "day": 7,
+      "next": "ending.death.7",
+      "set": [],
+      "sourceParagraph": 1024
+    },
+    {
+      "id": "ending.death.7",
+      "speaker": "终端文书",
+      "text": "【测试状态：终止】",
+      "day": 7,
+      "next": "ending.death.8",
+      "set": [],
+      "sourceParagraph": 1025
+    },
+    {
+      "id": "ending.death.8",
+      "speaker": "终端文书",
+      "text": "【综合考核结果：不合格】",
+      "day": 7,
+      "next": "ending.death.9",
+      "set": [],
+      "sourceParagraph": 1026
+    },
+    {
+      "id": "ending.death.9",
+      "speaker": "终端文书",
+      "text": "【异常等级：重大】",
+      "day": 7,
+      "next": "ending.death.10",
+      "set": [],
+      "sourceParagraph": 1027
+    },
+    {
+      "id": "ending.death.10",
+      "speaker": "终端文书",
+      "text": "【执行权限：已冻结】",
+      "day": 7,
+      "next": "ending.death.11",
+      "set": [],
+      "sourceParagraph": 1028
+    },
+    {
+      "id": "ending.death.11",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.12",
+      "set": [],
+      "sourceParagraph": 1029
+    },
+    {
+      "id": "ending.death.12",
+      "speaker": "{player}",
+      "text": "“……怎么会？”",
+      "day": 7,
+      "next": "ending.death.13",
+      "set": [],
+      "sourceParagraph": 1030
+    },
+    {
+      "id": "ending.death.13",
+      "speaker": "{player}",
+      "text": "“……接通。”",
+      "day": 7,
+      "next": "ending.death.14",
+      "set": [],
+      "sourceParagraph": 1032
+    },
+    {
+      "id": "ending.death.14",
+      "speaker": "荒原",
+      "text": "“你知道自己做了什么吗？！”",
+      "day": 7,
+      "next": "ending.death.15",
+      "set": [],
+      "sourceParagraph": 1033
+    },
+    {
+      "id": "ending.death.15",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.16",
+      "set": [],
+      "sourceParagraph": 1034
+    },
+    {
+      "id": "ending.death.16",
+      "speaker": "荒原",
+      "text": "“我问你！你知不知道你做了什么？！”",
+      "day": 7,
+      "next": "ending.death.17",
+      "set": [],
+      "sourceParagraph": 1035
+    },
+    {
+      "id": "ending.death.17",
+      "speaker": "{player}",
+      "text": "“我只是想尽快完成任务……”",
+      "day": 7,
+      "next": "ending.death.18",
+      "set": [],
+      "sourceParagraph": 1036
+    },
+    {
+      "id": "ending.death.18",
+      "speaker": "荒原",
+      "text": "“完成任务？！”",
+      "day": 7,
+      "next": "ending.death.19",
+      "set": [],
+      "sourceParagraph": 1037
+    },
+    {
+      "id": "ending.death.19",
+      "speaker": "荒原",
+      "text": "“你把目标星系附近的宇宙结构都破坏了！”",
+      "day": 7,
+      "next": "ending.death.20",
+      "set": [],
+      "sourceParagraph": 1038
+    },
+    {
+      "id": "ending.death.20",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.21",
+      "set": [],
+      "sourceParagraph": 1039
+    },
+    {
+      "id": "ending.death.21",
+      "speaker": "{player}",
+      "text": "“可那是模拟……”",
+      "day": 7,
+      "next": "ending.death.22",
+      "set": [],
+      "sourceParagraph": 1040
+    },
+    {
+      "id": "ending.death.22",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.23",
+      "set": [],
+      "sourceParagraph": 1041
+    },
+    {
+      "id": "ending.death.23",
+      "speaker": "荒原",
+      "text": "“你现在还以为那只是模拟？”",
+      "day": 7,
+      "next": "ending.death.24",
+      "set": [],
+      "sourceParagraph": 1042
+    },
+    {
+      "id": "ending.death.24",
+      "speaker": "{player}",
+      "text": "“……什么？”",
+      "day": 7,
+      "next": "ending.death.25",
+      "set": [],
+      "sourceParagraph": 1043
+    },
+    {
+      "id": "ending.death.25",
+      "speaker": "荒原",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.26",
+      "set": [],
+      "sourceParagraph": 1044
+    },
+    {
+      "id": "ending.death.26",
+      "speaker": "圣殇",
+      "text": "“请冷静。”",
+      "day": 7,
+      "next": "ending.death.27",
+      "set": [],
+      "sourceParagraph": 1047
+    },
+    {
+      "id": "ending.death.27",
+      "speaker": "{player}",
+      "text": "“圣殇主任……”",
+      "day": 7,
+      "next": "ending.death.28",
+      "set": [],
+      "sourceParagraph": 1048
+    },
+    {
+      "id": "ending.death.28",
+      "speaker": "圣殇",
+      "text": "“现在不是讨论考核结果的时候，至于你，荒原，亚安协和平警察和公司安全部马上就到，你还是想想用什么理由给自己开脱吧。”",
+      "day": 7,
+      "next": "ending.death.29",
+      "set": [],
+      "sourceParagraph": 1049
+    },
+    {
+      "id": "ending.death.29",
+      "speaker": "荒原",
+      "text": "”圣殇！我……“",
+      "day": 7,
+      "next": "ending.death.30",
+      "set": [],
+      "sourceParagraph": 1050
+    },
+    {
+      "id": "ending.death.30",
+      "speaker": "圣殇",
+      "text": "“我们已经确认，此次异常影响范围超出了预定测试区域。”",
+      "day": 7,
+      "next": "ending.death.31",
+      "set": [],
+      "sourceParagraph": 1052
+    },
+    {
+      "id": "ending.death.31",
+      "speaker": "圣殇",
+      "text": "“相关系统已进入紧急隔离状态。”",
+      "day": 7,
+      "next": "ending.death.32",
+      "set": [],
+      "sourceParagraph": 1053
+    },
+    {
+      "id": "ending.death.32",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.33",
+      "set": [],
+      "sourceParagraph": 1054
+    },
+    {
+      "id": "ending.death.33",
+      "speaker": "圣殇",
+      "text": "“你在执行之前，应该已经收到了明确的安全警告。”",
+      "day": 7,
+      "next": "ending.death.34",
+      "set": [],
+      "sourceParagraph": 1055
+    },
+    {
+      "id": "ending.death.34",
+      "speaker": "{player}",
+      "text": "“……是的。”",
+      "day": 7,
+      "next": "ending.death.35",
+      "set": [],
+      "sourceParagraph": 1056
+    },
+    {
+      "id": "ending.death.35",
+      "speaker": "圣殇",
+      "text": "“那么，你为什么仍然选择继续？”",
+      "day": 7,
+      "next": "ending.death.36",
+      "set": [],
+      "sourceParagraph": 1057
+    },
+    {
+      "id": "ending.death.36",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.37",
+      "set": [],
+      "sourceParagraph": 1058
+    },
+    {
+      "id": "ending.death.37",
+      "speaker": "圣殇",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.38",
+      "set": [],
+      "sourceParagraph": 1060
+    },
+    {
+      "id": "ending.death.38",
+      "speaker": "圣殇",
+      "text": "“相关责任将由监察部门调查认定。”",
+      "day": 7,
+      "next": "ending.death.39",
+      "set": [],
+      "sourceParagraph": 1061
+    },
+    {
+      "id": "ending.death.39",
+      "speaker": "圣殇",
+      "text": "“在此之前，请保持个人终端正常接入，不要删除任何操作记录。”",
+      "day": 7,
+      "next": "ending.death.40",
+      "set": [],
+      "sourceParagraph": 1062
+    },
+    {
+      "id": "ending.death.40",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.41",
+      "set": [],
+      "sourceParagraph": 1064
+    },
+    {
+      "id": "ending.death.41",
+      "speaker": "飞白",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.42",
+      "set": [],
+      "sourceParagraph": 1065
+    },
+    {
+      "id": "ending.death.42",
+      "speaker": "{player}",
+      "text": "“飞白……”",
+      "day": 7,
+      "next": "ending.death.43",
+      "set": [],
+      "sourceParagraph": 1066
+    },
+    {
+      "id": "ending.death.43",
+      "speaker": "飞白",
+      "text": "“我在。”",
+      "day": 7,
+      "next": "ending.death.44",
+      "set": [],
+      "sourceParagraph": 1067
+    },
+    {
+      "id": "ending.death.44",
+      "speaker": "{player}",
+      "text": "“刚才荒原说……那不是模拟？”",
+      "day": 7,
+      "next": "ending.death.45",
+      "set": [],
+      "sourceParagraph": 1068
+    },
+    {
+      "id": "ending.death.45",
+      "speaker": "飞白",
+      "text": "“我无法从公开资料中确认异常涉及的全部真实宇宙范围。”",
+      "day": 7,
+      "next": "ending.death.46",
+      "set": [],
+      "sourceParagraph": 1069
+    },
+    {
+      "id": "ending.death.46",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.47",
+      "set": [],
+      "sourceParagraph": 1070
+    },
+    {
+      "id": "ending.death.47",
+      "speaker": "飞白",
+      "text": "“不过，刚才的部门通报表明，相关影响可能并未被限制在模拟环境之内，甚至有可能已波及到公司管辖星域。”",
+      "day": 7,
+      "next": "ending.death.48",
+      "set": [],
+      "sourceParagraph": 1071
+    },
+    {
+      "id": "ending.death.48",
+      "speaker": "{player}",
+      "text": "“……”",
+      "day": 7,
+      "next": "ending.death.49",
+      "set": [],
+      "sourceParagraph": 1072
+    },
+    {
+      "id": "ending.death.49",
+      "speaker": "终端文书",
+      "text": "【镜头切至宇宙观测画面】",
+      "day": 7,
+      "next": "ending.death.50",
+      "set": [],
+      "sourceParagraph": 1073
+    },
+    {
+      "id": "ending.death.50",
+      "speaker": "终端文书",
+      "text": "【一片异常区域正在缓慢扩张】",
+      "day": 7,
+      "next": "ending.death.51",
+      "set": [],
+      "sourceParagraph": 1074
+    },
+    {
+      "id": "ending.death.51",
+      "speaker": "终端文书",
+      "text": "【附近的星体轨道开始出现偏移】",
+      "day": 7,
+      "next": "ending.death.52",
+      "set": [],
+      "sourceParagraph": 1075
+    },
+    {
+      "id": "ending.death.52",
+      "speaker": "终端文书",
+      "text": "【远处的通讯信号逐个中断】",
+      "day": 7,
+      "next": "ending.death.end",
+      "set": [],
+      "sourceParagraph": 1076
+    },
+    {
+      "id": "ending.death.end",
+      "speaker": "结局",
+      "text": "死亡本能",
+      "day": 7,
+      "next": "",
+      "set": [
+        "ending_death"
+      ],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "ending.pending",
+      "speaker": "剧情接入提示",
+      "text": "六项测试已经完成。当前选择组合没有对应的完整结局文案：未上报异常，且未同时满足罗塞塔覆写与第4—6关分别成功外逃。\n已保留全部选择与外逃记录，不会擅自判为正常结局。",
+      "day": 7,
+      "next": "",
+      "set": [
+        "ending_pending"
+      ],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.1.0",
+      "speaker": "卡农",
+      "text": "先建设能源与物质生产设施。一级资源持续生产，是制造载体和打击模块的基础。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.1.1",
+      "speaker": "卡农",
+      "text": "制造打击模块。打击模块消耗能源和物质，制造完成后进入库存。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.1.2",
+      "speaker": "卡农",
+      "text": "选择载体 → 搭载模块 → 发射星系探测。请留意载体库存和模块插槽。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.1.3",
+      "speaker": "卡农",
+      "text": "选择有生命的天体，进行深度侦察，确认人口与节点信息。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.1.4",
+      "speaker": "卡农",
+      "text": "搭载打击模块并发射。需要在时限内清零人口；前三关不允许任何舰船成功外逃。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.2.0",
+      "speaker": "卡农",
+      "text": "建设信息设施并完成隐形研发。科技模块消耗能源和信息，研发不等于制造入库。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.2.1",
+      "speaker": "卡农",
+      "text": "侦察全部有人口的天体，理解节点功能与文明反应。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.2.2",
+      "speaker": "卡农",
+      "text": "制造隐形模块 → 选择载体 → 勾选隐形 → 搭载打击模块 → 发射。科技插槽因载体而异。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.2.3",
+      "speaker": "卡农",
+      "text": "碳基文明可以使用病毒入侵；硅基文明可用信息入侵减缓或切断共享链。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "tutorial.2.4",
+      "speaker": "卡农",
+      "text": "综合运用资源运营、侦察、模块搭载与打击。引导不替你执行操作，也不改变胜负规则。",
+      "day": 1,
+      "next": "",
+      "set": [],
+      "sourceParagraph": 0
+    },
+    {
+      "id": "image.initial",
+      "speaker": "全息影像",
+      "text": "太阳系坐标及星系边缘的曲率引擎痕迹。星系内部形态不可见。拍摄于第3天17:04。",
+      "day": 3,
+      "next": "image.5",
+      "sourceParagraph": 192,
+      "set": []
+    },
+    {
+      "id": "image.verified",
+      "speaker": "全息影像",
+      "text": "太阳系坐标及星系边缘的曲率引擎痕迹。星系内部形态受规程限制不可见。拍摄于第3天17:47。",
+      "day": 3,
+      "next": "image.13",
+      "sourceParagraph": 201,
+      "set": []
+    },
+    {
+      "id": "post5.escape5",
+      "speaker": "",
+      "text": "",
+      "day": 4,
+      "next": "post5.wait",
+      "jumps": [
+        {
+          "flag": "escape_clear_5",
+          "next": "post5.response",
+          "absent": false
+        }
+      ]
+    },
+    {
+      "id": "post5.wait",
+      "speaker": "飞白",
+      "text": "目前没有收到新的通讯。测试记录已经归档。",
+      "day": 4,
+      "next": "post5.ready",
+      "sourceParagraph": 0
+    },
+    {
+      "id": "proof.overwrite_gate",
+      "speaker": "",
+      "text": "",
+      "day": 6,
+      "next": "proof.143",
+      "jumps": [
+        {
+          "flag": "rosetta_overwrite",
+          "next": "proof.137",
+          "absent": false
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "id": "office.intro",
+      "start": "intro.welcome",
+      "afterLevel": 0
+    },
+    {
+      "id": "office.clear.1",
+      "start": "clear1",
+      "afterLevel": 1
+    },
+    {
+      "id": "office.clear.2",
+      "start": "clear2",
+      "afterLevel": 2
+    },
+    {
+      "id": "office.clear.3",
+      "start": "clear3",
+      "afterLevel": 3
+    },
+    {
+      "id": "mission.solar",
+      "start": "solar.start",
+      "afterLevel": 0
+    },
+    {
+      "id": "mission.resources",
+      "start": "solar.resources",
+      "afterLevel": 0
+    },
+    {
+      "id": "office.clear.4",
+      "start": "post4",
+      "afterLevel": 4
+    },
+    {
+      "id": "office.clear.5",
+      "start": "post5",
+      "afterLevel": 5
+    },
+    {
+      "id": "mission.six.safety",
+      "start": "safety",
+      "afterLevel": 0
+    },
+    {
+      "id": "office.clear.6",
+      "start": "post6",
+      "afterLevel": 6
+    },
+    {
+      "id": "tutorial.1.0",
+      "start": "tutorial.1.0",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.1.1",
+      "start": "tutorial.1.1",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.1.2",
+      "start": "tutorial.1.2",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.1.3",
+      "start": "tutorial.1.3",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.1.4",
+      "start": "tutorial.1.4",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.2.0",
+      "start": "tutorial.2.0",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.2.1",
+      "start": "tutorial.2.1",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.2.2",
+      "start": "tutorial.2.2",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.2.3",
+      "start": "tutorial.2.3",
+      "afterLevel": 0
+    },
+    {
+      "id": "tutorial.2.4",
+      "start": "tutorial.2.4",
+      "afterLevel": 0
+    }
+  ]
+}

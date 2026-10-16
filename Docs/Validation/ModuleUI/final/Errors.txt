@@ -1,0 +1,5 @@
+Exception: SIX_UI: 按钮不可用Launch
+Siderectomy.DemoSixUIQA.Check (System.Boolean v, System.String m) (at E:/自己做的/游戏/2026聚光灯/裁星计划_团队评审包_2026-10-08/BY冻橙更新版/Assets/Siderectomy/Runtime/DemoSixUIQA.cs:14)
+Siderectomy.DemoSixUIQA.Click (System.String name) (at E:/自己做的/游戏/2026聚光灯/裁星计划_团队评审包_2026-10-08/BY冻橙更新版/Assets/Siderectomy/Runtime/DemoSixUIQA.cs:15)
+Siderectomy.DemoSixUIQA+<RunModules>d__11.MoveNext () (at E:/自己做的/游戏/2026聚光灯/裁星计划_团队评审包_2026-10-08/BY冻橙更新版/Assets/Siderectomy/Runtime/DemoSixUIQA.cs:70)
+UnityEngine.SetupCoroutine.InvokeMoveNext (System.Collections.IEnumerator enumerator, System.IntPtr returnValueAddress) (at C:/b/o/ra-engineer/unity-resell/Runtime/Export/Scripting/Coroutines.cs:17)

@@ -1,0 +1,26 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+namespace Siderectomy {
+ public sealed class DemoHudPolishQA:MonoBehaviour {
+  string directory;
+  public static void TryStart(){var args=Environment.GetCommandLineArgs();int i=Array.IndexOf(args,"--hud-polish-check");if(i<0||i+1>=args.Length)return;var qa=new GameObject("HudPolishQA").AddComponent<DemoHudPolishQA>();qa.directory=args[i+1];Directory.CreateDirectory(qa.directory);Application.logMessageReceived+=qa.Log;qa.StartCoroutine(qa.Run());}
+  void Log(string message,string trace,LogType type){if(type!=LogType.Error&&type!=LogType.Exception)return;File.WriteAllText(Path.Combine(directory,"FAIL.txt"),message+"\n"+trace);Application.Quit(1);}
+  void Check(bool value,string message){if(!value)throw new Exception("HUD_POLISH: "+message);}
+  IEnumerator Click(string name){yield return null;Canvas.ForceUpdateCanvases();var button=FindObjectsOfType<Button>().First(b=>b.name==name);var data=new PointerEventData(EventSystem.current){position=RectTransformUtility.WorldToScreenPoint(null,button.transform.TransformPoint(((RectTransform)button.transform).rect.center))};var hits=new List<RaycastResult>();EventSystem.current.RaycastAll(data,hits);Check(hits.Count>0&&(hits[0].gameObject==button.gameObject||hits[0].gameObject.transform.IsChildOf(button.transform)),"按钮遮挡："+name);ExecuteEvents.Execute(button.gameObject,data,ExecuteEvents.pointerClickHandler);}
+  IEnumerator Shot(string name){yield return new WaitForEndOfFrame();var camera=Camera.main;var canvas=FindObjectOfType<Canvas>();var mode=canvas.renderMode;var oldCamera=canvas.worldCamera;var oldTarget=camera.targetTexture;var active=RenderTexture.active;var target=new RenderTexture(1600,900,24);camera.targetTexture=target;canvas.renderMode=RenderMode.ScreenSpaceCamera;canvas.worldCamera=camera;canvas.planeDistance=1;Canvas.ForceUpdateCanvases();camera.Render();RenderTexture.active=target;var pixels=new Texture2D(1600,900,TextureFormat.RGB24,false);pixels.ReadPixels(new Rect(0,0,1600,900),0,0);pixels.Apply();File.WriteAllBytes(Path.Combine(directory,name+".png"),pixels.EncodeToPNG());camera.targetTexture=oldTarget;RenderTexture.active=active;canvas.renderMode=mode;canvas.worldCamera=oldCamera;Destroy(pixels);target.Release();Destroy(target);yield return null;}
+  IEnumerator Run(){yield return null;yield return null;var view=FindObjectOfType<DemoMissionView>();Check(view!=null,"缺少视图");DemoSession.Profile.highestUnlockedLevel=6;view.LoadLevel(4);var s=view.Simulation;s.GlobalProbe=true;foreach(var b in s.Bodies)b.recon=true;s.Missions.Add(new DemoMission{id=810,op="surface",body="p2",node="auto",carrier="dust",left=50,total=80});s.Revision++;view.SelectBody("p2");view.Refresh();yield return null;yield return null;
+   Check(view.InformationOpen&&!view.CommunicationsOpen,"默认折叠状态错误");Check(GameObject.Find("FunctionDock").GetComponent<Image>()==null,"底部仍存在整块底板");Check(GameObject.Find("Art_p2").GetComponent<Image>().rectTransform.sizeDelta.x==48,"星球图片未放大");Check(GameObject.Find("Art_p2").GetComponent<Image>().color==Color.white,"星球图片被染色");var details=GameObject.Find("BodyMetrics").GetComponent<Text>();Check(details.alignment==TextAnchor.UpperLeft&&details.lineSpacing<=1,"信息排版未压紧");yield return Shot("01_展开信息_淡虚线");
+   yield return Click("CollapseInformation");Check(!view.InformationOpen,"信息未收起");Check(view.HandlePanelShortcut(KeyCode.I)&&view.InformationOpen,"I未展开");view.HandlePanelShortcut(KeyCode.I);yield return Click("InformationTab");Check(view.InformationOpen,"页签未展开");
+   yield return Click("NPCTab");Check(view.CommunicationsOpen,"NPC未展开");yield return Shot("02_通讯展开");yield return Click("EndConversation");Check(!view.CommunicationsOpen,"结束通讯未收起");view.HandlePanelShortcut(KeyCode.O);Check(view.CommunicationsOpen,"O未展开");view.HandlePanelShortcut(KeyCode.O);Check(!view.CommunicationsOpen,"O未收起");
+   var handle=GameObject.Find("ClockDragHandle").GetComponent<DemoFloatingDrag>();var timer=handle.Target;Check(timer.anchoredPosition==new Vector2(846,-70),"时间默认位置错误");var from=RectTransformUtility.WorldToScreenPoint(null,handle.transform.TransformPoint(new Vector2(30,-15)));var e=new PointerEventData(EventSystem.current){position=from};handle.OnBeginDrag(e);e.position=from+new Vector2(-180,-120);handle.OnDrag(e);Check(timer.anchoredPosition!=new Vector2(846,-70),"时间控件拖动失败");yield return Click("Speed2");Check(s.Speed==2,"拖动后倍速失效");yield return Click("Pause");Check(!s.Paused,"拖动后暂停失效");s.Paused=true;handle.MoveTo(new Vector2(-10000,10000));Check(timer.anchoredPosition.x==0&&timer.anchoredPosition.y==-65,"拖动未限制边界");handle.MoveTo(new Vector2(846,-70));view.SetInformationOpen(false);yield return Shot("03_收起双栏_浮动HUD");
+   var map=FindObjectsOfType<DemoStarMap>().First(m=>!m.Compact);Check(map.MissionRoutes.Count==1,"任务轨迹缺失");view.EnterLocalView();view.Refresh();yield return null;yield return null;yield return Shot("04_局部图片");
+   File.WriteAllText(Path.Combine(directory,"PASS.txt"),"PASS 实际射线点击信息收展、I/O快捷分发、NPC展开与结束收起、时间控件拖动和边界/倍速/暂停、无底板操作栏、原色放大星球与总览/局部轨迹。独立测试存档与任务夹具。");Application.Quit(0);
+  }
+ }
+}

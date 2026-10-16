@@ -1,0 +1,43 @@
+# Unity 自动生成目录（打开工程后自动重建，无需上传；含 Tools/ 下嵌套工程）
+Library/
+Temp/
+obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+
+# IDE / 工具生成文件
+.vs/
+.idea/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+sysinfo.txt
+crashlytics-build.properties
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# Burst 调试信息（含构建机绝对路径，勿发布）
+*_BurstDebugInformation_DoNotShip/
+
+# 本地构建日志、测试档案及素材原稿保留在完整交付包
+Docs/**/*.log
+Docs/**/TestSaves/
+Docs/ArtReferences/**/*.psd
+Docs/Backups/
+
+# Python 字节码缓存
+__pycache__/
+*.pyc

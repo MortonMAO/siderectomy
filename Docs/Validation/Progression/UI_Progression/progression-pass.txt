@@ -1,0 +1,126 @@
+PASS 从开始界面进入
+PASS 新标题插画已接入
+PASS 入口存在 NewProfile
+PASS 入口可点击 NewProfile
+PASS 入口未被遮挡 NewProfile
+PASS 入口存在 ConfirmNewProfile
+PASS 入口可点击 ConfirmNewProfile
+PASS 入口未被遮挡 ConfirmNewProfile
+PASS 新档仅开放第一关
+PASS 办公室锁定 1
+PASS 办公室锁定 2
+PASS 办公室锁定 3
+PASS 办公室锁定 4
+PASS 办公室锁定 5
+PASS 办公室锁定 6
+PASS 绕过禁用按钮仍不能越级
+PASS 入口存在 OfficeLevel1
+PASS 入口可点击 OfficeLevel1
+PASS 入口未被遮挡 OfficeLevel1
+PASS 局内选关门槛 1 / 1
+PASS 局内选关门槛 2 / 1
+PASS 局内选关门槛 3 / 1
+PASS 局内选关门槛 4 / 1
+PASS 局内选关门槛 5 / 1
+PASS 局内选关门槛 6 / 1
+PASS 直接加载入口不能越级
+PASS 恢复入口不能载入未解锁关卡
+PASS 失败不解锁下一关
+PASS 入口存在 Retry
+PASS 入口可点击 Retry
+PASS 入口未被遮挡 Retry
+PASS 完成第一关解锁第二关，分数不作为门槛
+PASS 胜利进度立即落盘
+PASS 入口存在 NextLevel
+PASS 入口可点击 NextLevel
+PASS 入口未被遮挡 NextLevel
+PASS 结果页前往下一关
+PASS 局内选关门槛 1 / 2
+PASS 局内选关门槛 2 / 2
+PASS 局内选关门槛 3 / 2
+PASS 局内选关门槛 4 / 2
+PASS 局内选关门槛 5 / 2
+PASS 局内选关门槛 6 / 2
+PASS 入口存在 AbandonSimulation
+PASS 入口可点击 AbandonSimulation
+PASS 入口未被遮挡 AbandonSimulation
+PASS 办公室显示累计解锁
+PASS 入口存在 OfficeLevel1
+PASS 入口可点击 OfficeLevel1
+PASS 入口未被遮挡 OfficeLevel1
+PASS 重玩第一关不重复解锁或跳关
+PASS 入口存在 Inspect
+PASS 入口可点击 Inspect
+PASS 入口未被遮挡 Inspect
+PASS 入口存在 SaveSimulation
+PASS 入口可点击 SaveSimulation
+PASS 入口未被遮挡 SaveSimulation
+PASS 通关后保存退出保留下一关位置，不保存已完成现场
+PASS 入口存在 OfficeLevel2
+PASS 入口可点击 OfficeLevel2
+PASS 入口未被遮挡 OfficeLevel2
+PASS 入口存在 SaveSimulation
+PASS 入口可点击 SaveSimulation
+PASS 入口未被遮挡 SaveSimulation
+PASS 保存现场保留关卡解锁
+PASS 入口存在 OfficeMainMenu
+PASS 入口可点击 OfficeMainMenu
+PASS 入口未被遮挡 OfficeMainMenu
+PASS 入口存在 ContinueGame
+PASS 入口可点击 ContinueGame
+PASS 入口未被遮挡 ContinueGame
+PASS 入口存在 Load_3e542574f53a47efa44cd2f3de9c63a1
+PASS 入口可点击 Load_3e542574f53a47efa44cd2f3de9c63a1
+PASS 入口未被遮挡 Load_3e542574f53a47efa44cd2f3de9c63a1
+PASS 读档恢复第二关现场与暂停状态
+PASS 读档没有开放第三关
+PASS 第二关完成后清理现场并解锁第三关
+PASS 入口存在 Inspect
+PASS 入口可点击 Inspect
+PASS 入口未被遮挡 Inspect
+PASS 入口存在 AbandonSimulation
+PASS 入口可点击 AbandonSimulation
+PASS 入口未被遮挡 AbandonSimulation
+PASS 通关后放弃退出保留下一关位置
+PASS 入口存在 OfficeLevel3
+PASS 入口可点击 OfficeLevel3
+PASS 入口未被遮挡 OfficeLevel3
+PASS 第三关完成解锁第四关
+PASS 入口存在 NextLevel
+PASS 入口可点击 NextLevel
+PASS 入口未被遮挡 NextLevel
+PASS 第四关完成继续解锁第五关
+PASS 局内选关门槛 1 / 5
+PASS 局内选关门槛 2 / 5
+PASS 局内选关门槛 3 / 5
+PASS 局内选关门槛 4 / 5
+PASS 局内选关门槛 5 / 5
+PASS 局内选关门槛 6 / 5
+PASS 入口存在 NextLevel
+PASS 入口可点击 NextLevel
+PASS 入口未被遮挡 NextLevel
+PASS 第五关入口可用
+PASS 第五关完成解锁第六关
+PASS 入口存在 NextLevel
+PASS 入口可点击 NextLevel
+PASS 入口未被遮挡 NextLevel
+PASS 第六关入口可用
+PASS 末关完成不产生不存在的下一关
+PASS 入口存在 Inspect
+PASS 入口可点击 Inspect
+PASS 入口未被遮挡 Inspect
+PASS 入口存在 AbandonSimulation
+PASS 入口可点击 AbandonSimulation
+PASS 入口未被遮挡 AbandonSimulation
+PASS 入口存在 OfficeMainMenu
+PASS 入口可点击 OfficeMainMenu
+PASS 入口未被遮挡 OfficeMainMenu
+PASS 入口存在 NewProfile
+PASS 入口可点击 NewProfile
+PASS 入口未被遮挡 NewProfile
+PASS 入口存在 ConfirmNewProfile
+PASS 入口可点击 ConfirmNewProfile
+PASS 入口未被遮挡 ConfirmNewProfile
+PASS 新档不继承另一档案的解锁
+PASS 另一档案的进度仍保存
+使用独立测试存档；通关使用确定性目标完成夹具，仅验证进度与交互，不代表六关真实手动难度。

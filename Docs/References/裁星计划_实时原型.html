@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>裁星计划 · 第四关太阳系验收原型</title>
+<style>
+:root{--bg:#090d16;--panel:#131b28;--edge:#28364a;--text:#dce5ef;--muted:#8797ac;--cyan:#67d5dc;--gold:#ecc27b;--red:#f18189;--green:#88c9a3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:13px "Microsoft YaHei",sans-serif}button,select,input{font:inherit;color:inherit;background:#1c293b;border:1px solid var(--edge);border-radius:5px;padding:8px;cursor:pointer}button:hover:not(:disabled){border-color:var(--cyan)}button:disabled{opacity:.4;cursor:not-allowed}button.active{background:#294852;border-color:var(--cyan)}header{height:65px;display:flex;align-items:center;gap:18px;padding:12px 22px;border-bottom:1px solid var(--edge)}header strong{font-size:19px}header small{display:block;color:var(--muted);margin-top:4px}.pill{border:1px solid #675742;padding:5px 10px;border-radius:20px;color:var(--gold)}.layout{height:calc(100vh - 65px);display:grid;grid-template-columns:minmax(0,1fr) 310px;grid-template-rows:minmax(260px,1fr) 62px 220px}.map{position:relative;overflow:hidden;grid-column:1;grid-row:1;background:#090f19}canvas{width:100%;height:100%;display:block}.mapnote{position:absolute;top:14px;left:18px;color:var(--muted);pointer-events:none}.mapnote b{color:var(--text)}#toast{position:absolute;bottom:14px;left:18px;background:#17273eee;padding:10px 14px;border-left:3px solid var(--cyan);max-width:80%;pointer-events:none}.hud{grid-row:2;display:flex;align-items:center;gap:13px;padding:8px 16px;border-top:1px solid var(--edge);background:#17202f}.resource{min-width:67px;font-variant-numeric:tabular-nums}.resource span{display:block;font-size:11px;color:var(--muted)}.resource b{font-size:17px}.resource small{color:var(--green);font-size:10px}.controls{margin-left:auto;display:flex;gap:4px;align-items:center}.commands{grid-row:3;padding:10px 15px;background:var(--panel);border-top:1px solid var(--edge);overflow:auto}.tabs{display:flex;gap:6px;margin-bottom:8px}.tabs button{padding:7px 11px}#actions{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:7px}.action{text-align:left;min-height:75px}.action b,.action small{display:block}.action small{color:var(--muted);font-size:11px;margin-top:5px}.action .cost{color:var(--gold)}aside{grid-column:2;grid-row:1/4;background:var(--panel);border-left:1px solid var(--edge);overflow:auto;padding:15px}.portrait{height:90px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--edge);margin-bottom:12px}.portrait .orb{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#b7d6e7,#366b98 70%,#173143);box-shadow:0 0 25px #4b91ba22}.portrait h2{font-size:19px;margin:0}.muted{color:var(--muted);line-height:1.6}h3{font-size:12px;letter-spacing:1px;color:var(--muted);margin:16px 0 8px}.row{display:flex;justify-content:space-between;gap:8px;margin:7px 0}.bar{height:5px;background:#253347;border-radius:4px;margin:5px 0 10px;overflow:hidden}.bar i{display:block;height:100%;background:var(--cyan)}.nodes button{width:100%;display:flex;justify-content:space-between;margin-bottom:5px;padding:6px;font-size:11px}.nodes button.active{border-color:var(--gold)}.log{font-size:11px;color:var(--muted);line-height:1.7}.log div{border-left:2px solid var(--edge);padding-left:7px;margin-bottom:5px}.jobs{font-size:11px}.jobs .row{border-bottom:1px solid var(--edge);padding:6px 0}.hint{background:#212d3c;padding:10px;font-size:11px;line-height:1.7;border-radius:5px}.modal{position:fixed;inset:0;background:#050911df;display:none;align-items:center;justify-content:center;z-index:20}.modal.open{display:flex}.dialog{background:var(--panel);border:1px solid var(--edge);padding:25px;border-radius:12px;max-height:90vh;overflow:auto;width:min(680px,95vw)}.dialog h2{margin-top:0}.dialog input{width:115px}.parameter{display:flex;justify-content:space-between;align-items:center;margin:7px 0}.tag{font-size:10px;color:var(--gold)}#composer{display:none;margin-top:8px}.field{margin:8px 0}.field select{width:100%}.module{display:block;font-size:12px;margin:6px 0}.module input{width:auto}#bodyActions{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:12px 0}#bodyActions button{text-align:left;font-size:12px}#clock{white-space:nowrap;color:var(--gold)}@media(max-width:1000px){.layout{grid-template-columns:minmax(0,1fr) 270px}.hud{gap:7px;padding:6px}.resource{min-width:48px}.resource b{font-size:14px}#actions{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){header{height:auto;flex-wrap:wrap}.layout{height:auto;display:flex;flex-direction:column}.map{height:400px}.hud{flex-wrap:wrap}.commands{max-height:320px}aside{border-top:1px solid var(--edge)}}
+</style></head><body>
+<header><div><strong>裁星计划</strong><small>实时作业 · 规则 v1.1 / 太阳系基准关</small></div><span class="pill">第四关 · 太阳系</span><span class="muted">人口清零 + 16分钟内完成 · 外逃为结局分支</span><button id="settings" style="margin-left:auto">基准调参</button><button id="restart">重新开始</button></header>
+<div class="layout">
+<section class="map"><canvas id="cv"></canvas><div class="mapnote"><b>太阳系星图</b> · 点击天体查看详情<br>1恒星 · 8行星 · 10卫星 · 探测后解锁精确作业</div><div id="toast">先建设经济和军工、信号捕捉，再侦察中心并准备恒星打击。</div></section>
+<section class="hud"><div id="resources" style="display:flex;gap:14px"></div><div class="controls"><span id="clock"></span><button id="pause">暂停</button><button data-speed="1" class="active">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button></div></section>
+<section class="commands"><div class="tabs"><button data-tab="economy" class="active">生产设施</button><button data-tab="manufacture">二级资源</button><button data-tab="carriers">运输载体</button><button data-tab="research">研发</button><button data-tab="operation">作业投送</button><button data-tab="apply">资源申请</button></div><div id="actions"></div><div id="composer"></div></section>
+<aside><div id="detail"></div><div id="bodyActions"></div><div id="status"></div><h3>作业进程</h3><div id="jobs" class="jobs"></div><h3>文明响应 / 作战日志</h3><div id="log" class="log"></div></aside>
+</div><div class="modal" id="modal"><div class="dialog" id="dialog"></div></div>
+<script>
+"use strict";
+// 单文件，可离线运行。规则表集中于 CFG、FAC、BATCH、CARRIERS、OPS。
+const CFG={level:4,limit:960,energy:150,matter:150,info:12,a1:28,a2:0,a3:0,
+ energyRate:1.2,matterRate:.8,energyBonus:1.6,matterBonus:.95,facilityCap:5,
+ techStart:32,techRate:.045,alertMul:.9,decay:.16,backupStart:180,backupRate:.38,
+ escapeSeconds:45,aiBuildRate:.42,aiCap:8,nodeGate:.7,protection:.7,damageScale:1,aiScale:1,
+ initialPopulation:1650,seed:2407};
+const LABEL={energy:"能源",matter:"物质",info:"信息",a1:"一级武装",a2:"二级武装",a3:"三级武装"};
+const FAC={
+ energy:{name:"能源采集器",cost:{energy:20,matter:25},seconds:12,desc:"+1.60能源/秒，后续递减"},
+ matter:{name:"物质转化器",cost:{energy:25,matter:20},seconds:12,desc:"+0.95物质/秒，后续递减"},
+ military:{name:"军工制造点",cost:{energy:35,matter:35},seconds:15,desc:"提供武装制造队列"},
+ signal:{name:"信号捕捉点",cost:{energy:35,matter:45},seconds:15,desc:"提供信息制造队列；需探测卫星"}};
+const BATCH={
+ a1:{name:"一级武装",cost:{energy:12,matter:18},seconds:7,out:10,facility:"military"},
+ a2:{name:"二级武装",cost:{energy:24,matter:36},seconds:12,out:6,facility:"military"},
+ a3:{name:"三级武装",cost:{energy:48,matter:70},seconds:20,out:3,facility:"military"},
+ info:{name:"信息捕捉",cost:{energy:18,matter:15},seconds:8,out:8,facility:"signal"}};
+// 草案解锁冲突已对齐：二级武装第2关、三级和行星载体第3关，星系打击仍第5关。
+const CARRIERS={
+ dust:{name:"星尘级",cost:{energy:6,matter:8,info:2},seconds:8,slots:1,flight:10,exposure:0},
+ satellite:{name:"卫星级",cost:{energy:14,matter:20,info:4},seconds:15,slots:2,flight:18,exposure:-1},
+ asteroid:{name:"小行星级",cost:{energy:32,matter:50,info:10},seconds:30,slots:3,flight:30,exposure:3},
+ planet:{name:"行星级",cost:{energy:80,matter:130,info:25},seconds:60,slots:4,flight:45,exposure:10}};
+const OPS={
+ probe:{name:"星系探测",cost:{energy:4,matter:4,info:8},seconds:10,carrier:"dust",alert:1,desc:"探测全部轨道；需搭载模块"},
+ recon:{name:"天体深度侦察",cost:{energy:6,matter:5,info:14},seconds:16,carrier:"dust",alert:3,desc:"揭示选中天体城市、中心、备份与生命类型"},
+ disrupt:{name:"信息扰乱",cost:{energy:10,matter:8,info:12},seconds:18,carrier:"satellite",alert:2,desc:"目标反制−1，持续35秒"},
+ steal:{name:"信息窃取",cost:{energy:8,matter:6,info:16},seconds:18,carrier:"satellite",alert:2,desc:"定位冷备份，回收8信息"},
+ virus:{name:"病菌入侵",cost:{energy:12,matter:10,info:8},seconds:20,carrier:"dust",alert:3,desc:"碳基每20秒损失24P，共3次"},
+ infoVirus:{name:"信息病毒",cost:{energy:12,matter:8,info:18},seconds:18,carrier:"satellite",alert:3,desc:"清除24备份；每目标至多两次"},
+ dissolve:{name:"分子结构解离",cost:{energy:16,matter:15,info:10},seconds:20,carrier:"dust",alert:5,entropy:5,hp:.45,desc:"指定中心损失45%最大HP"},
+ surface:{name:"地表设施打击",cost:{energy:12,matter:8,a1:6},seconds:8,carrier:"dust",alert:8,entropy:2,pop:45,hp:.35,desc:"城市45P或指定中心35%HP"},
+ planetary:{name:"行星打击",cost:{energy:30,matter:28,a1:10,a2:4},seconds:20,carrier:"asteroid",alert:18,entropy:10,pop:220,hp:.6,desc:"选中天体220P或指定中心60%HP"},
+ satellite:{name:"卫星打击",cost:{energy:45,matter:24,a2:8},seconds:25,carrier:"satellite",alert:22,entropy:12,pop:160,hp:.8,desc:"卫星/人工天体160P或中心80%HP"},
+ stellar:{name:"恒星打击",cost:{energy:90,matter:75,a2:10,a3:4},seconds:55,carrier:"planet",alert:40,entropy:28,pop:650,hp:.7,desc:"太阳系范围650P + 所有中心70%HP"},
+ galaxy:{name:"星系级打击",cost:{energy:210,matter:180,a3:10},seconds:80,carrier:"planet",alert:85,entropy:65,pop:3000,hp:.85,locked:true,desc:"第5关解锁；第四关禁用"},
+ blockade:{name:"拦截外逃舰",cost:{energy:18,matter:12,a1:10,info:4},seconds:5,carrier:"satellite",alert:6,desc:"拦截一艘正在飞离的外逃舰"}};
+const MODULES={infoHide:{name:"信息扰动隐形",cost:{energy:6,matter:4,info:12},alert:-6,intercept:-.1},
+ physicalHide:{name:"物理检测隐形",cost:{energy:10,matter:12,info:10},alert:-4,intercept:-.2}};
+const RESEARCH={stealth:{name:"隐形探测卫星",cost:{energy:25,matter:20,info:12},seconds:35,desc:"解锁信号捕捉与隐形模块"},
+ calibration:{name:"高级武装校准",cost:{energy:35,matter:30,info:20,a1:18},seconds:45,desc:"本关打击效果+15%（S +25%）"},
+ dissolve:{name:"物质结构解离",cost:{energy:35,matter:25,info:16},seconds:35,desc:"解锁精确中心解离"}};
+const AI_FAC={energy:{name:"能源采集区",points:12,node:"能源",max:4},military:{name:"轨道军工",points:15,node:"军事",max:4},
+ info:{name:"信息冷库",points:12,node:"信息",max:4},political:{name:"协作枢纽",points:18,node:"政治",max:3},
+ escape:{name:"外逃港",points:20,node:"能源",max:3}};
+let state,tab="economy",last=0,drawTime=0,lastUI=0;
+const $=id=>document.getElementById(id),clamp=(v,a=0,b=100)=>Math.max(a,Math.min(b,v));
+function random(){state.rng=(Math.imul(state.rng,1664525)+1013904223)>>>0;return state.rng/4294967296}
+function storageGet(k){try{return Number(localStorage.getItem(k)||0)}catch{return 0}}
+function storageSet(k,v){try{localStorage.setItem(k,String(v))}catch{}}
+function addCost(...costs){let c={};for(const a of costs)for(const k in a)c[k]=(c[k]||0)+a[k];return c}
+function costText(c){return Object.entries(c).filter(([,v])=>v).map(([k,v])=>LABEL[k]+v).join(" · ")||"无需资源"}
+function canPay(c){return Object.entries(c).every(([k,v])=>state.res[k]+1e-7>=v)}
+function pay(c){if(!canPay(c)){notify("资源不足："+costText(c));return false}for(const k in c)state.res[k]-=c[k];return true}
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(Math.floor(s%60)).padStart(2,"0")}
+function notify(message){$("toast").textContent=message}
+function log(message){state.logs.unshift({time:state.time,message});state.logs=state.logs.slice(0,40);notify(message)}
+function solarBodies(){
+ const planets=[["水星",.39,4879,1,2,"#a9a59a"],["金星",.72,12104,3,3,"#d3b083"],["地球",1,12742,9,4,"#6faddc"],["火星",1.52,6779,4,4,"#c8846f"],["木星",5.2,139820,5,3,"#d6baa0"],["土星",9.58,116460,4,3,"#dccb95"],["天王星",19.2,50724,3,2,"#8ecbd3"],["海王星",30.05,49244,3,1,"#658ad7"]];
+ const bodies=[{id:"sun",name:"太阳",kind:"star",au:0,diameter:1392700,color:"#f2c77e",index:-1,parent:null,pop:0,initialPop:0,nodes:[],recon:true,backup:0,initialBackup:0}];
+ for(let i=0;i<planets.length;i++){
+  const [name,au,diameter,cities,count,color]=planets[i];const names=["政治","军事","能源","信息"];let nodes=[];
+  for(let j=0;j<count;j++){const type=names[(j+(i===7?3:0))%4],hp={政治:80,军事:95,能源:76,信息:76}[type];nodes.push({id:"p"+i+"n"+j,type,hp,max:hp,initial:true})}
+  bodies.push({id:"p"+i,name,kind:"planet",au,diameter,index:i,parent:"sun",color,cities,initialCities:cities,pop:cities*48,initialPop:cities*48,nodes,recon:false,backup:0,initialBackup:0});
+ }
+ const moons=[["月球",2],["火卫一",3],["火卫二",3],["木卫一",4],["木卫二",4],["木卫三",4],["木卫四",4],["土卫六",5],["土卫二",5],["海卫一",7]];
+ moons.forEach(([name,p],i)=>bodies.push({id:"m"+i,name,kind:"moon",au:planets[p][1],diameter:[3474,22,12,3643,3122,5268,4821,5150,504,2707][i],index:i,parent:"p"+p,color:"#b5bfd0",cities:0,pop:0,initialPop:0,nodes:[],recon:false,backup:0,initialBackup:0}));
+ // 轨道站保留为空载地图实体，太阳系文明人口与中心集中规则在下方统一应用。
+ ["地月数据站","木星军工站","土星中继站"].forEach((name,i)=>bodies.push({id:"s"+i,name,kind:"station",au:[1,5.2,9.58][i],diameter:12,index:i,parent:["p2","p4","p5"][i],color:"#a38fd8",cities:1,pop:38,initialPop:38,nodes:[{id:"s"+i+"n",type:"信息",hp:70,max:70,initial:true}],recon:false,backup:0,initialBackup:0}));
+ // 保留1650P/25中心基准，只修改分布：地球1536P、月球114P，全部中心位于地球。
+ const earth=bodies.find(b=>b.id==="p2"),moon=bodies.find(b=>b.id==="m0");
+ const earthNodes=bodies.flatMap(b=>b.nodes);
+ for(const b of bodies){b.pop=0;b.initialPop=0;b.cities=0;b.initialCities=0;b.nodes=[]}
+ earth.pop=earth.initialPop=1536;earth.cities=earth.initialCities=32;earth.nodes=earthNodes;
+ moon.pop=moon.initialPop=114;moon.cities=moon.initialCities=3;
+ const info=bodies.filter(b=>b.nodes.some(n=>n.type==="信息"));info.forEach(b=>{b.backup=CFG.backupStart/info.length;b.initialBackup=b.backup});
+ if(CFG.initialPopulation!==1650)for(const b of bodies){b.pop*=CFG.initialPopulation/1650;b.initialPop=b.pop}
+ return bodies;
+}
+function reset(){
+ state={time:0,speed:1,paused:true,over:false,rng:CFG.seed,res:{energy:CFG.energy,matter:CFG.matter,info:CFG.info,a1:CFG.a1,a2:CFG.a2,a3:CFG.a3},
+ fac:{energy:0,matter:0,military:0,signal:0},carriers:{dust:0,satellite:0,asteroid:0,planet:0},research:{},
+ jobs:[],missions:[],ships:[],effects:[],logs:[],alert:0,exposure:0,tech:CFG.techStart,thresholds:[],
+ escape:0,escapeActive:false,escaped:0,escapedPop:0,killed:0,entropy:0,forbidden:0,
+ aiQueue:null,aiFacilities:[],everBuilt:0,peak:0,selected:"p2",node:"auto",globalProbe:false,virus:[],
+ applyCount:storageGet("cx_apply"),secondEnding:false,serial:0};
+ state.bodies=solarBodies();state.initialPop=state.bodies.reduce((s,b)=>s+b.initialPop,0);
+ state.initialNodes=state.bodies.flatMap(b=>b.nodes).length;
+ for(const [k,count] of Object.entries({energy:2,military:2,info:2,escape:1})){
+  const host=state.bodies.find(b=>b.nodes.some(n=>n.type===AI_FAC[k].node));for(let i=0;i<count;i++)state.aiFacilities.push({key:k,host:host.id,node:host.nodes.find(n=>n.type===AI_FAC[k].node).id});
+ }
+ $("modal").classList.remove("open");tab="economy";log("第四关待命："+fmt(CFG.limit)+"，"+state.initialPop.toFixed(0)+"P；仅地球和月球有人口，全部"+state.initialNodes+"个中心位于地球。点击“继续”启动。");renderUI(true);
+}
+function aliveNodes(type){return state.bodies.flatMap(b=>b.nodes).filter(n=>n.hp>0&&(!type||n.type===type))}
+function cleared(){return state.bodies.flatMap(b=>b.nodes).filter(n=>n.initial&&n.hp<=0).length}
+function gateOpen(){return cleared()>=Math.ceil(state.initialNodes*CFG.nodeGate)}
+function activeFacility(f){const b=state.bodies.find(b=>b.id===f.host);return b.nodes.some(n=>n.id===f.node&&n.hp>0)}
+function aiCount(k){return state.aiFacilities.filter(f=>f.key===k&&activeFacility(f)).length}
+function ratio(type){const nodes=state.bodies.flatMap(b=>b.nodes).filter(n=>n.type===type);return nodes.length?nodes.filter(n=>n.hp>0).length/nodes.length:0}
+function counter(){return Math.max(0,3+state.thresholds.length-aiDestroyed("军事")+aiCount("military")-2)}
+function aiDestroyed(type){return state.bodies.flatMap(b=>b.nodes).filter(n=>n.type===type&&n.hp<=0).length}
+function production(k){let bonus=0;for(let i=0;i<state.fac[k];i++)bonus+=(k==="energy"?CFG.energyBonus:CFG.matterBonus)*(i===0?1:i===1?.75:.55);return(k==="energy"?CFG.energyRate:CFG.matterRate)+bonus}
+function addJob(kind,key,cost,seconds,extra={}){
+ if(state.over)return false;if(!pay(cost))return false;
+ state.jobs.push({id:++state.serial,kind,key,left:seconds,total:seconds,...extra});log("已提交："+(FAC[key]?.name||BATCH[key]?.name||CARRIERS[key]?.name||RESEARCH[key]?.name||"资源申请"));renderUI(true);return true;
+}
+function build(k){const f=FAC[k];if(state.fac[k]+state.jobs.filter(j=>j.kind==="facility"&&j.key===k).length>=CFG.facilityCap)return notify("该类设施已达上限"+CFG.facilityCap);
+ if(k==="signal"&&!state.research.stealth)return notify("先研发隐形探测卫星");addJob("facility",k,f.cost,f.seconds)}
+function batch(k){const b=BATCH[k],busy=state.jobs.filter(j=>j.kind==="batch"&&BATCH[j.key].facility===b.facility).length;if(busy>=state.fac[b.facility])return notify("制造队列不足：先建设"+FAC[b.facility].name);addJob("batch",k,b.cost,b.seconds)}
+function research(k){if(state.research[k]||state.jobs.some(j=>j.kind==="research"&&j.key===k))return notify("已研发或正在研发");const r=RESEARCH[k];addJob("research",k,r.cost,r.seconds)}
+function expose(v){const amount=Math.max(0,v);state.alert=clamp(state.alert+amount);state.exposure+=amount;state.peak=Math.max(state.peak,state.alert);thresholds()}
+function thresholds(){for(const t of [30,60,85])if(state.alert>=t&&!state.thresholds.includes(t)){
+ state.thresholds.push(t);state.tech=clamp(state.tech+{30:6,60:12,85:18}[t]);if(t>=60)state.escapeActive=true;
+ log("察觉"+t+"："+(t===30?"科技+6，防御升级、备份加速":t===60?"科技+12，恐慌，外逃准备启动":"科技+18，极端警戒、防御加固"));
+ }}
+function selected(){return state.bodies.find(b=>b.id===state.selected)}
+function resolveCarrier(op){return OPS[op].carrier}
+function launch(op,modules=[],carrier=resolveCarrier(op)){
+ if(state.over)return false;const d=OPS[op],b=selected(),c=CARRIERS[carrier];
+ if(d.locked)return notify("星系级打击第五关解锁，第四关不能使用");
+ if(!b)return notify("请先选择天体");
+ if(op==="satellite"&&!["moon","station"].includes(b.kind))return notify("卫星打击只接受卫星或人工天体目标");
+ if(!["probe","recon","stellar","galaxy","blockade"].includes(op)&&!b.recon)return notify("请先派出天体深度侦察");
+ if(["virus","surface","planetary"].includes(op)&&b.kind==="star")return notify("太阳没有城市，请选择行星");
+ if(op==="dissolve"&&!state.research.dissolve)return notify("先研发物质结构解离");
+ if(op==="infoVirus"&&(b.virusCount||0)>=2)return notify("该目标的信息病毒已达到两次上限");
+ if(modules.length&&!state.research.stealth)return notify("隐形模块需要隐形探测卫星");
+ if(1+modules.length>c.slots)return notify("载体槽位不足：载荷1槽，隐形模块各1槽");
+ if(c.slots<CARRIERS[d.carrier].slots)return notify("载体尺寸不足");
+ if(op==="blockade"&&!state.ships.some(s=>!s.done))return notify("当前没有在途外逃舰");
+ if(state.carriers[carrier]<=0)return notify("没有"+c.name+"载体库存，请先制造");
+ const cost=addCost(d.cost,...modules.map(m=>MODULES[m].cost));if(!pay(cost))return false;
+ state.carriers[carrier]--;let rate=clamp(counter()*.05+aliveNodes("军事").length*.02,0,.8);
+ for(const m of modules)rate+=MODULES[m].intercept;if(b.disruptedUntil>state.time)rate-=.05;
+ const stealth=modules.reduce((s,m)=>s+MODULES[m].alert,0);
+ const mission={id:++state.serial,op,body:b.id,node:state.node,carrier,left:d.seconds+c.flight,total:d.seconds+c.flight,modules,intercept:Math.max(0,rate),boost:1,exposure:Math.max(0,d.alert+c.exposure+stealth),qte:false};
+ state.missions.push(mission);expose(mission.exposure);log("发射 "+d.name+" → "+b.name+"，预计"+mission.total+"秒；载体已消耗");renderUI(true);return true;
+}
+function damageNodes(b,amount,node="auto"){
+ const ns=node==="auto"?b.nodes.filter(n=>n.hp>0).slice(0,1):b.nodes.filter(n=>n.id===node&&n.hp>0);
+ for(const n of ns){const mitigation=Math.min(.3,aiCount("political")*.04);n.hp=Math.max(0,n.hp-n.max*amount*(1-mitigation));if(n.hp<1e-6)n.hp=0;if(n.hp===0)log(b.name+"："+n.type+"中心已摧毁")}
+}
+function killPopulation(targets,amount){
+ let allowed=amount;
+ if(!gateOpen())allowed=Math.min(allowed,Math.max(0,state.initialPop*(1-CFG.protection)-state.killed));
+ for(const b of targets){const killed=Math.min(b.pop,allowed);b.pop-=killed;state.killed+=killed;allowed-=killed;if(b.pop<1e-6)b.pop=0;if(allowed<=0)break}
+ return amount-allowed;
+}
+function finishMission(m){
+ const d=OPS[m.op],b=state.bodies.find(x=>x.id===m.body);
+ state.entropy+=d.entropy||0;
+ let strength=m.boost*(state.research.calibration||1)*CFG.damageScale;
+ const offensive=!!(d.pop||d.hp||m.op==="virus"||m.op==="infoVirus");
+ if(offensive&&random()<m.intercept){strength*=.6;expose(6);log("载荷被拦截：保留60%效果，察觉+6")}
+ switch(m.op){
+  case "probe":state.globalProbe=true;log("星系探测完成：19个自然天体与3个轨道站轨迹已确认");break;
+  case "recon":b.recon=true;log(b.name+"深度侦察完成：人口、中心与生命类型已揭示");break;
+  case "disrupt":b.disruptedUntil=state.time+35;log(b.name+"反制−1，持续35秒");break;
+  case "steal":b.located=true;state.res.info+=8;log(b.name+"冷备份已定位，回收8信息");break;
+  case "virus":state.virus.push({body:b.id,next:state.time+20,count:3,strength});log("病菌已入侵"+b.name+"：每20秒削减24P");break;
+  case "infoVirus":if((b.virusCount||0)>=2){log("信息病毒超过同目标两次限制，载荷作废");break}b.virusCount=(b.virusCount||0)+1;b.backup=Math.max(0,b.backup-24*strength);log("信息备份削减24点："+b.name);break;
+  case "dissolve":damageNodes(b,d.hp*strength,m.node);break;
+  case "blockade":{const ship=state.ships.find(s=>!s.done);if(ship){ship.done=true;const owner=state.bodies.find(x=>x.id===ship.body);owner.pop+=ship.pop;log("外逃舰已阻截，人口返回"+owner.name+"，仍需清理")}break;}
+  default:
+   if(["stellar","galaxy"].includes(m.op)){
+    for(const target of state.bodies)for(const n of [...target.nodes])if(n.hp>0)damageNodes(target,d.hp*strength,n.id);
+    killPopulation(state.bodies.filter(x=>x.pop>0).sort((a,b)=>b.pop-a.pop),d.pop*strength);
+   }else if(m.node!=="auto"&&b.nodes.some(n=>n.id===m.node)){damageNodes(b,d.hp*strength,m.node)}
+   else killPopulation([b],d.pop*strength);
+   log(d.name+"落地："+(gateOpen()?"人口保护已解除":"节点不足70%，保护网络仍在"));
+ }
+ state.effects.push({body:b.id,life:1.8});checkEnd();
+}
+function finishJob(j){
+ if(j.kind==="facility"){state.fac[j.key]++;log(FAC[j.key].name+"建造完成")}
+ if(j.kind==="batch"){state.res[j.key]+=BATCH[j.key].out;log(BATCH[j.key].name+"产出"+BATCH[j.key].out)}
+ if(j.kind==="carrier"){state.carriers[j.key]++;log(CARRIERS[j.key].name+"载体入库")}
+ if(j.kind==="research"){state.research[j.key]=j.key==="calibration"?(j.grade==="S"?1.25:j.grade==="B"?1.105:1.15):true;log(RESEARCH[j.key].name+"研发完成")}
+ if(j.kind==="apply"){const keys=["energy","matter","info","a1","a2","a3"],k=keys[Math.floor(random()*keys.length)],amount=["energy","matter"].includes(k)?20+Math.floor(random()*41):8+Math.floor(random()*13);state.res[k]+=amount;log("上级拨付："+LABEL[k]+"+"+amount+"；申请不会解锁第四关禁用武器")}
+}
+function chooseAI(){
+ const a=state.alert,weights=a<30?{energy:45,military:20,info:25,political:10,escape:0}:a<60?{energy:25,military:45,info:20,political:10,escape:0}:a<85?{energy:10,military:35,info:20,political:0,escape:35}:{energy:0,military:35,info:20,political:0,escape:45};
+ const candidates=Object.entries(weights).filter(([k,w])=>w>0&&aliveNodes(AI_FAC[k].node).length&&aiCount(k)<AI_FAC[k].max);
+ if(!candidates.length||state.everBuilt>=CFG.aiCap)return null;
+ let r=random()*candidates.reduce((s,[,w])=>s+w,0),key=candidates[0][0];for(const [k,w]of candidates){r-=w;if(r<0){key=k;break}}
+ const def=AI_FAC[key],b=state.bodies.find(b=>b.nodes.some(n=>n.type===def.node&&n.hp>0));
+ return {key,left:def.points,host:b.id,node:b.nodes.find(n=>n.type===def.node&&n.hp>0).id};
+}
+function aiTick(dt){
+ state.alert=Math.max(0,state.alert-CFG.decay*dt);
+ const political=Math.max(.15,1-aiDestroyed("政治")*.08),energy=Math.max(.15,1-aiDestroyed("能源")*.2);
+ state.tech=clamp(state.tech+CFG.techRate*CFG.aiScale*(1+state.alert/100*CFG.alertMul)*political*dt);
+ if(state.tech>=70&&!state.escapeActive){state.escapeActive=true;log("科技达到70：外逃研发完成，启动外逃准备")}
+ const infoBodies=state.bodies.filter(b=>b.nodes.some(n=>n.type==="信息"&&n.hp>0));
+ const mul=state.thresholds.includes(60)?1.6:state.thresholds.includes(30)?1.25:1;
+ const backupRate=(CFG.backupRate*ratio("信息")+.12*Math.max(0,aiCount("info")-2))*mul*CFG.aiScale;
+ for(const b of infoBodies)b.backup+=backupRate*dt/Math.max(1,infoBodies.length);
+ if(!state.aiQueue){state.aiQueue=chooseAI();if(state.aiQueue)log("AI开始建造："+AI_FAC[state.aiQueue.key].name)}
+ if(state.aiQueue){const q=state.aiQueue;if(!activeFacility(q)){log("挂靠中心被毁，AI建造取消");state.aiQueue=null}
+ else{q.left-=CFG.aiBuildRate*CFG.aiScale*(1+.05*Math.max(0,aiCount("energy")-2))*dt;if(q.left<=0){state.aiFacilities.push({key:q.key,host:q.host,node:q.node});state.everBuilt++;log("AI完成："+AI_FAC[q.key].name+"，文明能力增强");state.aiQueue=null}}}
+ if(state.escapeActive){
+  state.escape+=100/CFG.escapeSeconds*energy*(1+.1*Math.max(0,aiCount("escape")-1))*CFG.aiScale*dt;
+  if(state.escape>=100){state.escape-=100;const b=[...state.bodies].filter(x=>x.pop>0).sort((a,b)=>b.pop-a.pop)[0];
+   if(b){const pop=Math.min(8,b.pop);b.pop-=pop;state.ships.push({id:++state.serial,body:b.id,pop,left:30,total:30,done:false});log("外逃舰离港：携带"+pop+"P，30秒内可拦截")}}
+ }
+ for(const ship of state.ships)if(!ship.done){ship.left-=dt;if(ship.left<=0){ship.done=true;state.escaped++;state.escapedPop+=ship.pop;state.secondEnding=true;log("外逃成功：第二结局标记，第四关继续作战");storageSet("cx_secondEnding",1)}}
+}
+function tick(dt){
+ if(state.paused||state.over)return;
+ dt=Math.min(dt,Math.max(0,CFG.limit-state.time));state.time+=dt;
+ state.res.energy+=production("energy")*dt;state.res.matter+=production("matter")*dt;
+ for(const j of [...state.jobs]){j.left-=dt;if(j.left<=0){state.jobs=state.jobs.filter(x=>x!==j);finishJob(j)}}
+ aiTick(dt);
+ for(const m of [...state.missions]){m.left-=dt;if(m.left<=0){state.missions=state.missions.filter(x=>x!==m);finishMission(m)}}
+ for(const v of [...state.virus])if(v.next<=state.time){const b=state.bodies.find(x=>x.id===v.body);killPopulation([b],24*v.strength);v.next+=20;v.count--;if(v.count===0)state.virus=state.virus.filter(x=>x!==v)}
+ checkEnd();
+}
+function remaining(){return state.bodies.reduce((s,b)=>s+b.pop,0)+state.ships.filter(s=>!s.done).reduce((s,b)=>s+b.pop,0)}
+function checkEnd(){if(state.over)return;if(remaining()<1e-6&&state.time<=CFG.limit)end(true);else if(state.time>=CFG.limit)end(false)}
+function end(win){
+ state.over=true;const backups=state.bodies.reduce((s,b)=>s+b.backup,0);
+ const score={info:clamp(100-100*backups/CFG.backupStart),knowledge:clamp(100-state.exposure),entropy:clamp(100-state.entropy)};
+ $("dialog").innerHTML='<h2>'+ (win?"太阳系清理完成":"任务失败 · 时间耗尽")+'</h2><p>已用 '+fmt(state.time)+' / '+fmt(CFG.limit)+'</p><p>天体与在途剩余人口 '+remaining().toFixed(1)+'P · 节点清除 '+cleared()+'/'+state.initialNodes+'</p><p>外逃 '+state.escaped+' 次 / '+state.escapedPop+'P · '+(state.secondEnding?"第二结局进度已记录":"未触发第二结局")+'</p><p>信息清理 '+score.info.toFixed(0)+' · 最低知情 '+score.knowledge.toFixed(0)+' · 熵增控制 '+score.entropy.toFixed(0)+'</p><p class="muted">外逃和信息残留不阻断第四关。人口清零只计算留在星系和在途人口，已外逃人口独立记录。</p><button onclick="reset()">重试基准关</button><button onclick="document.getElementById(\'modal\').classList.remove(\'open\')">查看战场</button>';
+ $("modal").classList.add("open");
+}
+function actionButton(name,cost,desc,fn,disabled=false){const b=document.createElement("button");b.className="action";b.innerHTML='<b>'+name+'</b><small class="cost">'+costText(cost)+'</small><small>'+desc+'</small>';b.disabled=disabled;b.onclick=fn;return b}
+function renderActions(){
+ const p=$("actions");p.innerHTML="";$("composer").style.display=tab==="operation"?"block":"none";
+ if(tab==="economy")for(const[k,d]of Object.entries(FAC))p.appendChild(actionButton(d.name+" ×"+state.fac[k],d.cost,d.seconds+"秒 · "+d.desc,()=>build(k),state.over||!canPay(d.cost)||(k==="signal"&&!state.research.stealth)));
+ if(tab==="manufacture")for(const[k,d]of Object.entries(BATCH))p.appendChild(actionButton(d.name+" +"+d.out,d.cost,d.seconds+"秒 / 批 · "+(d.out/d.seconds).toFixed(2)+"/秒",()=>batch(k),state.over||!canPay(d.cost)||!state.fac[d.facility]));
+ if(tab==="carriers")for(const[k,d]of Object.entries(CARRIERS))p.appendChild(actionButton(d.name+" · 库存"+state.carriers[k],d.cost,d.seconds+"秒制造 · "+d.slots+"槽 / 航行"+d.flight+"秒",()=>addJob("carrier",k,d.cost,d.seconds),state.over||!canPay(d.cost)));
+ if(tab==="research")for(const[k,d]of Object.entries(RESEARCH))p.appendChild(actionButton(d.name+(state.research[k]?" · 已完成":""),d.cost,d.seconds+"秒 · "+d.desc,()=>research(k),state.over||!!state.research[k]||!canPay(d.cost)));
+ if(tab==="apply")p.appendChild(actionButton("向上级申请 · 累计"+state.applyCount,{}, "25秒随机拨付一级/二级资源 · 不解锁星系打击",()=>{
+  if(state.jobs.some(j=>j.kind==="apply"))return notify("客服正在处理申请");
+  if(addJob("apply","apply",{},25)){state.applyCount++;storageSet("cx_apply",state.applyCount)}
+ },state.over||state.jobs.some(j=>j.kind==="apply")));
+ if(tab==="operation"&&!$("opSelect"))renderComposer();
+}
+function renderComposer(){
+ const c=$("composer");c.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:10px"><div class="field"><select id="opSelect">'+Object.entries(OPS).map(([k,d])=>'<option value="'+k+'" '+(d.locked?'disabled':'')+'>'+d.name+(d.locked?"（第5关）":"")+'</option>').join("")+'</select><select id="carrierSelect" style="margin-top:5px">'+Object.entries(CARRIERS).map(([k,d])=>'<option value="'+k+'">'+d.name+'</option>').join("")+'</select></div><div>'+Object.entries(MODULES).map(([k,d])=>'<label class="module"><input type="checkbox" id="'+k+'"> '+d.name+'</label>').join("")+'<span class="tag">载荷1槽，隐形各1槽</span></div><div><div id="manifest" class="muted"></div><button id="launch" style="margin-top:5px">发射至选中天体</button></div></div>';
+ $("opSelect").onchange=()=>{$("carrierSelect").value=OPS[$("opSelect").value].carrier;manifest()};
+ $("carrierSelect").onchange=manifest;for(const k of Object.keys(MODULES))$(k).onchange=manifest;
+ $("launch").onclick=()=>launch($("opSelect").value,Object.keys(MODULES).filter(k=>$(k).checked),$("carrierSelect").value);manifest();
+}
+function manifest(){if(!$("opSelect"))return;const op=$("opSelect").value,d=OPS[op],c=CARRIERS[$("carrierSelect").value],mods=Object.keys(MODULES).filter(k=>$(k).checked);
+ $("manifest").textContent=d.desc+" · "+costText(addCost(d.cost,...mods.map(k=>MODULES[k].cost)))+" · "+(d.seconds+c.flight)+"秒 · "+c.name+"库存"+state.carriers[$("carrierSelect").value];}
+function meter(name,value,max,color="#67d5dc"){return '<div class="row"><span>'+name+'</span><span>'+value.toFixed(1)+(max===100?"%":" / "+max.toFixed(0))+'</span></div><div class="bar"><i style="background:'+color+';width:'+clamp(max?value/max*100:0)+'%"></i></div>'}
+function bodyMetrics(b){const types=type=>{const ns=b.nodes.filter(n=>n.type===type);return ns.length?ns.reduce((s,n)=>s+n.hp/n.max,0)/ns.length:0};
+ return {structure:(types("政治")*.5+types("信息")*.5)*100,function:(types("能源")*.5+types("军事")*.5)*100}}
+function renderDetail(){
+ const b=selected();if(!b){$("detail").innerHTML='<div class="portrait"><h2>选择天体</h2><div class="orb"></div></div><p class="muted">点击星图中的行星、卫星、太阳或人工站。</p>';$("bodyActions").innerHTML="";return}
+ const m=bodyMetrics(b);$("detail").innerHTML='<div class="portrait"><div><span class="tag">'+({star:"自然恒星",planet:"自然行星",moon:"自然卫星",station:"人工空间站"}[b.kind])+'</span><h2>'+b.name+'</h2></div><div class="orb" style="background:radial-gradient(circle at 30% 30%,#eff5fa,'+b.color+')"></div></div><p class="muted">直径 '+b.diameter.toLocaleString()+' km<br>轨道 '+b.au+' AU · 生命类型 '+(b.recon?(b.initialPop?"碳基":"无常住文明"):"待侦察")+'<br>情报：'+(b.recon?"已深度侦察":"已知天体，中心资料未揭示")+'</p>'+
+ (b.recon?meter("人口（P）",b.pop,b.initialPop||1,"#f18189")+meter("结构完整度",m.structure,100,"#ecc27b")+meter("功能执行能力",m.function,100)+
+ '<div class="row"><span>信息备份</span><span>'+b.backup.toFixed(1)+(b.located?" · 已定位":"")+'</span></div><h3>目标选择</h3><div class="nodes"><button data-node="auto" class="'+(state.node==="auto"?"active":"")+'"><span>城市 / 人口</span><span>自动分配人口伤害</span></button>'+b.nodes.map(n=>'<button data-node="'+n.id+'" class="'+(state.node===n.id?"active":"")+'"><span>'+n.type+'中心</span><span>'+n.hp.toFixed(0)+' / '+n.max+' HP</span></button>').join("")+'</div>':'<div class="hint">派出深度侦察后显示城市、中心耐久和备份。太阳可直接承接恒星级打击。</div>');
+ $("detail").querySelectorAll("[data-node]").forEach(el=>el.onclick=()=>{state.node=el.dataset.node;renderUI(true)});
+ $("bodyActions").innerHTML='<button id="quickRecon">深度侦察<br><small>选择载体与模块</small></button><button id="quickStrike">打击 / 入侵<br><small>针对选中天体</small></button>';
+ $("quickRecon").onclick=()=>{setTab("operation");$("opSelect").value="recon";$("carrierSelect").value="dust";manifest()};
+ $("quickStrike").onclick=()=>{setTab("operation");$("opSelect").value=b.kind==="star"?"stellar":"surface";$("carrierSelect").value=OPS[$("opSelect").value].carrier;manifest()};
+}
+function renderUI(force=false){
+ $("resources").innerHTML=Object.entries(LABEL).map(([k,label])=>'<div class="resource"><span>'+label+'</span><b style="color:'+(["energy","matter"].includes(k)?"var(--gold)":"var(--cyan)")+'">'+Math.floor(state.res[k])+'</b>'+(['energy','matter'].includes(k)?'<small> +'+production(k).toFixed(2)+'/s</small>':"")+'</div>').join("");
+ $("clock").textContent=fmt(CFG.limit-state.time);$("pause").textContent=state.paused?"继续":"暂停";
+ document.querySelectorAll("[data-speed]").forEach(b=>b.classList.toggle("active",Number(b.dataset.speed)===state.speed));
+ renderDetail();$("status").innerHTML='<h3>全星系文明态势</h3>'+meter("察觉",state.alert,100,"#ecc27b")+meter("科技进度",state.tech,100)+meter("外逃准备",state.escape,100,"#f18189")+
+ '<div class="row"><span>反制等级</span><b>'+counter()+'</b></div><div class="row"><span>人口剩余</span><b>'+remaining().toFixed(1)+'P</b></div><div class="row"><span>初始中心已毁</span><b>'+cleared()+'/'+state.initialNodes+'（需'+Math.ceil(state.initialNodes*CFG.nodeGate)+'）</b></div><div class="row"><span>人口保护</span><span>'+(gateOpen()?"已解除":"最多清除30%")+'</span></div><div class="row"><span>外逃 / 分支</span><span>'+state.escaped+' / '+(state.secondEnding?"第二结局":"未触发")+'</span></div><div class="row"><span>全域信息备份</span><span>'+state.bodies.reduce((s,b)=>s+b.backup,0).toFixed(1)+'</span></div><div class="row"><span>AI建造</span><span>'+(state.aiQueue?AI_FAC[state.aiQueue.key].name+" "+Math.ceil(state.aiQueue.left/(CFG.aiBuildRate*CFG.aiScale))+"秒":"已达上限/无挂靠")+'</span></div>';
+ $("jobs").innerHTML=[...state.jobs.map(j=>'<div class="row"><span>'+ (FAC[j.key]?.name||BATCH[j.key]?.name||CARRIERS[j.key]?.name||RESEARCH[j.key]?.name||"申请")+'</span><span>'+Math.ceil(j.left)+'s</span></div>'),
+ ...state.missions.map(m=>'<div class="row"><span>'+OPS[m.op].name+'</span><span>'+Math.ceil(m.left)+'s <button data-qte="'+m.id+'" '+(m.qte?"disabled":"")+' style="padding:3px">接管</button></span></div>')].join("")||'<span class="muted">暂无作业；不同队列并行推进。</span>';
+ $("jobs").querySelectorAll("[data-qte]").forEach(el=>el.onclick=()=>openQTE(Number(el.dataset.qte)));
+ $("log").innerHTML=state.logs.slice(0,9).map(l=>'<div>'+fmt(l.time)+' '+l.message+'</div>').join("");
+ if(force||tab!=="operation")renderActions();manifest();
+}
+function setTab(t){tab=t;document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===t));renderActions()}
+function openQTE(id){
+ const m=state.missions.find(m=>m.id===id);if(!m||m.qte||state.over)return;m.qte=true;
+ const wasPaused=state.paused;state.paused=true;const start=performance.now();
+ $("dialog").innerHTML='<h2>载荷校准 · 可选接管</h2><p>让光点进入中央绿色窗口后点击。成功：效果+20%、缩短5秒；失误：效果−20%、察觉+3。校准期间战场暂停。</p><div class="bar" style="height:22px;position:relative"><div style="position:absolute;left:40%;width:20%;height:100%;background:#88c9a344"></div><i id="qteDot" style="width:3%;position:absolute"></i></div><button id="qteStop">锁定</button>';
+ $("modal").classList.add("open");let running=true;
+ function move(){if(!running)return;$("qteDot").style.left=((performance.now()-start)%1500)/1500*97+"%";requestAnimationFrame(move)}move();
+ $("qteStop").onclick=()=>{running=false;const pos=((performance.now()-start)%1500)/1500,ok=pos>=.4&&pos<=.6;m.boost=ok?1.2:.8;if(ok)m.left=Math.max(1,m.left-5);else expose(3);
+ log(ok?"校准成功：效果+20%":"校准失误：效果−20%，察觉+3");state.paused=wasPaused;$("modal").classList.remove("open");renderUI(true)};
+}
+function settings(){
+ const was=state.paused;state.paused=true;
+ const params={limit:"时间限制（秒）",initialPopulation:"初始人口P",nodeGate:"中心门槛（0–1）",energyRate:"基础能源/秒",matterRate:"基础物质/秒",damageScale:"玩家伤害倍率",aiScale:"AI成长倍率",techRate:"科技基础/秒",escapeSeconds:"基础外逃准备秒",aiBuildRate:"AI建造点/秒"};
+ $("dialog").innerHTML='<h2>太阳系基准调参</h2><p class="muted">应用参数将重新开始第四关。用于校准时间、经济、火力与AI，不修改其他关卡。</p>'+Object.entries(params).map(([k,label])=>'<label class="parameter">'+label+'<input id="param-'+k+'" type="number" step="any" value="'+CFG[k]+'"></label>').join("")+'<button id="applySettings">应用并重开</button> <button id="cancelSettings">返回</button>';
+ $("modal").classList.add("open");
+ $("cancelSettings").onclick=()=>{state.paused=was;$("modal").classList.remove("open")};
+ $("applySettings").onclick=()=>{for(const k in params){const v=Number($("param-"+k).value);if(!Number.isFinite(v)||v<=0||(k==="nodeGate"&&v>1))return notify("参数必须为正，中心门槛不能超过1")}
+ for(const k in params)CFG[k]=Number($("param-"+k).value);reset()};
+}
+const cv=$("cv"),ctx=cv.getContext("2d");let hitboxes=[];
+function draw(){
+ const rect=cv.getBoundingClientRect(),w=rect.width,h=rect.height,dpr=window.devicePixelRatio||1;
+ if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr)}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle="#090f19";ctx.fillRect(0,0,w,h);
+ for(let i=0;i<120;i++){ctx.fillStyle=i%3?"#a8bad049":"#c5d6ef88";ctx.fillRect((i*97+31)%w,(i*61+19)%h,1,1)}
+ const cx=w*.5,cy=h*.52,rx=w*.44,ry=h*.38;hitboxes=[];const positions={sun:{x:cx,y:cy}};
+ for(let i=0;i<8;i++){const r=(i+1)/8;ctx.strokeStyle="#52678233";ctx.lineWidth=1;ctx.beginPath();ctx.ellipse(cx,cy,rx*r,ry*r,0,0,Math.PI*2);ctx.stroke();
+ const angle=i*.91+state.time*.003/(i+1);positions["p"+i]={x:cx+Math.cos(angle)*rx*r,y:cy+Math.sin(angle)*ry*r}}
+ for(const b of state.bodies){let pos=positions[b.id];if(!pos){const parent=positions[b.parent];const angle=b.index*2.3+state.time*.013;pos={x:parent.x+Math.cos(angle)*(b.kind==="station"?32:21),y:parent.y+Math.sin(angle)*(b.kind==="station"?26:19)};positions[b.id]=pos}
+ const r=b.kind==="star"?17:b.kind==="planet"?9:b.kind==="station"?5:4;
+ ctx.fillStyle=b.color;ctx.shadowColor=b.color;ctx.shadowBlur=b.kind==="star"?24:7;ctx.beginPath();if(b.kind==="station")ctx.rect(pos.x-r,pos.y-r,r*2,r*2);else ctx.arc(pos.x,pos.y,r,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;
+ if(b.id===state.selected){ctx.strokeStyle="#67d5dc";ctx.lineWidth=2;ctx.beginPath();ctx.arc(pos.x,pos.y,r+6,0,Math.PI*2);ctx.stroke()}
+ ctx.fillStyle=b.pop===0&&b.initialPop>0?"#64748b":"#ccd8e6";ctx.font=b.kind==="planet"||b.kind==="star"?"12px sans-serif":"9px sans-serif";ctx.fillText(b.name,pos.x+9,pos.y-10);
+ hitboxes.push({...pos,r:Math.max(10,r+6),id:b.id});
+ }
+ const base={x:30,y:h-40};ctx.strokeStyle="#67d5dc";ctx.strokeRect(base.x-8,base.y-8,16,16);ctx.fillStyle="#67d5dc";ctx.fillText("作业基地",10,h-15);
+ for(const m of state.missions){const t=positions[m.body],p=1-m.left/m.total,x=base.x+(t.x-base.x)*p,y=base.y+(t.y-base.y)*p;ctx.strokeStyle="#67d5dc33";ctx.beginPath();ctx.moveTo(base.x,base.y);ctx.lineTo(t.x,t.y);ctx.stroke();ctx.fillStyle="#ecc27b";ctx.beginPath();ctx.arc(x,y,3,0,7);ctx.fill()}
+ for(const ship of state.ships)if(!ship.done){const p=positions[ship.body],progress=1-ship.left/ship.total;ctx.fillStyle="#f18189";ctx.beginPath();ctx.arc(p.x+(w-p.x)*progress,p.y+(10-p.y)*progress,4,0,7);ctx.fill()}
+ for(const e of state.effects){const p=positions[e.body];ctx.strokeStyle="#f18189";ctx.beginPath();ctx.arc(p.x,p.y,10+(1.8-e.life)*25,0,7);ctx.stroke();e.life-=.016}state.effects=state.effects.filter(e=>e.life>0);
+}
+cv.onclick=e=>{const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;const b=[...hitboxes].sort((a,b)=>Math.hypot(a.x-x,a.y-y)-Math.hypot(b.x-x,b.y-y)).find(b=>Math.hypot(b.x-x,b.y-y)<=b.r+4);if(b){state.selected=b.id;state.node="auto";renderUI(true)}};
+$("pause").onclick=()=>{if(!state.over){state.paused=!state.paused;renderUI(true)}};
+document.querySelectorAll("[data-speed]").forEach(b=>b.onclick=()=>{state.speed=Number(b.dataset.speed);renderUI(true)});
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+$("settings").onclick=settings;$("restart").onclick=reset;
+document.addEventListener("visibilitychange",()=>{if(document.hidden&&state&&!state.over)state.paused=true});
+function frame(now){if(last){let seconds=Math.min(.25,(now-last)/1000)*state.speed;while(seconds>0){const dt=Math.min(.1,seconds);tick(dt);seconds-=dt}}last=now;draw();if(now-lastUI>300){renderUI();lastUI=now}requestAnimationFrame(frame)}
+// 只读配置与模型入口，方便自动化验证和后续关卡标定。
+window.SolarPrototype={CFG,FAC,BATCH,CARRIERS,OPS,reset,tick,launch,batch,build,research,remaining,gateOpen,cleared,get state(){return state}};
+reset();requestAnimationFrame(frame);
+</script></body></html>

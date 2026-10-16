@@ -1,0 +1,1 @@
+PASS 编辑器环境：自动补齐CanvasRenderer、星图创建组件、Graphic访问、1–4关星图鼠标射线检测。

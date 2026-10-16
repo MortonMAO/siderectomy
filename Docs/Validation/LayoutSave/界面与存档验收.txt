@@ -1,0 +1,159 @@
+PASS 默认进入开始界面
+PASS 存在按钮 GameSettings
+PASS 按钮可用 GameSettings
+PASS 按钮没有遮挡 GameSettings
+PASS 设置具有可调音量
+PASS 音量滑杆填充不越界
+PASS 存在按钮 BackHome
+PASS 按钮可用 BackHome
+PASS 按钮没有遮挡 BackHome
+PASS 存在按钮 NewProfile
+PASS 按钮可用 NewProfile
+PASS 按钮没有遮挡 NewProfile
+PASS 存在按钮 ConfirmNewProfile
+PASS 按钮可用 ConfirmNewProfile
+PASS 按钮没有遮挡 ConfirmNewProfile
+PASS 新档案进入办公室
+PASS 存在按钮 OfficeLevel4
+PASS 按钮可用 OfficeLevel4
+PASS 按钮没有遮挡 OfficeLevel4
+PASS 办公室选择第四关
+PASS 存在按钮 Tab_facility
+PASS 按钮可用 Tab_facility
+PASS 按钮没有遮挡 Tab_facility
+PASS 滚动选项窗口 facility
+PASS 统一图标占位 Action_facility_signal
+PASS 统一图标占位 Action_facility_military
+PASS 统一图标占位 Action_facility_matter
+PASS 统一图标占位 Action_facility_energy
+PASS 存在按钮 Tab_batch
+PASS 按钮可用 Tab_batch
+PASS 按钮没有遮挡 Tab_batch
+PASS 滚动选项窗口 batch
+PASS 统一图标占位 Action_batch_info
+PASS 统一图标占位 Action_batch_a3
+PASS 统一图标占位 Action_batch_a2
+PASS 统一图标占位 Action_batch_a1
+PASS 存在按钮 Tab_carrier
+PASS 按钮可用 Tab_carrier
+PASS 按钮没有遮挡 Tab_carrier
+PASS 滚动选项窗口 carrier
+PASS 统一图标占位 Action_carrier_planet
+PASS 统一图标占位 Action_carrier_asteroid
+PASS 统一图标占位 Action_carrier_satellite
+PASS 统一图标占位 Action_carrier_dust
+PASS 存在按钮 Tab_research
+PASS 按钮可用 Tab_research
+PASS 按钮没有遮挡 Tab_research
+PASS 滚动选项窗口 research
+PASS 统一图标占位 Action_research_dissolve
+PASS 统一图标占位 Action_research_calibration
+PASS 统一图标占位 Action_research_stealth
+PASS 存在按钮 Tab_attackModule
+PASS 按钮可用 Tab_attackModule
+PASS 按钮没有遮挡 Tab_attackModule
+PASS 滚动选项窗口 attackModule
+PASS 统一图标占位 Action_attackModule_blockade
+PASS 统一图标占位 Action_attackModule_galaxy
+PASS 统一图标占位 Action_attackModule_stellar
+PASS 统一图标占位 Action_attackModule_satellite
+PASS 统一图标占位 Action_attackModule_planetary
+PASS 统一图标占位 Action_attackModule_surface
+PASS 存在按钮 Tab_operation
+PASS 按钮可用 Tab_operation
+PASS 按钮没有遮挡 Tab_operation
+PASS 滚动选项窗口 operation
+PASS 存在按钮 Tab_apply
+PASS 按钮可用 Tab_apply
+PASS 按钮没有遮挡 Tab_apply
+PASS 滚动选项窗口 apply
+PASS 统一图标占位 Apply
+PASS 存在按钮 Tab_carrier
+PASS 按钮可用 Tab_carrier
+PASS 按钮没有遮挡 Tab_carrier
+PASS 鼠标滚轮能滚动下级选项
+PASS 存在按钮 Action_carrier_dust
+PASS 按钮可用 Action_carrier_dust
+PASS 按钮没有遮挡 Action_carrier_dust
+PASS 存在按钮 Launch
+PASS 按钮可用 Launch
+PASS 按钮没有遮挡 Launch
+PASS 真实付费探测进入在途队列
+PASS 存在按钮 Tab_carrier
+PASS 按钮可用 Tab_carrier
+PASS 按钮没有遮挡 Tab_carrier
+PASS 存在按钮 Action_carrier_dust
+PASS 按钮可用 Action_carrier_dust
+PASS 按钮没有遮挡 Action_carrier_dust
+PASS 日志淡入后不透明
+PASS 日志不透明保持3秒
+PASS 日志淡出后回收
+PASS 日志自下而上保留多条
+PASS 右侧移除日志区
+PASS 存在按钮 Communicator
+PASS 按钮可用 Communicator
+PASS 按钮没有遮挡 Communicator
+PASS 点击通讯员变色并展开选项
+PASS 存在按钮 Dialogue_AAA
+PASS 按钮可用 Dialogue_AAA
+PASS 按钮没有遮挡 Dialogue_AAA
+PASS AAA演示回复
+PASS 存在按钮 Dialogue_BBB
+PASS 按钮可用 Dialogue_BBB
+PASS 按钮没有遮挡 Dialogue_BBB
+PASS BBB演示回复
+PASS 存在按钮 Dialogue_暂停键
+PASS 按钮可用 Dialogue_暂停键
+PASS 按钮没有遮挡 Dialogue_暂停键
+PASS 对话暂停键冻结模拟
+PASS 存在按钮 SaveSimulation
+PASS 按钮可用 SaveSimulation
+PASS 按钮没有遮挡 SaveSimulation
+PASS 保存后退回办公室
+PASS 存在按钮 OfficeMainMenu
+PASS 按钮可用 OfficeMainMenu
+PASS 按钮没有遮挡 OfficeMainMenu
+PASS 存在按钮 ContinueGame
+PASS 按钮可用 ContinueGame
+PASS 按钮没有遮挡 ContinueGame
+PASS 存在按钮 Load_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮可用 Load_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮没有遮挡 Load_2942d73678af406fbe4250ba5a8ddd29
+PASS 开始界面读档回到暂停现场
+PASS 读档保留计时和资源
+PASS 读档恢复制造与在途队列剩余时间
+PASS 读档后在途探测正确结算并揭示星系
+PASS 存在按钮 Tab_facility
+PASS 按钮可用 Tab_facility
+PASS 按钮没有遮挡 Tab_facility
+PASS 存在按钮 Communicator
+PASS 按钮可用 Communicator
+PASS 按钮没有遮挡 Communicator
+PASS 存在按钮 ResetSimulation
+PASS 按钮可用 ResetSimulation
+PASS 按钮没有遮挡 ResetSimulation
+PASS 重新模拟清空现场并重开当前关
+PASS 存在按钮 AbandonSimulation
+PASS 按钮可用 AbandonSimulation
+PASS 按钮没有遮挡 AbandonSimulation
+PASS 放弃退出不保留局内进度
+PASS 存在按钮 OfficeMainMenu
+PASS 按钮可用 OfficeMainMenu
+PASS 按钮没有遮挡 OfficeMainMenu
+PASS 存在按钮 ContinueGame
+PASS 按钮可用 ContinueGame
+PASS 按钮没有遮挡 ContinueGame
+PASS 存在按钮 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮可用 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮没有遮挡 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 存在按钮 CancelDelete
+PASS 按钮可用 CancelDelete
+PASS 按钮没有遮挡 CancelDelete
+PASS 取消删除保留存档
+PASS 存在按钮 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮可用 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 按钮没有遮挡 Delete_2942d73678af406fbe4250ba5a8ddd29
+PASS 存在按钮 ConfirmDelete
+PASS 按钮可用 ConfirmDelete
+PASS 按钮没有遮挡 ConfirmDelete
+PASS 删档完成且不残留在列表
